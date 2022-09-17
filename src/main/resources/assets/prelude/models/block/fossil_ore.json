@@ -1,5 +1,6 @@
 {
-  "item.prelude.fossil": "fossil"
-  "block.prelude.fossil_ore": "fossil_ore"
-  "itemGroup.fossil_mod_items": "prelude items",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "prelude:block/fossil_ore"
+  }
 }

@@ -1,4 +1,5 @@
 {
+  "language.name": "English",
   "item.prelude.fossil": "fossil"
   "block.prelude.fossil_ore": "fossil_ore"
   "itemGroup.fossil_mod_items": "prelude items",
