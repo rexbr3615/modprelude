@@ -17,7 +17,7 @@ import software.bernie.geckolib3.GeckoLib;
 public class prelude {
 
     public static final String MODID = "prelude";
-
+    public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // add a comment
