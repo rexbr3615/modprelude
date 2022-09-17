@@ -14,6 +14,8 @@ public class ModItems {
     // items
     public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> DISC_DRIVE = ITEMS.register("diskdrive",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     //foods
     public static final RegistryObject<Item> DODO_RAW = ITEMS.register("raw_dodo",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.DODO_RAW)));
@@ -24,6 +26,8 @@ public class ModItems {
 
     //dna
     public static final RegistryObject<Item> DODO_DNA = ITEMS.register("dodo_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> DODO_DISC = ITEMS.register("dodo_disc",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> DODO_SYRINGUE = ITEMS.register("dodo_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
