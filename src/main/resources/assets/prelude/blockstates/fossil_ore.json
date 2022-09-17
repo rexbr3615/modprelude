@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "prelude:block/fossil" }
+    "": { "model": "prelude:block/fossil_ore" }
   }
 }

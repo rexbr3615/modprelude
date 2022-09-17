@@ -3,6 +3,7 @@ package net.rexbr.preludejurassika.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -22,7 +23,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FOSSIL_ORE = registerBlock("fossil_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "prelude:block/fossil_ore"
+    "all": "prelude:block/fossil_block_0"
   }
 }
