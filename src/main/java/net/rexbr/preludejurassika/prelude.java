@@ -16,6 +16,7 @@ public class prelude {
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    // add a comment
     public prelude() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
