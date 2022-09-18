@@ -24,6 +24,10 @@ public class ModItems {
 
     //eggs
 
+    //syringues
+    public static final RegistryObject<Item> SYRINGUE = ITEMS.register("syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
     //spawn eggs
     public static final RegistryObject<Item> ACHILLOBATOR_SPAWN_EGG = ITEMS.register("achillobator_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.ACHILLOBATOR,0x948e8d, 0x3b3635,
