@@ -28,6 +28,9 @@ public class ModItems {
     public static final RegistryObject<Item> ACHILLOBATOR_SPAWN_EGG = ITEMS.register("achillobator_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.ACHILLOBATOR,0x948e8d, 0x3b3635,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> DODO_SPAWN_EGG = ITEMS.register("dodo_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.DODO,0x948e8d, 0x3b3635,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //dna
     public static final RegistryObject<Item> DODO_DNA = ITEMS.register("dodo_dna",

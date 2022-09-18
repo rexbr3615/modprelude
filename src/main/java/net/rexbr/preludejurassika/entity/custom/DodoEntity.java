@@ -15,7 +15,6 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -25,10 +24,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class AchillobatorEntity extends Animal implements IAnimatable {
+public class DodoEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public AchillobatorEntity(EntityType<? extends Animal> entityType, Level level) {
+    public DodoEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -57,11 +56,11 @@ public class AchillobatorEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.Achillobator.move", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.Dodo.move", 999));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.Achillobator.idle", 999));
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.Dodo.idle", 999));
         return PlayState.CONTINUE;
     }
 
@@ -95,7 +94,5 @@ public class AchillobatorEntity extends Animal implements IAnimatable {
     protected float getSoundVolume() {
         return 0.2F;
     }
-
-    public float Hunger = 200;
 
 }
