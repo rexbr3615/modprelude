@@ -21,6 +21,8 @@ public class ModItems {
     //foods
     public static final RegistryObject<Item> DODO_RAW = ITEMS.register("raw_dodo",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.DODO_RAW)));
+    public static final RegistryObject<Item> COOCKED_DODO = ITEMS.register("coocked_dodo",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.COOCKED_DODO)));
 
     //eggs
 
@@ -60,6 +62,10 @@ public class ModItems {
     public static final RegistryObject<Item> FOSSIL_HOE = ITEMS.register("fossil_hoe",
             () -> new HoeItem(ModTiers.FOSSIL, 0, 0f,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
+
+    //plants
+    public static final RegistryObject<Item> plant1 = ITEMS.register("plant1",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {

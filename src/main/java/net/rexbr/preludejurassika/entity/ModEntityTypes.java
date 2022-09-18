@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.custom.AchillobatorEntity;
 import net.rexbr.preludejurassika.entity.custom.DodoEntity;
+import net.rexbr.preludejurassika.entity.custom.TRexEntity;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {
@@ -24,8 +25,14 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<DodoEntity>> DODO =
             ENTITY_TYPES.register("dodo",
                     () -> EntityType.Builder.of(DodoEntity::new, MobCategory.CREATURE)
-                            .sized(0.6f, 0.8f)
+                            .sized(0.52f, 0.94f)
                             .build(new ResourceLocation(prelude.MODID, "dodo").toString()));
+
+    public static final RegistryObject<EntityType<TRexEntity>> TREX =
+            ENTITY_TYPES.register("trex",
+                    () -> EntityType.Builder.of(TRexEntity::new, MobCategory.CREATURE)
+                            .sized(3f, 4.5f)
+                            .build(new ResourceLocation(prelude.MODID, "trex").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

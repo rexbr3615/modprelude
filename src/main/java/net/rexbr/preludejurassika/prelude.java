@@ -13,6 +13,7 @@ import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.client.AchillobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.DodoRenderer;
+import net.rexbr.preludejurassika.entity.client.trex.TRexRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -46,6 +47,7 @@ public class prelude {
     private void clientSetup(final FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntityTypes.ACHILLOBATOR.get(), AchillobatorRenderer::new);
         EntityRenderers.register(ModEntityTypes.DODO.get(), DodoRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TREX.get(), TRexRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

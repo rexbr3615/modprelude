@@ -1,12 +1,14 @@
 package net.rexbr.preludejurassika.entity.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.commands.data.EntityDataAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -15,6 +17,9 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.player.AttackEntityEvent;
+import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -24,19 +29,21 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class DodoEntity extends Animal implements IAnimatable {
+import java.util.EnumSet;
+
+public class TRexEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public DodoEntity(EntityType<? extends Animal> entityType, Level level) {
+    public TRexEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
+                .add(Attributes.MAX_HEALTH, 78.0D)
                 .add(Attributes.ATTACK_DAMAGE, 5.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.23f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
 
     protected void registerGoals() {
@@ -56,12 +63,14 @@ public class DodoEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.Dodo.move", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.TRex.move", 999));
             return PlayState.CONTINUE;
+
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.Dodo.idle", 999));
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.TRex.idle", 999));
         return PlayState.CONTINUE;
+
     }
 
     @Override
