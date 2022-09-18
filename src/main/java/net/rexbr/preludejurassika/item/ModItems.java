@@ -1,10 +1,12 @@
 package net.rexbr.preludejurassika.item;
 
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModItems {
@@ -23,6 +25,9 @@ public class ModItems {
     //eggs
 
     //spawn eggs
+    public static final RegistryObject<Item> ACHILLOBATOR_SPAWN_EGG = ITEMS.register("achillobator_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ACHILLOBATOR,0x948e8d, 0x3b3635,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //dna
     public static final RegistryObject<Item> DODO_DNA = ITEMS.register("dodo_dna",
