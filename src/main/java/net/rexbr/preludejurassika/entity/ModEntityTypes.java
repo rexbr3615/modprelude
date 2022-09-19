@@ -30,7 +30,7 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<TRexEntity>> TREX =
             ENTITY_TYPES.register("trex",
-                    () -> EntityType.Builder.of(TRexEntity::new, MobCategory.CREATURE)
+                    () -> EntityType.Builder.of(TRexEntity::new, MobCategory.MONSTER)
                             .sized(3f, 4.5f)
                             .build(new ResourceLocation(prelude.MODID, "trex").toString()));
 

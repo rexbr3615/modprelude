@@ -1,8 +1,11 @@
 package net.rexbr.preludejurassika;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +18,7 @@ import net.rexbr.preludejurassika.entity.client.AchillobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.DodoRenderer;
 import net.rexbr.preludejurassika.entity.client.trex.TRexRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
+import net.rexbr.preludejurassika.sound.ModSounds;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -34,6 +38,7 @@ public class prelude {
         ModBlocks.register(eventBus);
 
         ModEntityTypes.register(eventBus);
+        ModSounds.register(eventBus);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
@@ -45,14 +50,18 @@ public class prelude {
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PLANT1.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PLANT1.get(), RenderType.cutout());
+
         EntityRenderers.register(ModEntityTypes.ACHILLOBATOR.get(), AchillobatorRenderer::new);
         EntityRenderers.register(ModEntityTypes.DODO.get(), DodoRenderer::new);
         EntityRenderers.register(ModEntityTypes.TREX.get(), TRexRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PLANT1.getId(), ModBlocks.POTTED_PLANT1);
+        });
     }
 }

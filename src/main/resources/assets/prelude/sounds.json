@@ -1,0 +1,8 @@
+{
+  "rex_damage_sound": {
+    "subtitle": "sounds.prelude.rex_damage_sound",
+    "sounds": [
+      "prelude:trex_hurt"
+    ]
+  }
+}
