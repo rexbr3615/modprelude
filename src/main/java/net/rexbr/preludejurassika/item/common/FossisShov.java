@@ -1,17 +1,12 @@
 package net.rexbr.preludejurassika.item.common;
 
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.Blocks;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 
-public class FossisPick extends PickaxeItem {
-    public FossisPick() {
+public class FossisShov extends ShovelItem {
+    public FossisShov() {
         super(new Tier() {
             public int getUses() {
                 return 800;

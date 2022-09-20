@@ -16,6 +16,7 @@ import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.client.AchillobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.DodoRenderer;
+import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 import net.rexbr.preludejurassika.entity.client.trex.TRexRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.sound.ModSounds;
@@ -57,6 +58,9 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.ACHILLOBATOR.get(), AchillobatorRenderer::new);
         EntityRenderers.register(ModEntityTypes.DODO.get(), DodoRenderer::new);
         EntityRenderers.register(ModEntityTypes.TREX.get(), TRexRenderer::new);
+        EntityRenderers.register(ModEntityTypes.JURAVENATOR.get(), JuravenatorRenderer::new);
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

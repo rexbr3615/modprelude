@@ -4,7 +4,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -12,6 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.rexbr.preludejurassika.block.common.AnalyzerBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
@@ -38,10 +38,12 @@ public class ModBlocks {
             () -> new FlowerPotBlock(null, ModBlocks.PLANT1,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
 
-
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }
+    public static final RegistryObject<Block> ANALYZER = registerBlock("analyzer",
+            () -> new AnalyzerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

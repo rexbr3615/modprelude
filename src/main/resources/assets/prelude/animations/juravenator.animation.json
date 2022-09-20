@@ -54,7 +54,35 @@
 			"loop": true
 		},
 		"animation.juravenator.move": {
-			"loop": true
+			"animation_length": 1,
+			"bones": {
+				"leg1": {
+					"rotation": {
+						"0.0": {
+							"vector": [-35, 0, 0]
+						},
+						"0.5": {
+							"vector": [35, 0, 0]
+						},
+						"1.0": {
+							"vector": [-35, 0, 0]
+						}
+					}
+				},
+				"leg4": {
+					"rotation": {
+						"0.0": {
+							"vector": [35, 0, 0]
+						},
+						"0.5": {
+							"vector": [-35, 0, 0]
+						},
+						"1.0": {
+							"vector": [35, 0, 0]
+						}
+					}
+				}
+			}
 		},
 		"animation.juravenator.attack": {
 			"loop": true

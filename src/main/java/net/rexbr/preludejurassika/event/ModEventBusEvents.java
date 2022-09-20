@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.custom.AchillobatorEntity;
 import net.rexbr.preludejurassika.entity.custom.DodoEntity;
+import net.rexbr.preludejurassika.entity.custom.JuravenatorEntity;
 import net.rexbr.preludejurassika.entity.custom.TRexEntity;
 import net.rexbr.preludejurassika.prelude;
 
@@ -16,6 +17,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.ACHILLOBATOR.get(), AchillobatorEntity.setAttributes());
         event.put(ModEntityTypes.DODO.get(), DodoEntity.setAttributes());
         event.put(ModEntityTypes.TREX.get(), TRexEntity.setAttributes());
+        event.put(ModEntityTypes.JURAVENATOR.get(), JuravenatorEntity.setAttributes());
     }
 
 }

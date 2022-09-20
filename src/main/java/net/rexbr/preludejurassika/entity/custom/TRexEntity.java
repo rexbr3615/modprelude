@@ -56,7 +56,7 @@ public class TRexEntity extends Animal implements IAnimatable {
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 78.0D)
-                .add(Attributes.ATTACK_DAMAGE, 5.0f)
+                .add(Attributes.ATTACK_DAMAGE, 15.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
@@ -64,18 +64,18 @@ public class TRexEntity extends Animal implements IAnimatable {
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new RemoveBlockGoal(Blocks.COBBLESTONE, this, 1, (int) 3));
-        this.goalSelector.addGoal(3, new PanicGoal(this, 1.25D));
-        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(7, (new HurtByTargetGoal(this)).setAlertOthers());
-        this.goalSelector.addGoal(8, new MeleeAttackGoal(this, 1.2, false) {
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
+        this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 1.2, false) {
             @Override
             protected double getAttackReachSqr(LivingEntity entity) {
                 return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+
             }
         });
-        this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, Player.class, false, false));
+        this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Player.class, false, false));
 
     }
 
