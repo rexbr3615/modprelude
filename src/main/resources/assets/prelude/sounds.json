@@ -4,5 +4,11 @@
     "sounds": [
       "prelude:trex_hurt"
     ]
+  },
+  "rex_living_sound": {
+    "subtitle": "sounds.prelude.rex_living_sound",
+    "sounds": [
+      "prelude:trex_living1"
+    ]
   }
 }

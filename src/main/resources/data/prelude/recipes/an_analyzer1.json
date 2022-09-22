@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:dodo_disc"
+  }
+}

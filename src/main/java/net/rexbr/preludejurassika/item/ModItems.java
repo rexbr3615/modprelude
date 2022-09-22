@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
+import net.rexbr.preludejurassika.item.common.FossisHoe;
 import net.rexbr.preludejurassika.item.common.FossisPick;
 import net.rexbr.preludejurassika.item.common.FossisShov;
 import net.rexbr.preludejurassika.prelude;
@@ -16,10 +17,19 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, prelude.MODID);
 
     // items
-    public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> DISC_DRIVE = ITEMS.register("diskdrive",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> NUCLEOTIDES = ITEMS.register("nucleotides",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> DNA_NUCLEOTIDES = ITEMS.register("dna_nucleotides",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    //dinossaurs
+    public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> ACHILLO_FOSSIL = ITEMS.register("achillo_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     //foods
     public static final RegistryObject<Item> DODO_RAW = ITEMS.register("raw_dodo",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.DODO_RAW)));
@@ -28,9 +38,11 @@ public class ModItems {
 
     //eggs
 
-    //syringues
+    //syringues and tube
     public static final RegistryObject<Item> SYRINGUE = ITEMS.register("syringue",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> TUBE = ITEMS.register("tube",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //spawn eggs
     public static final RegistryObject<Item> ACHILLOBATOR_SPAWN_EGG = ITEMS.register("achillobator_spawn_egg",
@@ -50,6 +62,12 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> DODO_SYRINGUE = ITEMS.register("dodo_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ACHILLO_DNA = ITEMS.register("achillo_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ACHILLO_DISC = ITEMS.register("achillo_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ACHILLO_SYRINGUE = ITEMS.register("achillo_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     //weapons
     public static final RegistryObject<Item> FOSSIL_SWORD = ITEMS.register("fossil_sword",
@@ -58,12 +76,10 @@ public class ModItems {
     public static final RegistryObject<Item> FOSSIL_AXE = ITEMS.register("fossil_axe",
             () -> new AxeItem(ModTiers.FOSSIL, 4, 0f,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
-    public static final RegistryObject<Item> FOSSIL_HOE = ITEMS.register("fossil_hoe",
-            () -> new HoeItem(ModTiers.FOSSIL, 0, 0f,
-                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
 
     public static final RegistryObject<Item> FOSSIS_PICKX = ITEMS.register("fossil_pickaxe", () -> new FossisPick());
     public static final RegistryObject<Item> FOSSIS_SHOV = ITEMS.register("fossil_shovel", () -> new FossisShov());
+    public static final RegistryObject<Item> FOSSIS_HOE = ITEMS.register("fossil_hoe", () -> new FossisHoe());
 
     //guns
 

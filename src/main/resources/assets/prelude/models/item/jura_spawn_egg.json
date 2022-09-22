@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "prelude:item/dodo_egg",
-    "layer1": "prelude:item/overlay/achillobator"
+    "layer1": "prelude:item/overlay/juravenator"
   }
 }

@@ -7,10 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.rexbr.preludejurassika.entity.custom.AchillobatorEntity;
-import net.rexbr.preludejurassika.entity.custom.DodoEntity;
-import net.rexbr.preludejurassika.entity.custom.JuravenatorEntity;
-import net.rexbr.preludejurassika.entity.custom.TRexEntity;
+import net.rexbr.preludejurassika.entity.custom.*;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {
@@ -39,7 +36,13 @@ public class ModEntityTypes {
             ENTITY_TYPES.register("jura",
                     () -> EntityType.Builder.of(JuravenatorEntity::new, MobCategory.MONSTER)
                             .sized(0.34f, 0.5f)
-                            .build(new ResourceLocation(prelude.MODID, "trex").toString()));
+                            .build(new ResourceLocation(prelude.MODID, "jura").toString()));
+
+    public static final RegistryObject<EntityType<GiganothossaurusEntity>> GIGANOTOSAURUS =
+            ENTITY_TYPES.register("giganotosaurus",
+                    () -> EntityType.Builder.of(GiganothossaurusEntity::new, MobCategory.MONSTER)
+                            .sized(4f, 8f)
+                            .build(new ResourceLocation(prelude.MODID, "giganotosaurus").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

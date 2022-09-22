@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "minecraft:potion"
+  },
+  "result": "prelude:nucleotides",
+  "experience": 0.15,
+  "cookingtime": 200
+}

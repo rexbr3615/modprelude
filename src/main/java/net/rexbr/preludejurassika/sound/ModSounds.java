@@ -13,6 +13,7 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, prelude.MODID);
 
     public static RegistryObject<SoundEvent> REX_DAMAGE_SOUND = registerSoundEvent("rex_damage_sound");
+    public static RegistryObject<SoundEvent> REX_LIVING_SOUND = registerSoundEvent("rex_living_sound");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(prelude.MODID, name)));

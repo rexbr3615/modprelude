@@ -34,6 +34,7 @@ import net.minecraftforge.event.ForgeEventFactory;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.custom.base.Variants;
 import net.rexbr.preludejurassika.item.ModItems;
+import net.rexbr.preludejurassika.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -63,19 +64,18 @@ public class TRexEntity extends Animal implements IAnimatable {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new RemoveBlockGoal(Blocks.COBBLESTONE, this, 1, (int) 3));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
-        this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 1.2, false) {
+        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.targetSelector.addGoal(3, (new HurtByTargetGoal(this)).setAlertOthers());
+        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
             @Override
             protected double getAttackReachSqr(LivingEntity entity) {
                 return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 
             }
         });
-        this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Player.class, false, false));
+        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 
     }
 
@@ -115,11 +115,11 @@ public class TRexEntity extends Animal implements IAnimatable {
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CAT_STRAY_AMBIENT;
+        return ModSounds.REX_LIVING_SOUND.get();
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.DOLPHIN_HURT;
+        return ModSounds.REX_DAMAGE_SOUND.get();
     }
 
     protected SoundEvent getDeathSound() {

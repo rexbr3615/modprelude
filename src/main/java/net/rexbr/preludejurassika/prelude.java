@@ -1,6 +1,7 @@
 package net.rexbr.preludejurassika;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -13,12 +14,17 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rexbr.preludejurassika.block.ModBlocks;
+import net.rexbr.preludejurassika.block.TileEntity.ModBlockEntities;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.client.AchillobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.DodoRenderer;
+import net.rexbr.preludejurassika.entity.client.giga.GigaRenderer;
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 import net.rexbr.preludejurassika.entity.client.trex.TRexRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
+import net.rexbr.preludejurassika.recipes.ModRecipes;
+import net.rexbr.preludejurassika.screen.ModMenuTypes;
+import net.rexbr.preludejurassika.screen.slots.AnalyzerScreen;
 import net.rexbr.preludejurassika.sound.ModSounds;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -41,6 +47,11 @@ public class prelude {
         ModEntityTypes.register(eventBus);
         ModSounds.register(eventBus);
 
+        ModRecipes.register(eventBus);
+
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
@@ -59,8 +70,11 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.DODO.get(), DodoRenderer::new);
         EntityRenderers.register(ModEntityTypes.TREX.get(), TRexRenderer::new);
         EntityRenderers.register(ModEntityTypes.JURAVENATOR.get(), JuravenatorRenderer::new);
+        EntityRenderers.register(ModEntityTypes.GIGANOTOSAURUS.get(), GigaRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
+
+        MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
