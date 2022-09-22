@@ -13,6 +13,8 @@ public class ModRecipes {
 
     public static final RegistryObject<RecipeSerializer<AnalyzerRecipe>> ANALYZER_SERIALIZER =
             SERIALIZERS.register("analyze", () -> AnalyzerRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<CultureRecipe>> CULTURE_SERIALIZER =
+            SERIALIZERS.register("culture", () -> CultureRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

@@ -19,12 +19,16 @@ public class ModItems {
     // items
     public static final RegistryObject<Item> DISC_DRIVE = ITEMS.register("diskdrive",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> NUCLEOTIDES = ITEMS.register("nucleotides",
+    public static final RegistryObject<Item> NUCLEOTIDES = ITEMS.register("unsaturated_nucleotides",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> DNA_NUCLEOTIDES = ITEMS.register("dna_nucleotides",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> NUTRIENTS = ITEMS.register("nutrients",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> SALT_DUST = ITEMS.register("salty_dust",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
-    //dinossaurs
+    //dinossaurs fossils
     public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> ACHILLO_FOSSIL = ITEMS.register("achillo_fossil",

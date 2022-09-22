@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:syringue"
+    },
+    {
+      "item": "prelude:dodo_dna"
+    }
+  ],
+  "result": {
+    "item": "prelude:dodo_syringue",
+    "count": 1
+  }
+}

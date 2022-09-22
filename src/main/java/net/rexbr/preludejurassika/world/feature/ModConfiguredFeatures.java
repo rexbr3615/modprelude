@@ -16,5 +16,5 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEP_FOSSIL_ORE.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> FOSSIL_ORE = FeatureUtils.register("fossil_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, 20));
+            Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, 25)); //20
 }

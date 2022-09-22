@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "minecraft:potion"
+    "tag": "prelude:unsaturated_nucleotides"
   },
-  "result": "prelude:nucleotides",
+  "result": "prelude:dna_nucleotides",
   "experience": 0.15,
   "cookingtime": 200
 }

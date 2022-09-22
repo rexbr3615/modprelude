@@ -25,7 +25,9 @@ import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerScreen;
+import net.rexbr.preludejurassika.screen.slots.CultureScreen;
 import net.rexbr.preludejurassika.sound.ModSounds;
+import net.rexbr.preludejurassika.villager.ModVillagers;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -48,6 +50,7 @@ public class prelude {
         ModSounds.register(eventBus);
 
         ModRecipes.register(eventBus);
+        ModVillagers.register(eventBus);
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
@@ -75,11 +78,14 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
 
         MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
+        MenuScreens.register(ModMenuTypes.CULTURE_MENU.get(), CultureScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PLANT1.getId(), ModBlocks.POTTED_PLANT1);
+
+            ModVillagers.registerPOIs();
         });
     }
 }

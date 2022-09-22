@@ -10,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerMenu;
+import net.rexbr.preludejurassika.screen.slots.CultureMenu;
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
@@ -17,7 +18,8 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<AnalyzerMenu>> ANALYZER_MENU =
             registerMenuType(AnalyzerMenu::new, "analyzer_menu");
-
+    public static final RegistryObject<MenuType<CultureMenu>> CULTURE_MENU =
+            registerMenuType(CultureMenu::new, "culture_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

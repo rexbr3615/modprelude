@@ -16,6 +16,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("analyzer_block_entity", () ->
                     BlockEntityType.Builder.of(AnalyzerEntity::new,
                             ModBlocks.ANALYZER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<CultureEntity>> CULTURE_ENTITY =
+            BLOCK_ENTITIES.register("culture_block_entity", () ->
+                    BlockEntityType.Builder.of(CultureEntity::new,
+                            ModBlocks.CULTURE_VAT.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

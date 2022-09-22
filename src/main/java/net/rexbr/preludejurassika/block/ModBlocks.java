@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.common.AnalyzerBlock;
+import net.rexbr.preludejurassika.block.common.CultureBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
@@ -44,6 +45,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> ANALYZER = registerBlock("analyzer",
             () -> new AnalyzerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> CULTURE_VAT = registerBlock("culture_vat",
+            () -> new CultureBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    //==================================================================================
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

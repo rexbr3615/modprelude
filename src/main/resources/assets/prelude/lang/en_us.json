@@ -1,6 +1,14 @@
 {
   "language.name": "English",
-  "item.prelude.fossil": "fossil",
-  "block.prelude.fossil_ore": "fossil_ore",
-  "itemGroup.fossil_mod_items": "prelude items"
+  "item.prelude.fossil": "dodo fossil",
+  "item.prelude.achillo_fossil": "achillobator fossil",
+  "block.prelude.fossil_ore": "fossil ore",
+  "itemGroup.fossil_mod_items": "prelude items",
+  "item.prelude.diskdrive": "disc drive",
+  "item.prelude.unsaturated_nucleotides": "unsaturated nucleotides",
+  "item.prelude.dna_nucleotides": "dna nucleotides",
+  "item.prelude.tube": "test tube",
+  "item.prelude.syringue": "syringue",
+  "block.prelude.deep_fossil_ore": "deep fossil ore",
+  "item.prelude.nutrients": "nutrients"
 }
