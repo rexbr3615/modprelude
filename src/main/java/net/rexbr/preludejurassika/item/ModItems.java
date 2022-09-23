@@ -58,6 +58,12 @@ public class ModItems {
     public static final RegistryObject<Item> JURA_SPAWN_EGG = ITEMS.register("jura_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.JURAVENATOR,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> REX_SPAWN_EGG = ITEMS.register("trex_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.TREX,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> GIGA_SPAWN_EGG = ITEMS.register("giga_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.GIGANOTOSAURUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //dna
     public static final RegistryObject<Item> DODO_DNA = ITEMS.register("dodo_dna",

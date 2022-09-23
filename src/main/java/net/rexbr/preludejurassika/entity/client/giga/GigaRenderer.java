@@ -27,7 +27,11 @@ public class GigaRenderer extends GeoEntityRenderer<GiganothossaurusEntity>  {
     public RenderType getRenderType(GiganothossaurusEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(3.5F, 3.5F, 3.5F);
+        if(animatable.isBaby()) {
+            stack.scale(0.7F, 0.7F, 0.7F);
+        } else {
+            stack.scale(3F, 3F, 3F);
+        }
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }

@@ -22,19 +22,19 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<DodoEntity>> DODO =
             ENTITY_TYPES.register("dodo",
-                    () -> EntityType.Builder.of(DodoEntity::new, MobCategory.CREATURE)
+                    () -> EntityType.Builder.of(DodoEntity::new, MobCategory.MONSTER)
                             .sized(0.52f, 0.94f)
                             .build(new ResourceLocation(prelude.MODID, "dodo").toString()));
 
     public static final RegistryObject<EntityType<TRexEntity>> TREX =
             ENTITY_TYPES.register("trex",
                     () -> EntityType.Builder.of(TRexEntity::new, MobCategory.MONSTER)
-                            .sized(3f, 4.5f)
+                            .sized(2.6f, 4.5f)
                             .build(new ResourceLocation(prelude.MODID, "trex").toString()));
 
     public static final RegistryObject<EntityType<JuravenatorEntity>> JURAVENATOR =
             ENTITY_TYPES.register("jura",
-                    () -> EntityType.Builder.of(JuravenatorEntity::new, MobCategory.MONSTER)
+                    () -> EntityType.Builder.of(JuravenatorEntity::new, MobCategory.CREATURE)
                             .sized(0.34f, 0.5f)
                             .build(new ResourceLocation(prelude.MODID, "jura").toString()));
 
