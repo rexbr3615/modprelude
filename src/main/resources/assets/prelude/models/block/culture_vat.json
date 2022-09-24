@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "culturevat",
+	"parent": "culture_vat",
 	"texture_size": [64, 128],
 	"textures": {
-		"1": "fossil:blocks/cultureVat/culturevat"
+		"1": "fossil:block/culturevat_green"
 	},
 	"elements": [
 		{
