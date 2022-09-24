@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:brusher"
+    },
+    {
+      "item": "minecraft:fossil"
+    }
+  ],
+  "result": {
+    "item": "prelude:cleaned_dodo_fossil",
+    "count": 3
+  }
+}

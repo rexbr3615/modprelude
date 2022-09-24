@@ -2,7 +2,7 @@
   "type": "prelude:analyze",
   "ingredients": [
     {
-      "item": "prelude:achillo_fossil"
+      "item": "prelude:cleaned_achillo_fossil"
     }
   ],
   "output": {

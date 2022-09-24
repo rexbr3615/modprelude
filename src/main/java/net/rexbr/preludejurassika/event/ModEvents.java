@@ -64,5 +64,23 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 6),
                     stack, 10, 4, 0.02F));
         }
+        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.PETRI.get(), 1);
+            int villagerLevel = 2;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 6),
+                    stack, 10, 4, 0.02F));
+        }
+        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.SALT_DUST.get(), 8);
+            int villagerLevel = 3;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 8),
+                    stack, 10, 4, 0.02F));
+        }
     }
 }
