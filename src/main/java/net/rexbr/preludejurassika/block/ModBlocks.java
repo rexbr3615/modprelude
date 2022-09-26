@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.common.AnalyzerBlock;
+import net.rexbr.preludejurassika.block.common.CleanerBlock;
 import net.rexbr.preludejurassika.block.common.CultureBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
@@ -47,6 +48,9 @@ public class ModBlocks {
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
     public static final RegistryObject<Block> CULTURE_VAT = registerBlock("culture_vat",
             () -> new CultureBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> CLEANER = registerBlock("cleaner",
+            () -> new CleanerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     //==================================================================================

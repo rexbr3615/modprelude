@@ -25,6 +25,7 @@ import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerScreen;
+import net.rexbr.preludejurassika.screen.slots.CleanerScreen;
 import net.rexbr.preludejurassika.screen.slots.CultureScreen;
 import net.rexbr.preludejurassika.sound.ModSounds;
 import net.rexbr.preludejurassika.villager.ModVillagers;
@@ -76,9 +77,11 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.GIGANOTOSAURUS.get(), GigaRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());
 
         MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
         MenuScreens.register(ModMenuTypes.CULTURE_MENU.get(), CultureScreen::new);
+        MenuScreens.register(ModMenuTypes.CLEANER_MENU.get(), CleanerScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

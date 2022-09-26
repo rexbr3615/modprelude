@@ -20,6 +20,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("culture_block_entity", () ->
                     BlockEntityType.Builder.of(CultureEntity::new,
                             ModBlocks.CULTURE_VAT.get()).build(null));
+    public static final RegistryObject<BlockEntityType<CleanerEntity>> CLEANER_ENTITY =
+            BLOCK_ENTITIES.register("cleaner_entity", () ->
+                    BlockEntityType.Builder.of(CleanerEntity::new,
+                            ModBlocks.CLEANER.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

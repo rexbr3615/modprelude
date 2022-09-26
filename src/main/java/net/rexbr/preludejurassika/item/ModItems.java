@@ -30,7 +30,7 @@ public class ModItems {
     public static final RegistryObject<Item> PETRI = ITEMS.register("petri",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> PAINT_BRUSH = ITEMS.register("brusher",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(32)));
 
     //dinossaurs fossils
     public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",

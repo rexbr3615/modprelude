@@ -9,11 +9,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.rexbr.preludejurassika.prelude;
 
-public class CultureScreen extends AbstractContainerScreen<CultureMenu> {
+public class CleanerScreen extends AbstractContainerScreen<CleanerMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(prelude.MODID, "textures/gui/culture_gui.png");
+            new ResourceLocation(prelude.MODID, "textures/gui/cleaner.png");
 
-    public CultureScreen(CultureMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public CleanerScreen(CleanerMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
     }
 

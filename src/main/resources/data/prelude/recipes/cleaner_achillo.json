@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:achillo_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_achillo_fossil"
+  }
+}

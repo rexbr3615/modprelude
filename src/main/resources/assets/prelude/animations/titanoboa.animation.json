@@ -1,0 +1,85 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.idle": {
+			"animation_length": 2,
+			"bones": {
+				"spine1": {
+					"rotation": {
+						"vector": [0, -17.5, 0]
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"0.0": {
+							"vector": [7.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.0": {
+							"vector": [7.5, 0, 0]
+						}
+					}
+				},
+				"spine2": {
+					"rotation": {
+						"vector": [0, 47.5, 0]
+					}
+				},
+				"spine3": {
+					"rotation": {
+						"vector": [0, -60, 0]
+					}
+				},
+				"spine4": {
+					"rotation": {
+						"vector": [0, 55, 0]
+					}
+				},
+				"spine5": {
+					"rotation": {
+						"vector": [0, -65, 0]
+					}
+				},
+				"spine6": {
+					"rotation": {
+						"vector": [0, 67.5, 0]
+					}
+				},
+				"spine7": {
+					"rotation": {
+						"vector": [0, -55, 0]
+					}
+				},
+				"tongue": {
+					"rotation": {
+						"0.0": {
+							"vector": [-2.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.0": {
+							"vector": [-2.5, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, -4]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, -4]
+						}
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

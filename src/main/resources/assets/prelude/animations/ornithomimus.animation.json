@@ -164,6 +164,16 @@
 					}
 				}
 			}
+		},
+		"animation.Ornithomimus.walk": {
+			"loop": true,
+			"bones": {
+				"thigh1": {
+					"rotation": {
+						"vector": [-50, 0, 0]
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2
