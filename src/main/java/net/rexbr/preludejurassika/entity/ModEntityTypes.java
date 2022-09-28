@@ -44,6 +44,12 @@ public class ModEntityTypes {
                             .sized(4f, 8f)
                             .build(new ResourceLocation(prelude.MODID, "giganotosaurus").toString()));
 
+    public static final RegistryObject<EntityType<PostosuchusEntity>> POSTOSUCHUS =
+            ENTITY_TYPES.register("postosuchus",
+                    () -> EntityType.Builder.of(PostosuchusEntity::new, MobCategory.MONSTER)
+                            .sized(4f, 8f)
+                            .build(new ResourceLocation(prelude.MODID, "postosuchus").toString()));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
