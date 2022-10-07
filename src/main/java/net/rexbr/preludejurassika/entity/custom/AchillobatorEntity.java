@@ -40,8 +40,8 @@ public class AchillobatorEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
-                .add(Attributes.ATTACK_DAMAGE, 7.0f)
+                .add(Attributes.MAX_HEALTH, 28.0D)
+                .add(Attributes.ATTACK_DAMAGE, 6.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
@@ -52,13 +52,15 @@ public class AchillobatorEntity extends Animal implements IAnimatable {
         this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
+
         this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, true) {
             @Override
             protected double getAttackReachSqr(LivingEntity entity) {
                 return (double) (3.0 + entity.getBbWidth() * entity.getBbWidth());
             }
         });
+
+        this.targetSelector.addGoal(7, (new HurtByTargetGoal(this)).setAlertOthers());
 
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Rabbit.class, true));
         this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, DodoEntity.class, true));

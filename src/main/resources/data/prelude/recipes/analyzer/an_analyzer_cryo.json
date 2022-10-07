@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:cleaned_cryo_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cryo_disc"
+  }
+}

@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.Postosuchus.idle": {
+		"animation.postosuchus.idle": {
 			"animation_length": 2,
 			"bones": {
 				"body3": {
@@ -58,7 +58,7 @@
 				}
 			}
 		},
-		"animation.Postosuchus.walk": {
+		"animation.postosuchus.walk": {
 			"animation_length": 1,
 			"bones": {
 				"forearm2": {
@@ -109,7 +109,7 @@
 				}
 			}
 		},
-		"animation.Postosuchus.attack": {
+		"animation.postosuchus.attack": {
 			"animation_length": 1,
 			"bones": {
 				"down_jaw": {

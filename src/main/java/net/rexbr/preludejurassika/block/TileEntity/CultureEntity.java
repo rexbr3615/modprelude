@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -31,6 +32,8 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 import java.util.Random;
 
+import static net.minecraft.world.entity.EntityType.ITEM;
+
 public class CultureEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
@@ -43,7 +46,7 @@ public class CultureEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 2000;
+    private int maxProgress = 2200;
 
     public CultureEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.CULTURE_ENTITY.get(), pWorldPosition, pBlockState);

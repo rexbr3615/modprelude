@@ -10,16 +10,16 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class GigaModel extends AnimatedGeoModel<GiganothossaurusEntity>  {
     @Override
     public ResourceLocation getModelLocation(GiganothossaurusEntity object) {
-        return new ResourceLocation(prelude.MODID, "geo/jwgiganotosaurus.geo.json");
+        return new ResourceLocation(prelude.MODID, "geo/giganotosaurus.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(GiganothossaurusEntity object) {
-        return new ResourceLocation(prelude.MODID, "textures/dinossaur/jwgiganotosaurus.png");
+        return new ResourceLocation(prelude.MODID, "textures/dinossaur/giganotosaurus_male.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(GiganothossaurusEntity animatable) {
-        return new ResourceLocation(prelude.MODID, "animations/jwgiganotosaurus.animation.json");
+        return new ResourceLocation(prelude.MODID, "animations/giganotosaurus.animation.json");
     }
 }

@@ -17,6 +17,8 @@ public class ModRecipes {
             SERIALIZERS.register("culture", () -> CultureRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<CleanerRecipe>> CLEANER_SERIALIZER =
             SERIALIZERS.register("cleaner", () -> CleanerRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<RessonatorRecipe>> RESSONATOR_SERIALIZER =
+            SERIALIZERS.register("ressonate", () -> RessonatorRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

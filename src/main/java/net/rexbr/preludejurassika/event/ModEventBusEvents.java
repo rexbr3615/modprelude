@@ -20,6 +20,8 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.TREX.get(), TRexEntity.setAttributes());
         event.put(ModEntityTypes.JURAVENATOR.get(), JuravenatorEntity.setAttributes());
         event.put(ModEntityTypes.GIGANOTOSAURUS.get(), GiganothossaurusEntity.setAttributes());
+        event.put(ModEntityTypes.CRYO.get(), CryoEntity.setAttributes());
+        event.put(ModEntityTypes.VELOGII.get(), Velociraptor2Entity.setAttributes());
     }
 
     @SubscribeEvent

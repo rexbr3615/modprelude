@@ -12,6 +12,7 @@ import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerMenu;
 import net.rexbr.preludejurassika.screen.slots.CleanerMenu;
 import net.rexbr.preludejurassika.screen.slots.CultureMenu;
+import net.rexbr.preludejurassika.screen.slots.RessonatorMenu;
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
@@ -23,6 +24,8 @@ public class ModMenuTypes {
             registerMenuType(CultureMenu::new, "culture_menu");
     public static final RegistryObject<MenuType<CleanerMenu>> CLEANER_MENU =
             registerMenuType(CleanerMenu::new, "cleaner_menu");
+    public static final RegistryObject<MenuType<RessonatorMenu>> RESSONATOR_MENU =
+            registerMenuType(RessonatorMenu::new, "ressonator_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

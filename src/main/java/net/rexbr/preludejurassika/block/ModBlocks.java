@@ -14,6 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.common.AnalyzerBlock;
 import net.rexbr.preludejurassika.block.common.CleanerBlock;
 import net.rexbr.preludejurassika.block.common.CultureBlock;
+import net.rexbr.preludejurassika.block.common.DnaressonatorBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
@@ -31,6 +32,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEP_FOSSIL_ORE = registerBlock("deep_fossil_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE)
                     .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> ZYGOPTERIS = registerBlock("zygopteris",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> PLANT1 = registerBlock("plant1",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
@@ -52,6 +57,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLEANER = registerBlock("cleaner",
             () -> new CleanerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> RESSONATOR = registerBlock("dna_ressonator",
+            () -> new DnaressonatorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
 
     //==================================================================================
 

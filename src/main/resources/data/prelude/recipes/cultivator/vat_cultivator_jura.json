@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:jura_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:jura_spawn_egg"
+  }
+}

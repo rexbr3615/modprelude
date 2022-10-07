@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tagtest"
+    }
+  ],
+  "result": {
+    "item": "minecraft:pointed_dripstone",
+    "count": 4
+  }
+}

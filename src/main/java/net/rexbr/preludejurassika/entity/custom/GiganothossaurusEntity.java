@@ -34,8 +34,8 @@ public class GiganothossaurusEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 120.0D)
-                .add(Attributes.ATTACK_DAMAGE, 20.0f)
+                .add(Attributes.MAX_HEALTH, 87.0D)
+                .add(Attributes.ATTACK_DAMAGE, 16.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.23f).build();
     }
@@ -57,11 +57,11 @@ public class GiganothossaurusEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.jwgiganotosaurus.move", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.giganotosaurus.move", 999));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.jwgiganotosaurus.default1", 999));
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.giganotosaurus.idle", 999));
         return PlayState.CONTINUE;
     }
 

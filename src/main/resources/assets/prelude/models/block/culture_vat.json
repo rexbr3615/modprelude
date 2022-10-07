@@ -3,7 +3,7 @@
 	"parent": "culture_vat",
 	"texture_size": [64, 128],
 	"textures": {
-		"1": "fossil:block/culturevat_green"
+		"0": "fossil:block/culturevat_green"
 	},
 	"elements": [
 		{

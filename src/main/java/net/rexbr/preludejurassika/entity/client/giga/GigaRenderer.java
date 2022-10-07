@@ -15,12 +15,12 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 public class GigaRenderer extends GeoEntityRenderer<GiganothossaurusEntity>  {
     public GigaRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new GigaModel());
-        this.shadowRadius = 0.3f;
+        this.shadowRadius = 5f;
     }
 
     @Override
     public ResourceLocation getTextureLocation(GiganothossaurusEntity instance) {
-        return new ResourceLocation(prelude.MODID, "textures/dinossaur/jwgiganotosaurus.png");
+        return new ResourceLocation(prelude.MODID, "textures/dinossaur/giganotosaurus_male.png");
     }
 
     @Override

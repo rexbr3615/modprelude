@@ -34,7 +34,7 @@ public class TRexRenderer extends GeoEntityRenderer<TRexEntity>{
 
     public TRexRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new TRexModel());
-        this.shadowRadius = 0.6f;
+        this.shadowRadius = 1.8f;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class TRexRenderer extends GeoEntityRenderer<TRexEntity>{
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
         if(animatable.isBaby()) {
-            stack.scale(0.7F, 0.7F, 0.7F);
+            stack.scale(0.5F, 0.5F, 0.5F);
         } else {
             stack.scale(3F, 3F, 3F);
         }

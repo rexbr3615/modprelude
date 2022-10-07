@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:jura_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:jura_dna"
+  }
+}

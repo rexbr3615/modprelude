@@ -22,13 +22,13 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<DodoEntity>> DODO =
             ENTITY_TYPES.register("dodo",
-                    () -> EntityType.Builder.of(DodoEntity::new, MobCategory.MONSTER)
+                    () -> EntityType.Builder.of(DodoEntity::new, MobCategory.CREATURE)
                             .sized(0.52f, 0.94f)
                             .build(new ResourceLocation(prelude.MODID, "dodo").toString()));
 
     public static final RegistryObject<EntityType<TRexEntity>> TREX =
             ENTITY_TYPES.register("trex",
-                    () -> EntityType.Builder.of(TRexEntity::new, MobCategory.MONSTER)
+                    () -> EntityType.Builder.of(TRexEntity::new, MobCategory.CREATURE)
                             .sized(2.6f, 4.5f)
                             .build(new ResourceLocation(prelude.MODID, "trex").toString()));
 
@@ -40,15 +40,21 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<GiganothossaurusEntity>> GIGANOTOSAURUS =
             ENTITY_TYPES.register("giganotosaurus",
-                    () -> EntityType.Builder.of(GiganothossaurusEntity::new, MobCategory.MONSTER)
+                    () -> EntityType.Builder.of(GiganothossaurusEntity::new, MobCategory.CREATURE)
                             .sized(4f, 8f)
                             .build(new ResourceLocation(prelude.MODID, "giganotosaurus").toString()));
 
-    public static final RegistryObject<EntityType<PostosuchusEntity>> POSTOSUCHUS =
-            ENTITY_TYPES.register("postosuchus",
-                    () -> EntityType.Builder.of(PostosuchusEntity::new, MobCategory.MONSTER)
-                            .sized(4f, 8f)
-                            .build(new ResourceLocation(prelude.MODID, "postosuchus").toString()));
+    public static final RegistryObject<EntityType<CryoEntity>> CRYO =
+            ENTITY_TYPES.register("cryo",
+                    () -> EntityType.Builder.of(CryoEntity::new, MobCategory.CREATURE)
+                            .sized(0.8f, 1.8f)
+                            .build(new ResourceLocation(prelude.MODID, "cryo").toString()));
+
+    public static final RegistryObject<EntityType<Velociraptor2Entity>> VELOGII =
+            ENTITY_TYPES.register("velociraptor2",
+                    () -> EntityType.Builder.of(Velociraptor2Entity::new, MobCategory.CREATURE)
+                            .sized(0.8f, 1.8f)
+                            .build(new ResourceLocation(prelude.MODID, "velociraptor2").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

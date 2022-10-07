@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:achillo_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:achillo_dna"
+  }
+}

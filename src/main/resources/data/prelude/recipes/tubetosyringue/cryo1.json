@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:syringue"
+    },
+    {
+      "item": "prelude:cryo_dna"
+    }
+  ],
+  "result": {
+    "item": "prelude:cryo_syringue",
+    "count": 1
+  }
+}

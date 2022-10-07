@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "prelude:salty_dust"
+    },
+    "1": {
+      "tag": "minecraft:small_flowers"
+    },
+    "2": {
+      "item": "prelude:salty_dust"
+    },
+    "3": {
+      "tag": "minecraft:small_flowers"
+    },
+    "4": {
+      "item": "minecraft:bowl"
+    },
+    "5": {
+      "tag": "minecraft:small_flowers"
+    },
+    "6": {
+      "item": "prelude:salty_dust"
+    },
+    "7": {
+      "tag": "minecraft:small_flowers"
+    },
+    "8": {
+      "item": "prelude:salty_dust"
+    }
+  },
+  "result": {
+    "item": "prelude:nutrients",
+    "count": 4
+  }
+}

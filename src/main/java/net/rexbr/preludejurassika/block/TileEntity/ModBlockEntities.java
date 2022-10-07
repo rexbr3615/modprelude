@@ -24,6 +24,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("cleaner_entity", () ->
                     BlockEntityType.Builder.of(CleanerEntity::new,
                             ModBlocks.CLEANER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<RessonatorEntity>> RESSONATOR_ENTITY =
+            BLOCK_ENTITIES.register("ressonator_entity", () ->
+                    BlockEntityType.Builder.of(RessonatorEntity::new,
+                            ModBlocks.RESSONATOR.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

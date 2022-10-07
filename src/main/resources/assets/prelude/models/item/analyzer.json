@@ -1,3 +1,6 @@
 {
-  "parent": "prelude:block/analyzer"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "prelude:item/analyzer"
+  }
 }
