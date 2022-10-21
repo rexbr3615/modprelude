@@ -10,20 +10,22 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.block.TileEntity.ModBlockEntities;
+import net.rexbr.preludejurassika.config.PreludeClientConfigs;
+import net.rexbr.preludejurassika.config.PreludeCommonConfig;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
-import net.rexbr.preludejurassika.entity.client.AchillobatorRenderer;
-import net.rexbr.preludejurassika.entity.client.DodoRenderer;
-import net.rexbr.preludejurassika.entity.client.VelociraptorG2Renderer;
-import net.rexbr.preludejurassika.entity.client.cryo.CryoRenderer;
-import net.rexbr.preludejurassika.entity.client.giga.GigaRenderer;
+
+import net.rexbr.preludejurassika.entity.client.*;
+
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
-import net.rexbr.preludejurassika.entity.client.trex.TRexRenderer;
+
 
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
@@ -71,6 +73,8 @@ public class prelude {
 
         GeckoLib.initialize();
 
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, PreludeClientConfigs.SPEC, "prelude-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, PreludeCommonConfig.SPEC, "prelude-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -82,13 +86,13 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PLANT1.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ZYGOPTERIS.get(), RenderType.cutout());
 
-        EntityRenderers.register(ModEntityTypes.ACHILLOBATOR.get(), AchillobatorRenderer::new);
-        EntityRenderers.register(ModEntityTypes.DODO.get(), DodoRenderer::new);
-        EntityRenderers.register(ModEntityTypes.TREX.get(), TRexRenderer::new);
         EntityRenderers.register(ModEntityTypes.JURAVENATOR.get(), JuravenatorRenderer::new);
-        EntityRenderers.register(ModEntityTypes.GIGANOTOSAURUS.get(), GigaRenderer::new);
-        EntityRenderers.register(ModEntityTypes.CRYO.get(), CryoRenderer::new);
-        EntityRenderers.register(ModEntityTypes.VELOGII.get(), VelociraptorG2Renderer::new);
+        EntityRenderers.register(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ALBERTOSAURUS.get(), AlbertosaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.AVACERATOPS.get(), AvaceratopsRenderer::new);
+        EntityRenderers.register(ModEntityTypes.PYRORAPTOR.get(), PyroraptorRenderer::new);
+        EntityRenderers.register(ModEntityTypes.AMAZONSAURUS.get(), AmazonsaurusRenderer::new);
+
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());

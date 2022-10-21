@@ -15,13 +15,13 @@ import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(ModEntityTypes.ACHILLOBATOR.get(), AchillobatorEntity.setAttributes());
-        event.put(ModEntityTypes.DODO.get(), DodoEntity.setAttributes());
-        event.put(ModEntityTypes.TREX.get(), TRexEntity.setAttributes());
         event.put(ModEntityTypes.JURAVENATOR.get(), JuravenatorEntity.setAttributes());
-        event.put(ModEntityTypes.GIGANOTOSAURUS.get(), GiganothossaurusEntity.setAttributes());
-        event.put(ModEntityTypes.CRYO.get(), CryoEntity.setAttributes());
-        event.put(ModEntityTypes.VELOGII.get(), Velociraptor2Entity.setAttributes());
+        event.put(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusEntity.setAttributes());
+        event.put(ModEntityTypes.ALBERTOSAURUS.get(), AlbertosaurusEntity.setAttributes());
+        event.put(ModEntityTypes.AVACERATOPS.get(), AvaceratopsEntity.setAttributes());
+        event.put(ModEntityTypes.PYRORAPTOR.get(), PyroraptorEntity.setAttributes());
+        event.put(ModEntityTypes.AMAZONSAURUS.get(), AmazonsaurusEntity.setAttributes());
+
     }
 
     @SubscribeEvent

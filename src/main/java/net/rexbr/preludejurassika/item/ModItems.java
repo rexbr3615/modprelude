@@ -8,9 +8,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
-import net.rexbr.preludejurassika.item.Cryo.CryoDisc;
-import net.rexbr.preludejurassika.item.Cryo.CryoDna;
-import net.rexbr.preludejurassika.item.Cryo.CryoSyr;
 import net.rexbr.preludejurassika.item.common.FossisHoe;
 import net.rexbr.preludejurassika.item.common.FossisPick;
 import net.rexbr.preludejurassika.item.common.FossisShov;
@@ -35,38 +32,36 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> PAINT_BRUSH = ITEMS.register("brusher",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(32)));
+    public static final RegistryObject<Item> EMPTY_EGG = ITEMS.register("empty_eggy",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(16)));
 
     //dinossaurs fossils
-    public static final RegistryObject<Item> FOSSIL = ITEMS.register("fossil",
+    public static final RegistryObject<Item> FOSSIL_GENERIC = ITEMS.register("fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> ACHILLO_FOSSIL = ITEMS.register("achillo_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> CLEANED_DODO_FOSSIL = ITEMS.register("cleaned_dodo_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> CLEANED_ACHILLO_FOSSIL = ITEMS.register("cleaned_achillo_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> FOSSIL_CRYO = ITEMS.register("cryo_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> CLEANED_CRYO_FOSSIL = ITEMS.register("cleaned_cryo_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> FOSSIL_PROTO = ITEMS.register("proto_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> CLEANED_PROTO_FOSSIL = ITEMS.register("cleaned_proto_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> FOSSIL_GALLI = ITEMS.register("galli_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> CLEANED_GALLI_FOSSIL = ITEMS.register("cleaned_galli_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     public static final RegistryObject<Item> FOSSIL_JURA = ITEMS.register("jura_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> CLEANED_JURA_FOSSIL = ITEMS.register("cleaned_jura_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> FOSSIL_ALBERTOSAURUS = ITEMS.register("albertosaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_ALBERTOSAURUS_FOSSIL = ITEMS.register("cleaned_albertosaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> FOSSIL_AVACERATOPS = ITEMS.register("avaceratops_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_AVACERATOPS_FOSSIL = ITEMS.register("cleaned_avaceratops_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_PYRORAPTOR = ITEMS.register("pyro_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_PYRORAPTOR_FOSSIL = ITEMS.register("cleaned_pyro_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //foods
     public static final RegistryObject<Item> DODO_RAW = ITEMS.register("raw_dodo",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.DODO_RAW)));
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).food(ModFoods.DODO_RAW)));
     public static final RegistryObject<Item> COOCKED_DODO = ITEMS.register("coocked_dodo",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.COOCKED_DODO)));
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).food(ModFoods.COOCKED_DODO)));
 
     //eggs
 
@@ -77,59 +72,27 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //spawn eggs
-    public static final RegistryObject<Item> ACHILLOBATOR_SPAWN_EGG = ITEMS.register("achillobator_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.ACHILLOBATOR,-1, -1,
-                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> DODO_SPAWN_EGG = ITEMS.register("dodo_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.DODO,-1, -1,
-                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> JURA_SPAWN_EGG = ITEMS.register("jura_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.JURAVENATOR,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> REX_SPAWN_EGG = ITEMS.register("trex_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.TREX,-1, -1,
+
+    public static final RegistryObject<Item> ALBERTOSAURUS_SPAWN_EGG = ITEMS.register("albertosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ALBERTOSAURUS,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> GIGA_SPAWN_EGG = ITEMS.register("giga_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.GIGANOTOSAURUS,-1, -1,
+
+    public static final RegistryObject<Item> AVACERATOPS_SPAWN_EGG = ITEMS.register("avaceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.AVACERATOPS,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> CRYO_SPAWN_EGG = ITEMS.register("cryo_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.CRYO,-1, -1,
+
+    public static final RegistryObject<Item> PYRORAPTOR_SPAWN_EGG = ITEMS.register("pyroraptor_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.PYRORAPTOR,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
-    public static final RegistryObject<Item> VELOGII_SPAWN_EGG = ITEMS.register("velociraptor2_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.VELOGII,-1, -1,
+
+    public static final RegistryObject<Item> AMAZONSAURUS_SPAWN_EGG = ITEMS.register("amazonsaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.AMAZONSAURUS,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //dna
-    public static final RegistryObject<Item> DODO_DNA = ITEMS.register("dodo_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-    public static final RegistryObject<Item> DODO_DISC = ITEMS.register("dodo_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
-    public static final RegistryObject<Item> DODO_SYRINGUE = ITEMS.register("dodo_syringue",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-    public static final RegistryObject<Item> ACHILLO_DNA = ITEMS.register("achillo_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-    public static final RegistryObject<Item> ACHILLO_DISC = ITEMS.register("achillo_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
-    public static final RegistryObject<Item> ACHILLO_SYRINGUE = ITEMS.register("achillo_syringue",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-
-    public static final RegistryObject<Item> CRYO_DNA = ITEMS.register("cryo_dna", () -> new CryoDna());
-    public static final RegistryObject<Item> CRYO_SYRINGUE = ITEMS.register("cryo_syringue", () -> new CryoSyr());
-    public static final RegistryObject<Item> CRYO_DISC = ITEMS.register("cryo_disc", () -> new CryoDisc());
-
-    public static final RegistryObject<Item> GALLI_DNA = ITEMS.register("galli_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-    public static final RegistryObject<Item> GALLI_DISC = ITEMS.register("galli_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
-    public static final RegistryObject<Item> GALLI_SYRINGUE = ITEMS.register("galli_syringue",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-
-    public static final RegistryObject<Item> PROTO_DNA = ITEMS.register("protoceratops_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
-    public static final RegistryObject<Item> PROTO_DISC = ITEMS.register("protoceratops_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
-    public static final RegistryObject<Item> PROTO_SYRINGUE = ITEMS.register("protoceratops_syringue",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> JURA_DNA = ITEMS.register("jura_dna",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
@@ -138,12 +101,33 @@ public class ModItems {
     public static final RegistryObject<Item> JURA_SYRINGUE = ITEMS.register("jura_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
+    public static final RegistryObject<Item> ALBERTOSAURUS_DNA = ITEMS.register("albertosaurus_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ALBERTOSAURUS_DISC = ITEMS.register("albertosaurus_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> ALBERTOSAURUS_SYRINGUE = ITEMS.register("albertosaurus_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> AVA_DNA = ITEMS.register("avaceratops_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> AVA_DISC = ITEMS.register("avaceratops_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> AVA_SYRINGUE = ITEMS.register("avaceratops_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> PYRO_DNA = ITEMS.register("pyro_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> PYRO_DISC = ITEMS.register("pyro_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> PYRO_SYRINGUE = ITEMS.register("pyro_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
     //weapons
     public static final RegistryObject<Item> FOSSIL_SWORD = ITEMS.register("fossil_sword",
-            () -> new SwordItem(ModTiers.FOSSIL, 2, 3f,
+            () -> new SwordItem(ModTiers.FOSSIL_GENERIC, 2, 3f,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
     public static final RegistryObject<Item> FOSSIL_AXE = ITEMS.register("fossil_axe",
-            () -> new AxeItem(ModTiers.FOSSIL, 4, 0f,
+            () -> new AxeItem(ModTiers.FOSSIL_GENERIC, 4, 0f,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
 
     public static final RegistryObject<Item> FOSSIS_PICKX = ITEMS.register("fossil_pickaxe", () -> new FossisPick());

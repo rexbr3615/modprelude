@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:albertosaurus_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_albertosaurus_fossil"
+  }
+}

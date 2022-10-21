@@ -47,6 +47,9 @@ public class JuravenatorEntity extends Animal implements IAnimatable {
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
+
+        this.goalSelector.addGoal(6, new AvoidEntityGoal<>(this, PyroraptorEntity.class, (float) 12, 1, 1.2));
+
     }
 
     @Nullable

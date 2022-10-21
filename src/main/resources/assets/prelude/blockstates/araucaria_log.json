@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "prelude:block/araucaria_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "prelude:block/araucaria_log"
+    },
+    "axis=z": {
+      "model": "prelude:block/araucaria_log_horizontal",
+      "x": 90
+    }
+  }
+}

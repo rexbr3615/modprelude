@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "prelude:fossil",
+          "name": "prelude:avaceratops_fossil",
           "weight": 20,
           "conditions": [
             {
@@ -54,55 +54,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "prelude:achillo_fossil",
-          "weight": 20,
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          ],
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 1
-              }
-            },
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 0,
-                "max": 3
-              }
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            },
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "prelude:cryo_fossil",
+          "name": "prelude:albertosaurus_fossil",
           "weight": 20,
           "conditions": [
             {

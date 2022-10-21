@@ -163,7 +163,7 @@ public class CultureEntity extends BlockEntity implements MenuProvider {
     }
 
     private static boolean hasToolsInToolSlot(CultureEntity entity) {
-        return entity.itemHandler.getStackInSlot(2).getItem() == ModItems.DNA_NUCLEOTIDES.get();
+        return entity.itemHandler.getStackInSlot(2).getItem() == ModItems.EMPTY_EGG.get();
     }
 
     private static void craftItem(CultureEntity entity) {

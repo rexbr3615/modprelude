@@ -7,6 +7,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.rexbr.preludejurassika.block.ModBlocks;
+import net.rexbr.preludejurassika.config.PreludeCommonConfig;
 
 import java.util.List;
 
@@ -16,5 +17,5 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEP_FOSSIL_ORE.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> FOSSIL_ORE = FeatureUtils.register("fossil_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, 25)); //20
+            Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, PreludeCommonConfig.FOSSIL_ORE_VEIN_SIZE.get())); //20
 }

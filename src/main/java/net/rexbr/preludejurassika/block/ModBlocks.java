@@ -1,20 +1,21 @@
 package net.rexbr.preludejurassika.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.rexbr.preludejurassika.block.common.AnalyzerBlock;
-import net.rexbr.preludejurassika.block.common.CleanerBlock;
-import net.rexbr.preludejurassika.block.common.CultureBlock;
-import net.rexbr.preludejurassika.block.common.DnaressonatorBlock;
+import net.rexbr.preludejurassika.block.common.*;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
@@ -35,7 +36,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ZYGOPTERIS = registerBlock("zygopteris",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
-                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), CreativeModeTab.TAB_SEARCH);
 
     public static final RegistryObject<Block> PLANT1 = registerBlock("plant1",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
@@ -60,6 +61,39 @@ public class ModBlocks {
     public static final RegistryObject<Block> RESSONATOR = registerBlock("dna_ressonator",
             () -> new DnaressonatorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+    // ======================================= araucaria ==========================
+
+    public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> ARAUCARIA_WOOD = registerBlock("araucaria_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> ARAUCARIA_DOOR = registerBlock("araucaria_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> ARAUCARIA_TRAPDOOR = registerBlock("araucaria_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
     //==================================================================================

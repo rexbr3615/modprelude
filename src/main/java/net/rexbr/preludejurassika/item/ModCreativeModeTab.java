@@ -7,7 +7,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab FOSSIL_MOD_ITEMS = new CreativeModeTab("fossil_mod_items") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.FOSSIL.get());
+            return new ItemStack(ModItems.FOSSIL_GENERIC.get());
         }
     };
 }

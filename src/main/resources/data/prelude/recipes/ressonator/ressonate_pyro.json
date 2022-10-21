@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:pyro_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:pyro_dna"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:cleaned_avaceratops_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:avaceratops_disc"
+  }
+}

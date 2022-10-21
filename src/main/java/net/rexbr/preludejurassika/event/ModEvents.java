@@ -21,22 +21,14 @@ public class ModEvents {
     public static void addCustomTrades(VillagerTradesEvent event) {
         if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.FOSSIL.get(), 2);
+            ItemStack stack = new ItemStack(ModItems.FOSSIL_GENERIC.get(), 2);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 4),
                     stack,10,2,0.02F)); //qnt trocas //pxp //preço mulktiplyer
         }
-        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.ACHILLO_FOSSIL.get(), 2);
-            int villagerLevel = 1;
 
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5),
-                    stack,10,2,0.02F));
-        }
         if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModItems.DISC_DRIVE.get(), 3);

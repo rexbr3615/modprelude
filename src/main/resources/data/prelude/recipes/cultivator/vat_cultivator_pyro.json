@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:pyro_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:pyroraptor_spawn_egg"
+  }
+}

@@ -18,7 +18,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.18.2-0.1.2.release'
+version = '1.18.2-0.2.1.beta'
 group = 'net.rexbr.preludejurassika' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'prelude'
 
@@ -177,6 +177,9 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+
+
+
 
 
 
