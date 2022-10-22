@@ -57,6 +57,11 @@ public class ModItems {
     public static final RegistryObject<Item> CLEANED_PYRORAPTOR_FOSSIL = ITEMS.register("cleaned_pyro_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    public static final RegistryObject<Item> FOSSIL_AMAZONSAURUS = ITEMS.register("amazonsaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_AMAZONSAURUS_FOSSIL = ITEMS.register("cleaned_amazonsaurus_fossil.json",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     //foods
     public static final RegistryObject<Item> DODO_RAW = ITEMS.register("raw_dodo",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).food(ModFoods.DODO_RAW)));
@@ -120,6 +125,13 @@ public class ModItems {
     public static final RegistryObject<Item> PYRO_DISC = ITEMS.register("pyro_disc",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
     public static final RegistryObject<Item> PYRO_SYRINGUE = ITEMS.register("pyro_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> AMAZONSAURUS_DNA = ITEMS.register("amazonsaurus_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> AMAZONSAURUS_DISC = ITEMS.register("amazonsaurus_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> AMAZONSAURUS_SYRINGUE = ITEMS.register("amazonsaurus_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     //weapons
