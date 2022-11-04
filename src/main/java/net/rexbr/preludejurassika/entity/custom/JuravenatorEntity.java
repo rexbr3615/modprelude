@@ -64,6 +64,8 @@ public class JuravenatorEntity extends Animal implements IAnimatable {
             return PlayState.CONTINUE;
         }
 
+
+
         event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.juravenator.idle", 999));
         return PlayState.CONTINUE;
     }

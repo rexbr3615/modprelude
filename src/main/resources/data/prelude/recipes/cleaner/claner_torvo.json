@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:torvo_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_torvo_fossil"
+  }
+}

@@ -55,6 +55,7 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
             }
         });
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, JuravenatorEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PaleolamaMajorEntity.class, true));
 
     }
 

@@ -27,6 +27,8 @@ import net.rexbr.preludejurassika.entity.client.*;
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 
+import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
+import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
@@ -48,6 +50,8 @@ public class prelude {
     public static final String MODID = "prelude";
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
     private static final Logger LOGGER = LogUtils.getLogger();
+
+
 
     // add a comment
     public prelude() {
@@ -92,6 +96,8 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.AVACERATOPS.get(), AvaceratopsRenderer::new);
         EntityRenderers.register(ModEntityTypes.PYRORAPTOR.get(), PyroraptorRenderer::new);
         EntityRenderers.register(ModEntityTypes.AMAZONSAURUS.get(), AmazonsaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TORVOSAURUS.get(), TorvosaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.PALEOLAMA.get(), PaleoLamaRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());

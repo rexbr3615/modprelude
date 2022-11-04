@@ -21,6 +21,8 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.AVACERATOPS.get(), AvaceratopsEntity.setAttributes());
         event.put(ModEntityTypes.PYRORAPTOR.get(), PyroraptorEntity.setAttributes());
         event.put(ModEntityTypes.AMAZONSAURUS.get(), AmazonsaurusEntity.setAttributes());
+        event.put(ModEntityTypes.TORVOSAURUS.get(), TorvosaurusEntity.setAttributes());
+        event.put(ModEntityTypes.PALEOLAMA.get(), PaleolamaMajorEntity.setAttributes());
 
     }
 

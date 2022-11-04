@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:torvo_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:torvosaurus_spawn_egg"
+  }
+}

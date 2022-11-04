@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:amazonsaurus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:amazonsaurus_spawn_egg"
+  }
+}

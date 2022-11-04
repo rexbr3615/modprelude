@@ -41,14 +41,26 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<PyroraptorEntity>> PYRORAPTOR =
             ENTITY_TYPES.register("pyroraptor",
                     () -> EntityType.Builder.of(PyroraptorEntity::new, MobCategory.CREATURE)
-                            .sized(1.05f, 1.4f)
+                            .sized(0.66f, 0.84f)
                             .build(new ResourceLocation(prelude.MODID, "pyroraptor").toString()));
 
     public static final RegistryObject<EntityType<AmazonsaurusEntity>> AMAZONSAURUS =
             ENTITY_TYPES.register("amazonsaurus",
                     () -> EntityType.Builder.of(AmazonsaurusEntity::new, MobCategory.CREATURE)
-                            .sized(1.05f, 1.4f)
+                            .sized(1.3f, 2.23f)
                             .build(new ResourceLocation(prelude.MODID, "amazonsaurus").toString()));
+
+    public static final RegistryObject<EntityType<TorvosaurusEntity>> TORVOSAURUS =
+            ENTITY_TYPES.register("torvosaurus",
+                    () -> EntityType.Builder.of(TorvosaurusEntity::new, MobCategory.CREATURE)
+                            .sized(1.8f, 3.2f)
+                            .build(new ResourceLocation(prelude.MODID, "torvosaurus").toString()));
+
+    public static final RegistryObject<EntityType<PaleolamaMajorEntity>> PALEOLAMA =
+            ENTITY_TYPES.register("paleolama",
+                    () -> EntityType.Builder.of(PaleolamaMajorEntity::new, MobCategory.CREATURE)
+                            .sized(1.8f, 3.2f)
+                            .build(new ResourceLocation(prelude.MODID, "paleolama").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

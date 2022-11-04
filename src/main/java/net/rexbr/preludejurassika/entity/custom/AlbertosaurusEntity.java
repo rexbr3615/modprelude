@@ -10,6 +10,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.behavior.Swim;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -59,6 +60,7 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
 
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AvaceratopsEntity.class, true));
+
     }
 
     @Nullable
@@ -87,7 +89,15 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
         return PlayState.CONTINUE;
     }
 
-
+    private PlayState SwimPredicate(AnimationEvent event) {
+        if(this.isSwimming() && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
+            event.getController().markNeedsReload();
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.attack", true));
+            this.swinging = false;
+        }
+        setSwimming(true);
+        return PlayState.CONTINUE;
+    }
 
     @Override
     public void registerControllers(AnimationData data) {
@@ -95,6 +105,8 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
                 0, this::predicate));
         data.addAnimationController(new AnimationController(this, "attackController",
                 0, this::attackPredicate));
+        data.addAnimationController(new AnimationController(this, "SwimController",
+                0, this::SwimPredicate));
     }
 
 

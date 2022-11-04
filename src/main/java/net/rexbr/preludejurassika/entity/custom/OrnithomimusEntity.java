@@ -14,6 +14,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.behavior.Swim;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
@@ -24,6 +25,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.Vec3;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.custom.base.Sex;
@@ -49,7 +51,7 @@ public class OrnithomimusEntity extends Animal implements IAnimatable {
 
         super(entityType, level);
         xpReward = 0;
-        this.moveControl = new FlyingMoveControl(this, 10, true);
+        this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 
     }
 
@@ -66,6 +68,7 @@ public class OrnithomimusEntity extends Animal implements IAnimatable {
                 .add(Attributes.FOLLOW_RANGE, 12.0f)
                 .add(Attributes.ATTACK_DAMAGE, 4.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
+
                 .add(Attributes.MOVEMENT_SPEED, 0.35f).build();
     }
 
@@ -82,7 +85,7 @@ public class OrnithomimusEntity extends Animal implements IAnimatable {
             }
         });
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(4, new FloatGoal(this));
+
         this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
 
 
