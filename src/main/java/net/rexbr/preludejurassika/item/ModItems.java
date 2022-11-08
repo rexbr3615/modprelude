@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.item.common.FossisHoe;
 import net.rexbr.preludejurassika.item.common.FossisPick;
@@ -35,10 +36,13 @@ public class ModItems {
     public static final RegistryObject<Item> EMPTY_EGG = ITEMS.register("empty_eggy",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(16)));
 
-    //misc
 
+
+
+    //misc
     public static final RegistryObject<Item> TOKEN = ITEMS.register("token",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
 
     //dinossaurs fossils
     public static final RegistryObject<Item> FOSSIL_GENERIC = ITEMS.register("fossil",
@@ -70,6 +74,11 @@ public class ModItems {
     public static final RegistryObject<Item> FOSSIL_TORVO = ITEMS.register("torvo_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> CLEANED_TORVO_FOSSIL = ITEMS.register("cleaned_torvo_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_PALEOLAMA = ITEMS.register("paleolama_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_PALEOLAMA_FOSSIL = ITEMS.register("cleaned_paleolama_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     //foods
@@ -171,7 +180,11 @@ public class ModItems {
     public static final RegistryObject<Item> FOSSIS_SHOV = ITEMS.register("fossil_shovel", () -> new FossisShov());
     public static final RegistryObject<Item> FOSSIS_HOE = ITEMS.register("fossil_hoe", () -> new FossisHoe());
 
-    //guns
+    //seeds
+
+    public static final RegistryObject<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
+            () -> new ItemNameBlockItem(ModBlocks.COOKSONIA_PLANT.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

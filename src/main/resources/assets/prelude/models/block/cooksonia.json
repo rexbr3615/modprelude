@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "prelude:block/plants/cooksonia_stage3"
+  }
+}

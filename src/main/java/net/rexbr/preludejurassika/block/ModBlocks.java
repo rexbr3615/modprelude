@@ -17,6 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.common.*;
+import net.rexbr.preludejurassika.block.plants.CooksoniaPlantBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
@@ -35,16 +36,20 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE)
                     .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
+    public static final RegistryObject<Block> ADOBE = registerBlock("adobe",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
     public static final RegistryObject<Block> ZYGOPTERIS = registerBlock("zygopteris",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
-                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), CreativeModeTab.TAB_SEARCH);
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.PALEO_BOTANIC);
 
-    public static final RegistryObject<Block> PLANT1 = registerBlock("plant1",
+    public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
-                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.PALEO_BOTANIC);
 
-    public static final RegistryObject<Block> POTTED_PLANT1 = registerBlockWithoutBlockItem("potted_plant1.json",
-            () -> new FlowerPotBlock(null, ModBlocks.PLANT1,
+    public static final RegistryObject<Block> POTTED_COOKSONIA = registerBlockWithoutBlockItem("potted_cooksonia.json",
+            () -> new FlowerPotBlock(null, ModBlocks.COOKSONIA,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
@@ -64,37 +69,11 @@ public class ModBlocks {
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
-    // ======================================= araucaria ==========================
+    //==========================seeds=================================================
 
-    public static final RegistryObject<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
-            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
-    public static final RegistryObject<Block> ARAUCARIA_WOOD = registerBlock("araucaria_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
-            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
-    public static final RegistryObject<Block> ARAUCARIA_PLANKS = registerBlock("araucaria_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return true;
-                }
 
-                @Override
-                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 20;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                    return 5;
-                }
-            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
-    public static final RegistryObject<Block> ARAUCARIA_DOOR = registerBlock("araucaria_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
-    public static final RegistryObject<Block> ARAUCARIA_TRAPDOOR = registerBlock("araucaria_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> COOKSONIA_PLANT = registerBlockWithoutBlockItem("cooksonia_plant",
+            () -> new CooksoniaPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
 
     //==================================================================================

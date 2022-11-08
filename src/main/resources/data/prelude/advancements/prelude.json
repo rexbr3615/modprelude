@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "prelude:block/adobe.png",
+    "icon": {
+      "item": "prelude:token"
+    },
+    "title": {
+      "translate": "advancements.prelude.title"
+    },
+    "description": {
+      "translate": "advancements.prelude.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "prelude": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:overworld"
+      }
+    }
+  }
+}

@@ -2,6 +2,11 @@
   "replace": false,
   "values": [
     "prelude:fossil_ore",
-    "prelude:deep_fossil_ore"
+    "prelude:deep_fossil_ore",
+    "prelude:analyzer",
+    "prelude:dna_ressonator",
+    "prelude:culture_vat",
+    "prelude:cleaner",
+    "prelude:adobe"
   ]
 }

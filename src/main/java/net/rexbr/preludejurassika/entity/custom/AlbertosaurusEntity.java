@@ -30,6 +30,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class AlbertosaurusEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
+    private boolean isSwimming;
 
     public AlbertosaurusEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -61,6 +62,9 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AvaceratopsEntity.class, true));
 
+        this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
+
+
     }
 
     @Nullable
@@ -75,8 +79,22 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
             return PlayState.CONTINUE;
         }
 
+        if (this.isDeadOrDying()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.death", false));
+            return PlayState.CONTINUE;
+        }
+        if (this.isInWaterOrBubble()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.swim", true));
+            return PlayState.CONTINUE;
+        }
+        if (this.isSprinting()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.sprint", true));
+            return PlayState.CONTINUE;
+        }
+
         event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.albertosaurus.idle", 999));
         return PlayState.CONTINUE;
+
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
@@ -84,20 +102,13 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
             event.getController().markNeedsReload();
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.attack", false));
             this.swinging = false;
+            this.getSharedFlag(4);
         }
 
         return PlayState.CONTINUE;
     }
 
-    private PlayState SwimPredicate(AnimationEvent event) {
-        if(this.isSwimming() && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
-            event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.attack", true));
-            this.swinging = false;
-        }
-        setSwimming(true);
-        return PlayState.CONTINUE;
-    }
+
 
     @Override
     public void registerControllers(AnimationData data) {
@@ -105,8 +116,7 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
                 0, this::predicate));
         data.addAnimationController(new AnimationController(this, "attackController",
                 0, this::attackPredicate));
-        data.addAnimationController(new AnimationController(this, "SwimController",
-                0, this::SwimPredicate));
+
     }
 
 

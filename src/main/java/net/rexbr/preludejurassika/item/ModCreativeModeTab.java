@@ -16,4 +16,10 @@ public class ModCreativeModeTab {
             return new ItemStack(ModItems.EMPTY_EGG.get());
         }
     };
+    public static final CreativeModeTab PALEO_BOTANIC = new CreativeModeTab("paleo_botanic") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.COOKSONIA_SPORES.get());
+        }
+    };
 }

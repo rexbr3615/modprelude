@@ -42,6 +42,7 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
+
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.4D, false));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
@@ -57,6 +58,8 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, JuravenatorEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PaleolamaMajorEntity.class, true));
 
+        this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
+
     }
 
     @Nullable
@@ -68,6 +71,19 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.pyroraptor.move", 999));
+            return PlayState.CONTINUE;
+        }
+
+        if (this.isDeadOrDying()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.death", false));
+            return PlayState.CONTINUE;
+        }
+        if (this.isInWaterOrBubble()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.swim", true));
+            return PlayState.CONTINUE;
+        }
+        if (this.isSprinting()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.sprint", true));
             return PlayState.CONTINUE;
         }
 
@@ -84,6 +100,8 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
 
         return PlayState.CONTINUE;
     }
+
+
 
     @Override
     public void registerControllers(AnimationData data) {

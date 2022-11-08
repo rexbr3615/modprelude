@@ -272,13 +272,13 @@
 				"head": {
 					"rotation": {
 						"0.0": {
-							"vector": [17.5, 0, 0]
+							"vector": [7.5, 0, 0]
 						},
 						"0.5": {
-							"vector": [27.5, 0, 0]
+							"vector": [15, 0, 0]
 						},
 						"1.0": {
-							"vector": [17.5, 0, 0]
+							"vector": [7.5, 0, 0]
 						}
 					}
 				},
@@ -363,6 +363,44 @@
 						},
 						"0.5": {
 							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.albertosaurus.death": {
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 360, 0]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.albertosaurus.sprint": {
+			"animation_length": 0.5,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 360, 0]
 						}
 					}
 				}

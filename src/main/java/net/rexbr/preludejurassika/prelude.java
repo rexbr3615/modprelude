@@ -30,6 +30,7 @@ import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
+import net.rexbr.preludejurassika.item.ModItemsAztec;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerScreen;
@@ -58,6 +59,8 @@ public class prelude {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModItemsAztec.register(eventBus);
+
         ModBlocks.register(eventBus);
 
         ModEntityTypes.register(eventBus);
@@ -68,8 +71,6 @@ public class prelude {
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
-
-
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
@@ -86,9 +87,10 @@ public class prelude {
 
     private void clientSetup(final FMLClientSetupEvent event) {
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PLANT1.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PLANT1.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_COOKSONIA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ZYGOPTERIS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA_PLANT.get(), RenderType.cutout());
 
         EntityRenderers.register(ModEntityTypes.JURAVENATOR.get(), JuravenatorRenderer::new);
         EntityRenderers.register(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusRenderer::new);
@@ -112,7 +114,7 @@ public class prelude {
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PLANT1.getId(), ModBlocks.POTTED_PLANT1);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.COOKSONIA.getId(), ModBlocks.POTTED_COOKSONIA);
 
             ModVillagers.registerPOIs();
         });

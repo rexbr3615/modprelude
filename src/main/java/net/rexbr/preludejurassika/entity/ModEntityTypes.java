@@ -53,7 +53,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<TorvosaurusEntity>> TORVOSAURUS =
             ENTITY_TYPES.register("torvosaurus",
                     () -> EntityType.Builder.of(TorvosaurusEntity::new, MobCategory.CREATURE)
-                            .sized(1.8f, 3.2f)
+                            .sized(1.8f, 3.0f)
                             .build(new ResourceLocation(prelude.MODID, "torvosaurus").toString()));
 
     public static final RegistryObject<EntityType<PaleolamaMajorEntity>> PALEOLAMA =
@@ -61,6 +61,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.of(PaleolamaMajorEntity::new, MobCategory.CREATURE)
                             .sized(1.8f, 3.2f)
                             .build(new ResourceLocation(prelude.MODID, "paleolama").toString()));
+
+    public static final RegistryObject<EntityType<DryosaurusEntity>> DRYOSAURUS =
+            ENTITY_TYPES.register("dryosaurus",
+                    () -> EntityType.Builder.of(DryosaurusEntity::new, MobCategory.CREATURE)
+                            .sized(1.8f, 3.2f)
+                            .build(new ResourceLocation(prelude.MODID, "dryosaurus").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

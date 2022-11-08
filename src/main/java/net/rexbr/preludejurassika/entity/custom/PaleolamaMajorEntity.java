@@ -55,6 +55,7 @@ public class PaleolamaMajorEntity extends Animal implements IAnimatable {
             }
         });
 
+        this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
 
     }
 

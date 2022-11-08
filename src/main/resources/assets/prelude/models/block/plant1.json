@@ -1,6 +1,0 @@
-{
-  "parent": "item/cross",
-  "textures": {
-    "cross": "prelude:block/alliopteris"
-  }
-}

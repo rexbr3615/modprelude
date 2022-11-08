@@ -123,9 +123,6 @@
 				}
 			}
 		},
-		"animation.juravenator.swim": {
-			"loop": true
-		},
 		"animation.juravenator.move": {
 			"animation_length": 1,
 			"bones": {

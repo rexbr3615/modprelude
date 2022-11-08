@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:sand"
+    },
+    "1": {
+      "item": "minecraft:clay"
+    },
+    "2": {
+      "item": "minecraft:clay"
+    },
+    "3": {
+      "tag": "minecraft:sand"
+    }
+  },
+  "result": {
+    "item": "prelude:adobe",
+    "count": 4
+  }
+}
