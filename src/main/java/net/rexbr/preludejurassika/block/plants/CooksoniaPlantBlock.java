@@ -22,4 +22,5 @@ public class CooksoniaPlantBlock extends CropBlock {
     protected ItemLike getBaseSeedId() {
         return ModItems.COOKSONIA_SPORES.get();
     }
+
 }

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:cooksonia_cells"
+    }
+  ],
+  "output": {
+    "item": "prelude:cooksonia_spores"
+  }
+}

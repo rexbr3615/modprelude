@@ -61,9 +61,9 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
 
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AvaceratopsEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, DryosaurusEntity.class, true));
 
         this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
-
 
     }
 
@@ -79,16 +79,8 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
             return PlayState.CONTINUE;
         }
 
-        if (this.isDeadOrDying()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.death", false));
-            return PlayState.CONTINUE;
-        }
         if (this.isInWaterOrBubble()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.swim", true));
-            return PlayState.CONTINUE;
-        }
-        if (this.isSprinting()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.sprint", true));
             return PlayState.CONTINUE;
         }
 

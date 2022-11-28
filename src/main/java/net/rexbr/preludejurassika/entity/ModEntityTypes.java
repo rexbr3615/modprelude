@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.custom.*;
+
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {
@@ -20,11 +21,11 @@ public class ModEntityTypes {
                             .sized(0.34f, 0.5f)
                             .build(new ResourceLocation(prelude.MODID, "jura").toString()));
 
-    public static final RegistryObject<EntityType<OrnithomimusEntity>> ORNITHOMIMUS =
-            ENTITY_TYPES.register("ornithomimus",
-                    () -> EntityType.Builder.of(OrnithomimusEntity::new, MobCategory.CREATURE)
-                            .sized(0.8f, 1.8f)
-                            .build(new ResourceLocation(prelude.MODID, "ornithomimus").toString()));
+    public static final RegistryObject<EntityType<mimodactylusEntity>> MIMODACTYLUS =
+            ENTITY_TYPES.register("mimodactylus",
+                    () -> EntityType.Builder.of(mimodactylusEntity::new, MobCategory.CREATURE)
+                            .sized(0.8f, 0.8f)
+                            .build(new ResourceLocation(prelude.MODID, "mimodactylus").toString()));
 
     public static final RegistryObject<EntityType<AlbertosaurusEntity>> ALBERTOSAURUS =
             ENTITY_TYPES.register("albertosaurus",
@@ -59,14 +60,27 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<PaleolamaMajorEntity>> PALEOLAMA =
             ENTITY_TYPES.register("paleolama",
                     () -> EntityType.Builder.of(PaleolamaMajorEntity::new, MobCategory.CREATURE)
-                            .sized(1.8f, 3.2f)
+                            .sized(1.0f, 1.6f)
                             .build(new ResourceLocation(prelude.MODID, "paleolama").toString()));
 
     public static final RegistryObject<EntityType<DryosaurusEntity>> DRYOSAURUS =
             ENTITY_TYPES.register("dryosaurus",
                     () -> EntityType.Builder.of(DryosaurusEntity::new, MobCategory.CREATURE)
-                            .sized(1.8f, 3.2f)
+                            .sized(1.2f, 1.4f)
                             .build(new ResourceLocation(prelude.MODID, "dryosaurus").toString()));
+
+    public static final RegistryObject<EntityType<YpupiaraEntity>> YPUPIARA =
+            ENTITY_TYPES.register("ypupiara",
+                    () -> EntityType.Builder.of(YpupiaraEntity::new, MobCategory.CREATURE)
+                            .sized(0.86f, 1.1f)
+                            .build(new ResourceLocation(prelude.MODID, "ypupiara").toString()));
+
+    public static final RegistryObject<EntityType<TenontosaurusEntity>> TENONTOSAURUS =
+            ENTITY_TYPES.register("tenontosaurus",
+                    () -> EntityType.Builder.of(TenontosaurusEntity::new, MobCategory.CREATURE)
+                            .sized(1.23f, 1.76f)
+                            .build(new ResourceLocation(prelude.MODID, "tenontosaurus").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

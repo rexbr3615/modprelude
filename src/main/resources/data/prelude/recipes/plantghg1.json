@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:petri_dish_agar"
+    },
+    {
+      "item": "prelude:plant_cells"
+    }
+  ],
+  "result": {
+    "item": "prelude:petri_dish_plant_cells",
+    "count": 1
+  }
+}

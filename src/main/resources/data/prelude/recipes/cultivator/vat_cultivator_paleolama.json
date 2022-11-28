@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:paleolama_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:paleolama_gest_syringue"
+  }
+}

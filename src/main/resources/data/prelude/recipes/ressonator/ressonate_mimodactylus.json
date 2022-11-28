@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:mimodactylus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:mimodactylus_dna"
+  }
+}

@@ -10,7 +10,7 @@ public class ModCreativeModeTab {
             return new ItemStack(ModItems.TOKEN.get());
         }
     };
-    public static final CreativeModeTab FOSSIL_EGSS = new CreativeModeTab("fossil_mod_items") {
+    public static final CreativeModeTab FOSSIL_EGSS = new CreativeModeTab("fossil_eggs") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.EMPTY_EGG.get());

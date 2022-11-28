@@ -130,6 +130,19 @@
 							"vector": [35.5, 0, 0]
 						}
 					}
+				},
+				"bone8": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 22.5]
+						},
+						"0.5": {
+							"vector": [0, 0, -22.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 22.5]
+						}
+					}
 				}
 			}
 		},
@@ -159,6 +172,10 @@
 					}
 				}
 			}
+		},
+		"animation.plateosaurus.swim": {
+			"loop": true
 		}
-	}
+	},
+	"geckolib_format_version": 2
 }

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:ypupiara_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_ypupiara_fossil"
+  }
+}

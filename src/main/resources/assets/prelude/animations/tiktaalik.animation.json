@@ -1,0 +1,127 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.tiktaalik.swim": {
+			"animation_length": 1,
+			"bones": {
+				"bone4": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [-2.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 7.5, 0]
+						},
+						"0.5": {
+							"vector": [0, -7.5, 0]
+						},
+						"1.0": {
+							"vector": [0, 7.5, 0]
+						}
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 7.5, 0]
+						},
+						"0.5": {
+							"vector": [0, -7.5, 0]
+						},
+						"1.0": {
+							"vector": [0, 7.5, 0]
+						}
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 7.5, 0]
+						},
+						"0.5": {
+							"vector": [0, -7.5, 0]
+						},
+						"1.0": {
+							"vector": [0, 7.5, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.tiktaalik.land": {
+			"animation_length": 1,
+			"bones": {
+				"root2": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"vector": [-4.76968, 1.50179, 17.43745]
+					}
+				},
+				"bone11": {
+					"rotation": {
+						"vector": [-4.76968, -1.50179, -17.43745]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": [-7.5, 0, 0]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"vector": [-6.66067, -3.45533, -27.29887]
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"vector": [4.33287, 2.49762, -29.9055]
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"vector": [-7.15656, 2.24944, 17.35932]
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"vector": [-7.15656, -2.24944, -17.35932]
+					}
+				}
+			}
+		}
+	}
+}

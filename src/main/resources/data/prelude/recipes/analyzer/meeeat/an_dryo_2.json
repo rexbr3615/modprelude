@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_dryosaurus_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:dryo_disc"
+  }
+}

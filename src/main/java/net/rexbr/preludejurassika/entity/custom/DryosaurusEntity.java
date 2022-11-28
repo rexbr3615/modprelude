@@ -47,10 +47,6 @@ public class DryosaurusEntity extends Animal implements IAnimatable {
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
-
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, JuravenatorEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PaleolamaMajorEntity.class, true));
 
         this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
 
@@ -64,20 +60,12 @@ public class DryosaurusEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.dryosaurus.move", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.dryosaurus.walk", 999));
             return PlayState.CONTINUE;
         }
 
-        if (this.isDeadOrDying()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dryosaurus.death", false));
-            return PlayState.CONTINUE;
-        }
         if (this.isInWaterOrBubble()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dryosaurus.swim", true));
-            return PlayState.CONTINUE;
-        }
-        if (this.isSprinting()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dryosaurus.sprint", true));
             return PlayState.CONTINUE;
         }
 

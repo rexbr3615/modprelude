@@ -57,6 +57,7 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
         });
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, JuravenatorEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PaleolamaMajorEntity.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, DryosaurusEntity.class, true));
 
         this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
 
@@ -74,19 +75,11 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
             return PlayState.CONTINUE;
         }
 
-        if (this.isDeadOrDying()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.death", false));
-            return PlayState.CONTINUE;
-        }
         if (this.isInWaterOrBubble()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.swim", true));
             return PlayState.CONTINUE;
         }
-        if (this.isSprinting()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.sprint", true));
-            return PlayState.CONTINUE;
-        }
-
+        
         event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.pyroraptor.idle", 999));
         return PlayState.CONTINUE;
     }

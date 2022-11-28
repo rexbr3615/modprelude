@@ -15,10 +15,11 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
 }
+
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.18.2-0.2.2.beta'
+version = '1.18.2-0.2.8.beta'
 group = 'net.rexbr.preludejurassika' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'prelude'
 
@@ -161,7 +162,12 @@ repositories {
 
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 
-
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 
 }
 
@@ -169,7 +175,7 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.27'
 
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.39')
 
@@ -179,7 +185,8 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
 
-
+    runtimeOnly fg.deobf("curse.maven:mekanism-268560:${project.mek}")
+    implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")
 
 
 

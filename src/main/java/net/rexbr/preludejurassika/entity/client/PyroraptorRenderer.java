@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.rexbr.preludejurassika.config.PreludeClientConfigs;
 import net.rexbr.preludejurassika.entity.custom.AlbertosaurusEntity;
 import net.rexbr.preludejurassika.entity.custom.PyroraptorEntity;
 import net.rexbr.preludejurassika.prelude;
