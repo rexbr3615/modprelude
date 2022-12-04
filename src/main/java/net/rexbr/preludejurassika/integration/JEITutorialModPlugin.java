@@ -10,6 +10,7 @@ import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
+import net.rexbr.preludejurassika.recipes.CleanerRecipe;
 import net.rexbr.preludejurassika.recipes.RessonatorRecipe;
 
 import java.util.List;
@@ -27,6 +28,8 @@ public class JEITutorialModPlugin implements IModPlugin {
 
         registration.addRecipeCategories(new
                 AnalyzerRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new
+                CleanerRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 
 
     }
@@ -37,7 +40,8 @@ public class JEITutorialModPlugin implements IModPlugin {
 
         List<AnalyzerRecipe> recipes = rm.getAllRecipesFor(AnalyzerRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(AnalyzerRecipeCategory.UID, AnalyzerRecipe.class), recipes);
-
+        List<CleanerRecipe> recipes1 = rm.getAllRecipesFor(CleanerRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(CleanerRecipeCategory.UID, CleanerRecipe.class), recipes1);
 
     }
 }

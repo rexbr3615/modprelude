@@ -28,6 +28,7 @@ import net.rexbr.preludejurassika.block.plants.CooksoniaPlantBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
+import net.rexbr.preludejurassika.world.feature.tree.CalamitesTreeGrower;
 
 import java.util.Collections;
 import java.util.List;
@@ -132,6 +133,64 @@ public class ModBlocks {
 
             }, ModCreativeModeTab.PALEO_BOTANIC);
 
+
+    //===============================trees===========================================
+
+
+    public static final RegistryObject<Block> CALAMITES_LOG = registerBlock("calamites_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> CALAMITES_WOOD = registerBlock("calamites_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> STRIPPED_CALAMITES_LOG = registerBlock("stripped_calamites_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> STRIPPED_CALAMITES_WOOD = registerBlock("stripped_calamites_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+    public static final RegistryObject<Block> CALAMITES_PLANKS = registerBlock("calamites_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+    public static final RegistryObject<Block> CALAMITES_LEAVES = registerBlock("calamites_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+    public static final RegistryObject<Block> CALAMITES_SAPLING = registerBlock("calamites_sapling",
+            () -> new SaplingBlock(new CalamitesTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.PALEO_BOTANIC);
 
 
     //==========================seeds=================================================

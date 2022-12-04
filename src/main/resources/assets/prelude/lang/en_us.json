@@ -75,5 +75,14 @@
   "item.prelude.raw_ypupiara_meat": "raw ypupiara meat",
   "item.prelude.raw_tenontosaurus_meat": "raw tenontosaurus meat",
   "item.prelude.raw_mimodactylus_meat": "raw mimodactylus meat",
-  "item.prelude.thagomizer": "thagomizer"
+  "item.prelude.thagomizer": "thagomizer",
+  "block.prelude.prototaxites": "prototaxites",
+  "block.prelude.calamites_log": "calamites log",
+  "block.prelude.calamites_wood": "calamites wood",
+  "block.prelude.calamites_planks": "calamites planks",
+  "block.prelude.stripped_calamites_log": "stripped calamites log",
+  "block.prelude.stripped_calamites_wood": "stripped calamites wood",
+  "block.prelude.calamites_leaves": "calamites leaves",
+  "block.prelude.calamites_sapling": "calamites sapling",
+  "item.prelude.irritator_spawn_egg": "irritator spawn egg"
 }

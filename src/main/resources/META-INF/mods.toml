@@ -22,7 +22,7 @@ modId="prelude" #mandatory
 version="1.18.2-0.2.8.beta" #mandatory
  # A display name for the mod
 displayName="jurassic: prelude" #mandatory
-displayURL= "https://github.com/rexbr3615/modprelude"
+displayURL= "https://github.com/rexbr3615/modprelude , https://www.curseforge.com/minecraft/mc-mods/jurassick-prelude"
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -64,6 +64,13 @@ dinossaurs!!!
     versionRange="[3.0.39,)"
     ordering="BEFORE"
     side="BOTH"
+
+[[dependencies.prelude]]
+     modId="mekanism"
+     mandatory=true
+     versionRange="[10.2.5,)"
+     ordering="BEFORE"
+     side="BOTH"
 
 
 

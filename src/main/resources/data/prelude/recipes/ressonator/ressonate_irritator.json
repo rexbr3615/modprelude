@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:irritator_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:irritator_dna"
+  }
+}

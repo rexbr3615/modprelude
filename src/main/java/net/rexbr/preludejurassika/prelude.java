@@ -29,6 +29,7 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.client.*;
 
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
+import net.rexbr.preludejurassika.entity.client.irritator.IrritatorRenderer;
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 
@@ -111,6 +112,7 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.DRYOSAURUS.get(), DryoRenderer::new);
         EntityRenderers.register(ModEntityTypes.YPUPIARA.get(), YpupiaraRenderer::new);
         EntityRenderers.register(ModEntityTypes.TENONTOSAURUS.get(), TenontosaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.IRRITATOR.get(), IrritatorRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());

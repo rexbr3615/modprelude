@@ -3,7 +3,7 @@
 	"parent": "culture_vat",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "block/culture"
+		"0": "prelude:block/culture"
 	},
 	"elements": [
 		{

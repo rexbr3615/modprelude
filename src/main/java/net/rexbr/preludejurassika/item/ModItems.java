@@ -1,6 +1,5 @@
 package net.rexbr.preludejurassika.item;
 
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,9 +8,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
-import net.rexbr.preludejurassika.item.common.FossisHoe;
-import net.rexbr.preludejurassika.item.common.FossisPick;
-import net.rexbr.preludejurassika.item.common.FossisShov;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModItems {
@@ -119,6 +115,11 @@ public class ModItems {
     public static final RegistryObject<Item> CLEANED_MIMODACTYLUS_FOSSIL = ITEMS.register("cleaned_mimodactylus_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    public static final RegistryObject<Item> FOSSIL_IRRITATOR = ITEMS.register("irritator_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_IRRITATOR_FOSSIL = ITEMS.register("cleaned_irritator_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     // plants stuff
 
     public static final RegistryObject<Item> FOSSIL_COOKSONIA = ITEMS.register("cooksonia_fossil",
@@ -153,6 +154,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_TENONTOSAURUS_MEAT)));
     public static final RegistryObject<Item> RAW_MIMODACTYLUS_MEAT = ITEMS.register("raw_mimodactylus_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_MIMODACTYLUS_MEAT)));
+    public static final RegistryObject<Item> RAW_IRRITATOR_MEAT = ITEMS.register("raw_irritator_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_IRRITATOR_MEAT)));
+
     //eggs
 
     //syringues and tube
@@ -204,6 +208,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> MIMODACTYLUS_SPAWN_EGG = ITEMS.register("mimodactylus_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.MIMODACTYLUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> IRRITATOR_SPAWN_EGG = ITEMS.register("irritator_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.IRRITATOR,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
     //dna
@@ -285,17 +293,12 @@ public class ModItems {
     public static final RegistryObject<Item> MIMODACTYLUS_SYRINGUE = ITEMS.register("mimodactylus_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
-    //weapons
-    public static final RegistryObject<Item> FOSSIL_SWORD = ITEMS.register("fossil_sword",
-            () -> new SwordItem(ModTiers.FOSSIL_GENERIC, 2, 3f,
-                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
-    public static final RegistryObject<Item> FOSSIL_AXE = ITEMS.register("fossil_axe",
-            () -> new AxeItem(ModTiers.FOSSIL_GENERIC, 4, 0f,
-                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).durability(900)));
-
-    public static final RegistryObject<Item> FOSSIS_PICKX = ITEMS.register("fossil_pickaxe", () -> new FossisPick());
-    public static final RegistryObject<Item> FOSSIS_SHOV = ITEMS.register("fossil_shovel", () -> new FossisShov());
-    public static final RegistryObject<Item> FOSSIS_HOE = ITEMS.register("fossil_hoe", () -> new FossisHoe());
+    public static final RegistryObject<Item> IRRITATOR_DNA = ITEMS.register("irritator_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> IRRITATOR_DISC = ITEMS.register("irritator_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> IRRITATOR_SYRINGUE = ITEMS.register("irritator_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     //seeds
 

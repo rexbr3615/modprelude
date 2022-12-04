@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:irritator_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:irritator_spawn_egg"
+  }
+}

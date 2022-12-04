@@ -81,6 +81,12 @@ public class ModEntityTypes {
                             .sized(1.23f, 1.76f)
                             .build(new ResourceLocation(prelude.MODID, "tenontosaurus").toString()));
 
+    public static final RegistryObject<EntityType<IrritatorEntity>> IRRITATOR =
+            ENTITY_TYPES.register("irritator",
+                    () -> EntityType.Builder.of(IrritatorEntity::new, MobCategory.CREATURE)
+                            .sized(1.03f, 1.76f)
+                            .build(new ResourceLocation(prelude.MODID, "irritator").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
