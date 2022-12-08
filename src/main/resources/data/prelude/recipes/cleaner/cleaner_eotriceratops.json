@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:eotriceratops_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_eotriceratops_fossil"
+  }
+}

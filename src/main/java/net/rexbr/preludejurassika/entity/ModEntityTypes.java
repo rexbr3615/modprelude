@@ -87,6 +87,18 @@ public class ModEntityTypes {
                             .sized(1.03f, 1.76f)
                             .build(new ResourceLocation(prelude.MODID, "irritator").toString()));
 
+    public static final RegistryObject<EntityType<ProlibytheriumEntity>> PROLIBYTHERIUM =
+            ENTITY_TYPES.register("prolibytherium",
+                    () -> EntityType.Builder.of(ProlibytheriumEntity::new, MobCategory.CREATURE)
+                            .sized(0.9f, 1.6f)
+                            .build(new ResourceLocation(prelude.MODID, "prolibytherium").toString()));
+
+    public static final RegistryObject<EntityType<EotriceratopsEntity>> EOTRICERATOPS =
+            ENTITY_TYPES.register("eotriceratops",
+                    () -> EntityType.Builder.of(EotriceratopsEntity::new, MobCategory.CREATURE)
+                            .sized(2.2f, 4.0f)
+                            .build(new ResourceLocation(prelude.MODID, "eotriceratops").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

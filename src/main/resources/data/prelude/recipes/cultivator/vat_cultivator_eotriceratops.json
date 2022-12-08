@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:eotriceratops_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:eotriceratops_spawn_egg"
+  }
+}

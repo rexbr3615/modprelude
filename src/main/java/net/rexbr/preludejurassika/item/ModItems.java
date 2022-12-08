@@ -120,6 +120,26 @@ public class ModItems {
     public static final RegistryObject<Item> CLEANED_IRRITATOR_FOSSIL = ITEMS.register("cleaned_irritator_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    public static final RegistryObject<Item> FOSSIL_PROLIBYTHERIUM = ITEMS.register("prolibytherium_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_PROLIBYTHERIUM_FOSSIL = ITEMS.register("cleaned_prolibytherium_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_INCISIVOSAURUS = ITEMS.register("incisivosaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_INCISIVOSAURUS_FOSSIL = ITEMS.register("cleaned_incisivosaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_EOTRICERATOPS = ITEMS.register("eotriceratops_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_EOTRICERATOPS_FOSSIL = ITEMS.register("cleaned_eotriceratops_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_SILESSAURUS = ITEMS.register("silessaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_SILESSAURUS_FOSSIL = ITEMS.register("cleaned_silessaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     // plants stuff
 
     public static final RegistryObject<Item> FOSSIL_COOKSONIA = ITEMS.register("cooksonia_fossil",
@@ -156,6 +176,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_MIMODACTYLUS_MEAT)));
     public static final RegistryObject<Item> RAW_IRRITATOR_MEAT = ITEMS.register("raw_irritator_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_IRRITATOR_MEAT)));
+    public static final RegistryObject<Item> RAW_PROLIBYTHERIUM_MEAT = ITEMS.register("raw_prolibytherium_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_PROLIBYTHERIUM_MEAT)));
+    public static final RegistryObject<Item> RAW_EOTRICERATOPS_MEAT = ITEMS.register("raw_eotriceratops_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_EOTRICERATOPS_MEAT)));
+
 
     //eggs
 
@@ -212,6 +237,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> IRRITATOR_SPAWN_EGG = ITEMS.register("irritator_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.IRRITATOR,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> PROLIBYTHERIUM_GESTATION_SYRINGUE = ITEMS.register("prolibytherium_gest_syringue",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.PROLIBYTHERIUM,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> EOTRICERATOPS_SPAWN_EGG = ITEMS.register("eotriceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.EOTRICERATOPS,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
     //dna
@@ -298,6 +331,20 @@ public class ModItems {
     public static final RegistryObject<Item> IRRITATOR_DISC = ITEMS.register("irritator_disc",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
     public static final RegistryObject<Item> IRRITATOR_SYRINGUE = ITEMS.register("irritator_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> PROLIBYTHERIUM_DNA = ITEMS.register("prolibytherium_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> PROLIBYTHERIUM_DISC = ITEMS.register("prolibytherium_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> PROLIBYTHERIUM_SYRINGUE = ITEMS.register("prolibytherium_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> EOTRICERATOPS_DNA = ITEMS.register("eotriceratops_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> EOTRICERATOPS_DISC = ITEMS.register("eotriceratops_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> EOTRICERATOPS_SYRINGUE = ITEMS.register("eotriceratops_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     //seeds

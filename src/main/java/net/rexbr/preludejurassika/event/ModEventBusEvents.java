@@ -28,7 +28,8 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.YPUPIARA.get(), YpupiaraEntity.setAttributes());
         event.put(ModEntityTypes.TENONTOSAURUS.get(), TenontosaurusEntity.setAttributes());
         event.put(ModEntityTypes.IRRITATOR.get(), IrritatorEntity.setAttributes());
-
+        event.put(ModEntityTypes.PROLIBYTHERIUM.get(), ProlibytheriumEntity.setAttributes());
+        event.put(ModEntityTypes.EOTRICERATOPS.get(), EotriceratopsEntity.setAttributes());
     }
 
     @SubscribeEvent

@@ -29,16 +29,18 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.client.*;
 
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
+import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
 import net.rexbr.preludejurassika.entity.client.irritator.IrritatorRenderer;
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
+import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
 import net.rexbr.preludejurassika.item.ModItems;
-import net.rexbr.preludejurassika.item.ModItemsAztec;
+
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerScreen;
@@ -68,8 +70,6 @@ public class prelude {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
-        ModItemsAztec.register(eventBus);
-
         ModBlocks.register(eventBus);
 
         ModEntityTypes.register(eventBus);
@@ -98,6 +98,7 @@ public class prelude {
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_COOKSONIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA_PLANT.get(), RenderType.cutout());
 
@@ -113,6 +114,8 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.YPUPIARA.get(), YpupiaraRenderer::new);
         EntityRenderers.register(ModEntityTypes.TENONTOSAURUS.get(), TenontosaurusRenderer::new);
         EntityRenderers.register(ModEntityTypes.IRRITATOR.get(), IrritatorRenderer::new);
+        EntityRenderers.register(ModEntityTypes.PROLIBYTHERIUM.get(), ProlibytheriumRenderer::new);
+        EntityRenderers.register(ModEntityTypes.EOTRICERATOPS.get(), EotriceratopsRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());

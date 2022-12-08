@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:eotriceratops_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:eotriceratops_dna"
+  }
+}

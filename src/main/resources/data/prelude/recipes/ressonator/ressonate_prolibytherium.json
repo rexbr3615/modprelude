@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:prolibytherium_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:prolibytherium_dna"
+  }
+}

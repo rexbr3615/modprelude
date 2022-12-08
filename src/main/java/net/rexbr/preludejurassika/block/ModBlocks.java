@@ -28,6 +28,7 @@ import net.rexbr.preludejurassika.block.plants.CooksoniaPlantBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
+import net.rexbr.preludejurassika.procedurals.CalamitesGenP;
 import net.rexbr.preludejurassika.world.feature.tree.CalamitesTreeGrower;
 
 import java.util.Collections;

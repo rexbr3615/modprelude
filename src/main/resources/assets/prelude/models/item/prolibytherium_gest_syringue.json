@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "prelude:item/embryonic_syringue",
+    "layer1": "prelude:item/overlay/prolibytherium"
+  }
+}

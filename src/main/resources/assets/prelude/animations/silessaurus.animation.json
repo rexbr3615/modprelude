@@ -1,0 +1,163 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.silessaurus.walk": {
+			"loop": true
+		},
+		"animation.silessaurus.idle": {
+			"animation_length": 2,
+			"bones": {
+				"bone3": {
+					"rotation": {
+						"0.0": {
+							"vector": [2, 0, 0]
+						},
+						"1.0": {
+							"vector": [2.5, 0, 0]
+						},
+						"2.0": {
+							"vector": [2, 0, 0]
+						}
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [2, 0, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"bone15": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"bone16": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					}
+				},
+				"bone17": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					}
+				},
+				"bone18": {
+					"rotation": {
+						"vector": [-2.5, 0, 0]
+					}
+				},
+				"bone19": {
+					"rotation": {
+						"vector": [7.5, 0, 0]
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"0.0": {
+							"vector": [-2.5, 5, 0]
+						},
+						"0.5": {
+							"vector": [-5, 0, 0]
+						},
+						"1.0": {
+							"vector": [-2.5, -5, 0]
+						},
+						"1.5": {
+							"vector": [-5, 0, 0]
+						},
+						"2.0": {
+							"vector": [-2.5, 5, 0]
+						}
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"0.0": {
+							"vector": [-2.5, 5, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [0, -5, 0]
+						},
+						"1.5": {
+							"vector": [0, 5, 0]
+						},
+						"2.0": {
+							"vector": [-2.5, 5, 0]
+						}
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"vector": [-2.5, 0, 0]
+					}
+				},
+				"bone11": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bone12": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"bone20": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"bone21": {
+					"rotation": {
+						"vector": [-7.5, 0, 0]
+					}
+				},
+				"bone22": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					}
+				},
+				"bone23": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"0.0": {
+							"vector": [-2.5, 5, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [-2.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, 0]
+						},
+						"2.0": {
+							"vector": [-2.5, 5, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.silessaurus.new": {
+			"loop": true
+		},
+		"animation.silessaurus.attack": {
+			"loop": true
+		}
+	},
+	"geckolib_format_version": 2
+}

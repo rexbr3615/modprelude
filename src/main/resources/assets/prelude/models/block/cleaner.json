@@ -3,8 +3,7 @@
 	"parent": "cleaner",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "prelude:block/cleaner_tex",
-		"particle": "prelude:block/cleaner_tex"
+		"0": "prelude:block/cleaner_tex"
 	},
 	"elements": [
 		{
