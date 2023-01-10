@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "mekanism:ingot_steel"
+    },
+    "1": {
+      "item": "mekanism:ingot_steel"
+    },
+    "2": {
+      "item": "mekanism:ingot_steel"
+    },
+    "3": {
+      "item": "prelude:fence_wire"
+    },
+    "4": {
+      "item": "prelude:fence_wire"
+    },
+    "5": {
+      "item": "prelude:fence_wire"
+    },
+    "6": {
+      "item": "mekanism:ingot_steel"
+    },
+    "7": {
+      "item": "mekanism:ingot_steel"
+    },
+    "8": {
+      "item": "mekanism:ingot_steel"
+    }
+  },
+  "result": {
+    "item": "prelude:common_fence",
+    "count": 6
+  }
+}

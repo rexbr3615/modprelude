@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:calamites_log",
+    "prelude:calamites_wood",
+    "prelude:stripped_calamites_log",
+    "prelude:stripped_calamites_wood"
+  ]
+}

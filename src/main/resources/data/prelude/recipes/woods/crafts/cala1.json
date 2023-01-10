@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "prelude:calamites_log"
+    }
+  ],
+  "result": {
+    "item": "prelude:calamites_planks",
+    "count": 4
+  }
+}

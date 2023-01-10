@@ -11,6 +11,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.rexbr.preludejurassika.recipes.CleanerRecipe;
+import net.rexbr.preludejurassika.recipes.CultureRecipe;
 import net.rexbr.preludejurassika.recipes.RessonatorRecipe;
 
 import java.util.List;
@@ -30,6 +31,10 @@ public class JEITutorialModPlugin implements IModPlugin {
                 AnalyzerRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new
                 CleanerRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new
+                RessonatorRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new
+                VatRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 
 
     }
@@ -42,6 +47,11 @@ public class JEITutorialModPlugin implements IModPlugin {
         registration.addRecipes(new RecipeType<>(AnalyzerRecipeCategory.UID, AnalyzerRecipe.class), recipes);
         List<CleanerRecipe> recipes1 = rm.getAllRecipesFor(CleanerRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(CleanerRecipeCategory.UID, CleanerRecipe.class), recipes1);
+        List<RessonatorRecipe> recipes2 = rm.getAllRecipesFor(RessonatorRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(RessonatorRecipeCategory.UID, RessonatorRecipe.class), recipes2);
+        List<CultureRecipe> recipes3 = rm.getAllRecipesFor(CultureRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(VatRecipeCategory.UID, CultureRecipe.class), recipes3);
+
 
     }
 }

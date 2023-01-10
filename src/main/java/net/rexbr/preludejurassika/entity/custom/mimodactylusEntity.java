@@ -87,7 +87,7 @@ public class mimodactylusEntity extends Animal implements IAnimatable {
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        if (event.isMoving()) {
+        if (event.isMoving() && !this.isFallFlying()) {
             event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.mimodactylus.fly", 999));
             return PlayState.CONTINUE;
         }
@@ -97,9 +97,18 @@ public class mimodactylusEntity extends Animal implements IAnimatable {
             return PlayState.CONTINUE;
         }
 
+        if (this.isOnGround()) {
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.mimodactylus.idle", 999));
+            return PlayState.CONTINUE;
+        }
 
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.mimodactylus.idle", 999));
-        return PlayState.CONTINUE;
+        if (event.isMoving() && !this.isOnGround()) {
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.mimodactylus.walk", 999));
+            return PlayState.CONTINUE;
+        }
+
+        return PlayState.STOP;
+
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
@@ -166,5 +175,23 @@ public class mimodactylusEntity extends Animal implements IAnimatable {
         super.defineSynchedData();
         this.entityData.define(DATA_ID_TYPE_SEX, 0);
     }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        if (source == DamageSource.FALL)
+            return false;
+        return super.hurt(source, amount);
+    }
+
+    @Override
+    protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+    }
+
+    @Override
+    public void setNoGravity(boolean ignored) {
+        super.setNoGravity(true);
+    }
+
+
 
 }

@@ -1,11 +1,17 @@
 package net.rexbr.preludejurassika.world.feature;
 
+import com.google.common.collect.ImmutableList;
+import net.minecraft.advancements.critereon.PlacedBlockTrigger;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.util.valueproviders.BiasedToBottomInt;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
@@ -15,13 +21,22 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureCo
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
+import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraftforge.registries.ForgeRegistryEntry;
+import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.config.PreludeCommonConfig;
+import net.rexbr.preludejurassika.prelude;
+import net.rexbr.preludejurassika.procedurals.CalamitesGenP;
+import net.rexbr.preludejurassika.procedurals.EncaseFossil;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_FOSSIL_ORES = List.of(
@@ -37,7 +52,8 @@ public class ModConfiguredFeatures {
                     BlockStateProvider.simple(ModBlocks.CALAMITES_LOG.get()),
                     new StraightTrunkPlacer(5, 6, 3),
                     BlockStateProvider.simple(ModBlocks.CALAMITES_LEAVES.get()),
-                    new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                    new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 7),
+
                     new TwoLayersFeatureSize(1, 0, 2)).build());
 
 
@@ -48,6 +64,7 @@ public class ModConfiguredFeatures {
             FeatureUtils.register("calamites_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(CALAMITES_CHECKED,
                             0.5F)), CALAMITES_CHECKED));
+
 
 
 }

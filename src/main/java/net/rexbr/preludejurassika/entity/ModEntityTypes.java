@@ -99,6 +99,24 @@ public class ModEntityTypes {
                             .sized(2.2f, 4.0f)
                             .build(new ResourceLocation(prelude.MODID, "eotriceratops").toString()));
 
+    public static final RegistryObject<EntityType<IncisivosaurusEntity>> INCISIVOSAURUS =
+            ENTITY_TYPES.register("incisivosaurus",
+                    () -> EntityType.Builder.of(IncisivosaurusEntity::new, MobCategory.CREATURE)
+                            .sized(0.58f, 1.06f)
+                            .build(new ResourceLocation(prelude.MODID, "incisivosaurus").toString()));
+
+    public static final RegistryObject<EntityType<OrnithomimusEntity>> ORNITHOMIMUS =
+            ENTITY_TYPES.register("ornithomimus",
+                    () -> EntityType.Builder.of(OrnithomimusEntity::new, MobCategory.CREATURE)
+                            .sized(0.65f, 1.8f)
+                            .build(new ResourceLocation(prelude.MODID, "ornithomimus").toString()));
+
+    public static final RegistryObject<EntityType<SilessaurusEntity>> SILESSAURUS =
+            ENTITY_TYPES.register("silessaurus",
+                    () -> EntityType.Builder.of(SilessaurusEntity::new, MobCategory.CREATURE)
+                            .sized(0.65f, 0.8f)
+                            .build(new ResourceLocation(prelude.MODID, "silessaurus").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

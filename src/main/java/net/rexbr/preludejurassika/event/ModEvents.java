@@ -9,6 +9,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.villager.ModVillagers;
@@ -21,12 +22,12 @@ public class ModEvents {
     public static void addCustomTrades(VillagerTradesEvent event) {
         if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(ModItems.FOSSIL_GENERIC.get(), 2);
+            ItemStack stack = new ItemStack(ModItems.PLASTER.get(), 4);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 4),
-                    stack,10,2,0.02F)); //qnt trocas //pxp //preço mulktiplyer
+                    stack,8,2,0.02F)); //qnt trocas //pxp //preço mulktiplyer
         }
 
         if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
@@ -73,6 +74,42 @@ public class ModEvents {
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 8),
                     stack, 10, 4, 0.02F));
+        }
+        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.PLANT_CELLS.get(), 2);
+            int villagerLevel = 4;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 6),
+                    stack, 10, 4, 0.02F));
+        }
+        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModBlocks.ADOBE.get(), 2);
+            int villagerLevel = 4;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 6),
+                    stack, 10, 4, 0.02F));
+        }
+        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.PETRI_DISH_AGAR.get(), 1);
+            int villagerLevel = 4;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 16),
+                    stack, 6, 10, 0.02F));
+        }
+        if(event.getType() == ModVillagers.PALEONTOLOGIST.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.TOKEN.get(), 1);
+            int villagerLevel = 5;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 64),
+                    stack, 6, 12, 0.02F));
         }
     }
 }

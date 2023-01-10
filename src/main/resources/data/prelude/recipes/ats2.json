@@ -7,13 +7,13 @@
   ],
   "key": {
     "0": {
-      "item": "prelude:salty_dust"
+      "tag": "forge:salt"
     },
     "1": {
       "tag": "minecraft:small_flowers"
     },
     "2": {
-      "item": "prelude:salty_dust"
+      "tag": "forge:salt"
     },
     "3": {
       "tag": "minecraft:small_flowers"
@@ -25,13 +25,13 @@
       "tag": "minecraft:small_flowers"
     },
     "6": {
-      "item": "prelude:salty_dust"
+      "tag": "forge:salt"
     },
     "7": {
       "tag": "minecraft:small_flowers"
     },
     "8": {
-      "item": "prelude:salty_dust"
+      "tag": "forge:salt"
     }
   },
   "result": {

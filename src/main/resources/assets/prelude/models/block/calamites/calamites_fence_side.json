@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "prelude:block/trees/calamites/calamites_planks"
+  }
+}

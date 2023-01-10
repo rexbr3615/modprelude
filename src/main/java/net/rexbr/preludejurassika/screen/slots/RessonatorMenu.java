@@ -34,7 +34,7 @@ public class RessonatorMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 34, 40));
+            this.addSlot(new SlotItemHandler(handler, 0, 12, 27));
             this.addSlot(new SlotItemHandler(handler, 1, 57, 18));
             this.addSlot(new SlotItemHandler(handler, 2, 103, 18));
             this.addSlot(new ModResultSlot(handler, 3, 80, 60));
