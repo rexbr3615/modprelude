@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:encrinus_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:encrinus_disc"
+  }
+}
