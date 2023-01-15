@@ -75,7 +75,7 @@ public class CleanerEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("cleaner entity");
+        return new TextComponent("cleaner");
     }
 
     @Nullable
@@ -155,12 +155,8 @@ public class CleanerEntity extends BlockEntity implements MenuProvider {
                 .getRecipeFor(CleanerRecipe.Type.INSTANCE, inventory, level); /////recip
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem())
-                && hasItemInItemSlot(entity) && hasToolsInToolSlot(entity);
-    }
+                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem());
 
-    private static boolean hasItemInItemSlot(CleanerEntity entity) {
-        return PotionUtils.getPotion(entity.itemHandler.getStackInSlot(0)) == Potions.WATER;
     }
 
     private static boolean hasToolsInToolSlot(CleanerEntity entity) {
@@ -178,7 +174,6 @@ public class CleanerEntity extends BlockEntity implements MenuProvider {
                 .getRecipeFor(CleanerRecipe.Type.INSTANCE, inventory, level); //recipe now
 
         if(match.isPresent()) {
-            entity.itemHandler.extractItem(0,1, false);
             entity.itemHandler.extractItem(1,1, false);
             entity.itemHandler.getStackInSlot(2).hurt(1, new Random(), null);
 

@@ -45,7 +45,7 @@ public class RessonatorEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 1450;
+    private int maxProgress = 1050;
 
     public RessonatorEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.RESSONATOR_ENTITY.get(), pWorldPosition, pBlockState);

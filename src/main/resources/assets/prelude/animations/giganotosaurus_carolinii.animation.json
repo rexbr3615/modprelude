@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.giganotosaurus_carolinii.idle": {
+			"loop": true
+		},
+		"animation.giganotosaurus_carolinii.walk": {
+			"loop": true
+		},
+		"animation.giganotosaurus_carolinii.attack": {
+			"animation_length": 0.5,
+			"bones": {
+				"bone9": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.25": {
+							"vector": [40, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -20,12 +20,14 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.rexbr.preludejurassika.block.WrappedHandler;
 import net.rexbr.preludejurassika.block.common.AnalyzerBlock;
 import net.rexbr.preludejurassika.item.ModItems;
+
 import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
 import net.rexbr.preludejurassika.screen.slots.AnalyzerMenu;
 import org.jetbrains.annotations.NotNull;
@@ -55,6 +57,9 @@ public class AnalyzerEntity extends BlockEntity implements MenuProvider {
         }
 
     };
+
+
+    private static final int ENERGY_REQ = 32;
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -98,7 +103,7 @@ public class AnalyzerEntity extends BlockEntity implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("analyzer entity");
+        return new TextComponent("analyzer");
     }
 
     @Nullable
@@ -133,6 +138,8 @@ public class AnalyzerEntity extends BlockEntity implements MenuProvider {
 
         return super.getCapability(cap, side);
     }
+
+
 
     @Override
     public void onLoad() {

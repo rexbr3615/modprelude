@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -28,9 +29,12 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import static java.lang.Math.PI;
+
 public class AlbertosaurusEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private boolean isSwimming;
+
 
     public AlbertosaurusEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -121,6 +125,9 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
     }
+
+
+
 
 
 

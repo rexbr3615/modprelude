@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "":
+    [
+      { "model": "prelude:block/swartpuntia" },
+      { "model": "prelude:block/swartpuntia1"},
+      { "model": "prelude:block/swartpuntia2"}
+    ]
+  }
+}

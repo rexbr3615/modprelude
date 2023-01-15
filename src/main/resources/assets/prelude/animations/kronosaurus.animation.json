@@ -1,0 +1,242 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.landed": {
+			"loop": true,
+			"bones": {
+				"root2": {
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"vector": [-0.17544, 14.94159, 16.1622]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [0.47532, 19.82169, 20.21994]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [7.47178, 0.65182, -4.95744]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [-2.5, 0, -12.5]
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"vector": [0, 0, 5]
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"vector": [0, 0, -5]
+					}
+				}
+			}
+		},
+		"animation.model.swim": {
+			"animation_length": 1,
+			"bones": {
+				"bone7": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -35]
+						},
+						"0.5": {
+							"vector": [0, 0, 35]
+						},
+						"1.0": {
+							"vector": [0, 0, -35]
+						}
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 35]
+						},
+						"0.5": {
+							"vector": [0, 0, -35]
+						},
+						"1.0": {
+							"vector": [0, 0, 35]
+						}
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 35]
+						},
+						"0.5": {
+							"vector": [0, 0, -35]
+						},
+						"1.0": {
+							"vector": [0, 0, 35]
+						}
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -35]
+						},
+						"0.5": {
+							"vector": [0, 0, 35]
+						},
+						"1.0": {
+							"vector": [0, 0, -35]
+						}
+					}
+				}
+			}
+		},
+		"animation.model.attack": {
+			"animation_length": 0.5,
+			"bones": {
+				"bone6": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.25": {
+							"vector": [72.5, 0, 0]
+						},
+						"0.375": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.kronosaurus.landed": {
+			"loop": true,
+			"bones": {
+				"root2": {
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"vector": [-0.17544, 14.94159, 16.1622]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [0.47532, 19.82169, 20.21994]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [7.47178, 0.65182, -4.95744]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [-2.5, 0, -12.5]
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"vector": [0, 0, 5]
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"vector": [0, 0, -5]
+					}
+				}
+			}
+		},
+		"animation.kronosaurus.swim": {
+			"animation_length": 1,
+			"bones": {
+				"bone7": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -35]
+						},
+						"0.5": {
+							"vector": [0, 0, 35]
+						},
+						"1.0": {
+							"vector": [0, 0, -35]
+						}
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 35]
+						},
+						"0.5": {
+							"vector": [0, 0, -35]
+						},
+						"1.0": {
+							"vector": [0, 0, 35]
+						}
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 35]
+						},
+						"0.5": {
+							"vector": [0, 0, -35]
+						},
+						"1.0": {
+							"vector": [0, 0, 35]
+						}
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -35]
+						},
+						"0.5": {
+							"vector": [0, 0, 35]
+						},
+						"1.0": {
+							"vector": [0, 0, -35]
+						}
+					}
+				}
+			}
+		},
+		"animation.kronosaurus.attack": {
+			"animation_length": 0.5,
+			"bones": {
+				"bone6": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.25": {
+							"vector": [72.5, 0, 0]
+						},
+						"0.375": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -6,9 +6,12 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,12 +33,15 @@ import net.rexbr.preludejurassika.entity.client.*;
 
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
+import net.rexbr.preludejurassika.entity.client.incisivosaurus.IncisivosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.irritator.IrritatorRenderer;
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 
+import net.rexbr.preludejurassika.entity.client.ornithomimus.OrnithomimusRenderer;
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
 import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
+import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
@@ -99,6 +105,15 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_COOKSONIA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COMMON_FENCE.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SWARTPUNTIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ENCRINUS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ENCRINUS_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_LEAVES.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA_PLANT.get(), RenderType.cutout());
 
@@ -116,6 +131,9 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.IRRITATOR.get(), IrritatorRenderer::new);
         EntityRenderers.register(ModEntityTypes.PROLIBYTHERIUM.get(), ProlibytheriumRenderer::new);
         EntityRenderers.register(ModEntityTypes.EOTRICERATOPS.get(), EotriceratopsRenderer::new);
+        EntityRenderers.register(ModEntityTypes.INCISIVOSAURUS.get(), IncisivosaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.SILESSAURUS.get(), SilessaurusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());
@@ -133,6 +151,50 @@ public class prelude {
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.COOKSONIA.getId(), ModBlocks.POTTED_COOKSONIA);
+
+
+            SpawnPlacements.register(ModEntityTypes.ALBERTOSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.ORNITHOMIMUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.AVACERATOPS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.AMAZONSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.JURAVENATOR.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.PYRORAPTOR.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.PALEOLAMA.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.TORVOSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.PROLIBYTHERIUM.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+            SpawnPlacements.register(ModEntityTypes.IRRITATOR.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+
 
             ModVillagers.registerPOIs();
 

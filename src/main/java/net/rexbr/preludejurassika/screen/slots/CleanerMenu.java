@@ -34,7 +34,6 @@ public class CleanerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 34, 40));
             this.addSlot(new SlotItemHandler(handler, 1, 57, 18));
             this.addSlot(new SlotItemHandler(handler, 2, 103, 18));
             this.addSlot(new ModResultSlot(handler, 3, 80, 60));
@@ -67,7 +66,7 @@ public class CleanerMenu extends AbstractContainerMenu {
     private static final int PLAYER_INVENTORY_COLUMN_COUNT = 9;
     private static final int PLAYER_INVENTORY_SLOT_COUNT = PLAYER_INVENTORY_COLUMN_COUNT * PLAYER_INVENTORY_ROW_COUNT;
     private static final int VANILLA_SLOT_COUNT = HOTBAR_SLOT_COUNT + PLAYER_INVENTORY_SLOT_COUNT;
-    private static final int VANILLA_FIRST_SLOT_INDEX = 0;
+    private static final int VANILLA_FIRST_SLOT_INDEX = 1;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!

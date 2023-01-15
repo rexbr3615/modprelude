@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "prelude:block/trees/calamites/calamites_sapling"
+    "layer0": "prelude:block/trees/calamites/calamites_sapling",
+    "layer1": "prelude:block/palleta"
   }
 }

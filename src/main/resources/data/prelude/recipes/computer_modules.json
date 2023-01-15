@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "minecraft:iron_ingot"
+    },
+    "2": {
+      "item": "minecraft:iron_ingot"
+    },
+    "3": {
+      "tag": "forge:dusts/gold"
+    },
+    "4": {
+      "item": "thermal:rf_coil"
+    },
+    "5": {
+      "item": "thermal:cured_rubber"
+    }
+  },
+  "result": {
+    "item": "prelude:computer_modules",
+    "count": 1
+  }
+}

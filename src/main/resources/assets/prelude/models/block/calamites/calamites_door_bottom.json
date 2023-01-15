@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "prelude:block/trees/calamites/calamites_door_top",
+    "bottom": "prelude:block/trees/calamites/calamites_door_bottom"
+  }
+}

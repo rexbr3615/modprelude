@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "prelude:textures/block/adobe.png",
+    "icon": {
+      "item": "prelude:token"
+    },
+    "title": {
+      "translate": "advancements.welcome.title"
+    },
+    "description": {
+      "translate": "advancements.welcomea.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bemvindo": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  }
+}

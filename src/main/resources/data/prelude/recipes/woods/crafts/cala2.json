@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:calamites_log"
+    }
+  },
+  "result": {
+    "item": "prelude:calamites_wood",
+    "count": 1
+  }
+}

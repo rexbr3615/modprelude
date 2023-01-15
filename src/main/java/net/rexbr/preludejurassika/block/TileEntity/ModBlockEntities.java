@@ -6,7 +6,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.ModBlocks;
+
 import net.rexbr.preludejurassika.prelude;
+
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
@@ -28,6 +30,14 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("ressonator_entity", () ->
                     BlockEntityType.Builder.of(RessonatorEntity::new,
                             ModBlocks.RESSONATOR.get()).build(null));
+
+
+
+
+
+
+
+
 
 
     public static void register(IEventBus eventBus) {

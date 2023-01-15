@@ -2,14 +2,17 @@ package net.rexbr.preludejurassika.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,19 +21,27 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.common.*;
+
 import net.rexbr.preludejurassika.block.plants.CooksoniaPlantBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.procedurals.CalamitesGenP;
+import net.rexbr.preludejurassika.procedurals.CalamitesTreeGrowing;
+import net.rexbr.preludejurassika.procedurals.EncaseFossil;
 import net.rexbr.preludejurassika.world.feature.tree.CalamitesTreeGrower;
 
+
+import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -42,16 +53,59 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FOSSIL_ORE = registerBlock("fossil_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    .strength(2f).requiresCorrectToolForDrops()){
 
+                @Override
+                public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
+                    super.use(blockstate, world, pos, entity, hand, hit);
+                    int x = pos.getX();
+                    int y = pos.getY();
+                    int z = pos.getZ();
+                    double hitX = hit.getLocation().x;
+                    double hitY = hit.getLocation().y;
+                    double hitZ = hit.getLocation().z;
+                    Direction direction = hit.getDirection();
+
+                    EncaseFossil.execute(world, x, y, z, entity);
+                    return InteractionResult.SUCCESS;
+                }
+
+
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> DEEP_FOSSIL_ORE = registerBlock("deep_fossil_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE)
+                    .strength(3f).requiresCorrectToolForDrops()){
+
+                @Override
+                public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
+                    super.use(blockstate, world, pos, entity, hand, hit);
+                    int x = pos.getX();
+                    int y = pos.getY();
+                    int z = pos.getZ();
+                    double hitX = hit.getLocation().x;
+                    double hitY = hit.getLocation().y;
+                    double hitZ = hit.getLocation().z;
+                    Direction direction = hit.getDirection();
+
+                    EncaseFossil.execute(world, x, y, z, entity);
+                    return InteractionResult.SUCCESS;
+                }
+
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> ENCHASED_FOSSIL = registerBlock("enchased_fossil",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE)
                     .strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> ADOBE = registerBlock("adobe",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> VOLCANIC_ASH = registerBlock("volcanic_ash",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
 
     public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
@@ -76,6 +130,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> RESSONATOR = registerBlock("dna_ressonator",
             () -> new DnaressonatorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+
+
+
 
 
     public static final RegistryObject<Block> PROTOTAXITES = registerBlock("prototaxites",
@@ -134,8 +193,29 @@ public class ModBlocks {
 
             }, ModCreativeModeTab.PALEO_BOTANIC);
 
+    public static final RegistryObject<Block> SWARTPUNTIA = registerBlock("swartpuntia",
+            () -> new BlockPreludeCustomWaterGrass(
+                    BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion()), ModCreativeModeTab.PALEO_BOTANIC);
 
-    //===============================trees===========================================
+    public static final RegistryObject<GrowingPlantHeadBlock> ENCRINUS = registerBlock("encrinus",
+            () -> new BlockKrethrossTop(BlockBehaviour.Properties.of(Material.WATER_PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+
+                    .sound(SoundType.WET_GRASS)), ModCreativeModeTab.PALEO_BOTANIC);
+
+    public static final RegistryObject<GrowingPlantBlock> ENCRINUS_PLANT = registerBlock("encrinus_stem",
+            () -> new BlockKrethross(BlockBehaviour.Properties.of(Material.WATER_PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+
+                    .sound(SoundType.WET_GRASS)), ModCreativeModeTab.PALEO_BOTANIC);
+
+
+
+    //==tree==
 
 
     public static final RegistryObject<Block> CALAMITES_LOG = registerBlock("calamites_log",
@@ -144,12 +224,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> CALAMITES_WOOD = registerBlock("calamites_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
-    public static final RegistryObject<Block> STRIPPED_CALAMITES_LOG = registerBlock("stripped_calamites_log",
+
+    /*public static final RegistryObject<Block> STRIPPED_CALAMITES_LOG = registerBlock("stripped_calamites_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
     public static final RegistryObject<Block> STRIPPED_CALAMITES_WOOD = registerBlock("stripped_calamites_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
-            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);*/
 
 
     public static final RegistryObject<Block> CALAMITES_PLANKS = registerBlock("calamites_planks",
@@ -189,9 +270,103 @@ public class ModBlocks {
                 }
             }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
+    public static final RegistryObject<Block> CALAMITES_STAIRS = registerBlock("calamites_stairs",
+            () -> new StairBlock(() -> ModBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(5f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> CALAMITES_SLAB = registerBlock("calamites_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> CALAMITES_FENCE = registerBlock("calamites_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    
+    public static final RegistryObject<Block> CALAMITES_FENCE_GATE = registerBlock("calamites_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+    public static final RegistryObject<Block> CALAMITES_BUTTON = registerBlock("calamites_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)
+                    .strength(5f).requiresCorrectToolForDrops().noCollission()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> CALAMITES_PRESSURE_PLATE = registerBlock("calamites_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> CALAMITES_DOOR = registerBlock("calamites_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> CALAMITES_TRAPDOOR = registerBlock("calamites_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    
 
     public static final RegistryObject<Block> CALAMITES_SAPLING = registerBlock("calamites_sapling",
             () -> new SaplingBlock(new CalamitesTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.PALEO_BOTANIC);
+
+    public static final RegistryObject<Block> CALAMITES_SAPLING2 = registerBlock("calamites_sapling1",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion().noCollission().instabreak()){
+
+
+                @Override
+                public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+                    super.onPlace(blockstate, world, pos, oldState, moving);
+                    CalamitesTreeGrowing.execute(world, pos.getX(), pos.getY(), pos.getZ());
+                }
+
+
+
+            }, ModCreativeModeTab.PALEO_BOTANIC);
+
+
+
+
+
+
+    public static final RegistryObject<Block> GINKGO_LOG = registerBlock("ginkgo_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> GINKGO_WOOD = registerBlock("ginkgo_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> GINKGO_PLANKS = registerBlock("ginkgo_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> GINKGO_LEAVES = registerBlock("ginkgo_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
     //==========================seeds=================================================
@@ -203,8 +378,26 @@ public class ModBlocks {
 
     //========================decorations===============================================
 
+    public static final RegistryObject<Block> COMMON_FENCE = registerBlock("common_fence",
+            () -> new common_fence(),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
 
     //==================================================================================
+
+
+
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab, String tooltipKey) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(tab)) {
+            @Override
+            public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+                pTooltip.add(new TranslatableComponent(tooltipKey));
+            }
+        });
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

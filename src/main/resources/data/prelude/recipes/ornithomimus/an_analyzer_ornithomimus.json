@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:cleaned_ornithomimus_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:ornithomimus_disc"
+  }
+}

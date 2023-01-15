@@ -7,6 +7,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
+import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.custom.*;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
@@ -30,6 +31,9 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.IRRITATOR.get(), IrritatorEntity.setAttributes());
         event.put(ModEntityTypes.PROLIBYTHERIUM.get(), ProlibytheriumEntity.setAttributes());
         event.put(ModEntityTypes.EOTRICERATOPS.get(), EotriceratopsEntity.setAttributes());
+        event.put(ModEntityTypes.INCISIVOSAURUS.get(), IncisivosaurusEntity.setAttributes());
+        event.put(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusEntity.setAttributes());
+        event.put(ModEntityTypes.SILESSAURUS.get(), SilessaurusEntity.setAttributes());
     }
 
     @SubscribeEvent

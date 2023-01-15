@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:silessaurus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:silessaurus_dna"
+  }
+}

@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-
+      "prelude:calamites_stairs",
+      "prelude:calamites_slab",
+      "prelude:calamites_fence",
+      "prelude:calamites_fence_gate",
+      "prelude:calamites_button",
+      "prelude:calamites_pressure_plate",
+      "prelude:calamites_door",
+      "prelude:calamites_trapdoor"
   ]
 }

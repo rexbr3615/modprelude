@@ -1,5 +1,6 @@
 package net.rexbr.preludejurassika.screen.slots;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,6 +14,8 @@ import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.block.TileEntity.AnalyzerEntity;
 import net.rexbr.preludejurassika.block.TileEntity.CultureEntity;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
+
+import java.util.HashMap;
 
 public class CultureMenu extends AbstractContainerMenu {
     private final CultureEntity blockEntity;
@@ -34,7 +37,7 @@ public class CultureMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 34, 40));
+            this.addSlot(new SlotItemHandler(handler, 0, 80, 6));
             this.addSlot(new SlotItemHandler(handler, 1, 57, 18));
             this.addSlot(new SlotItemHandler(handler, 2, 103, 18));
             this.addSlot(new ModResultSlot(handler, 3, 80, 60));
@@ -125,4 +128,8 @@ public class CultureMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
         }
     }
+
+
+
+
 }

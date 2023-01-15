@@ -19,7 +19,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.18.2-0.2.8.beta'
+version = '1.18.2-0.3.0.release'
 group = 'net.rexbr.preludejurassika' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'prelude'
 
@@ -175,7 +175,7 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.27'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.92'
 
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.39')
 
@@ -184,10 +184,14 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
+    runtimeOnly fg.deobf("curse.maven:just-enough-resources-jer-240630:${project.jer}")
 
     runtimeOnly fg.deobf("curse.maven:mekanism-268560:${project.mek}")
-    implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")
+    runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:${project.tf}")
+    runtimeOnly fg.deobf("curse.maven:cofh-core-69162:${project.cofh}")
+    runtimeOnly fg.deobf("curse.maven:thermal-expansion-69163:${project.th_ex}")
 
+    implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")
 
 
     // Real mod deobf dependency examples - these get remapped to your current mappings

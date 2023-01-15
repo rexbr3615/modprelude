@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:calamites_planks"
+    }
+  },
+  "result": {
+    "item": "prelude:calamites_stairs",
+    "count": 2
+  }
+}

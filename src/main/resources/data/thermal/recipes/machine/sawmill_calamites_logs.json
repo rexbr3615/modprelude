@@ -1,0 +1,17 @@
+{
+  "type": "thermal:sawmill",
+  "ingredient": {
+    "tag": "forge:calamite_log"
+  },
+  "result": [
+    {
+      "item": "prelude:calamites_planks",
+      "count": 6
+    },
+    {
+      "item": "thermal:sawdust",
+      "chance": 1.25
+    }
+  ],
+  "net.rexbr.test.energy": 1000
+}

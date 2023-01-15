@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:albertosaurus_dna",
+    "prelude:avaceratops_dna",
+    "prelude:juda_dna",
+    "prelude:pyro_dna",
+    "prelude:amazonsaurus_dna",
+    "prelude:torvo_dna",
+    "prelude:paleolama_dna"
+  ]
+}

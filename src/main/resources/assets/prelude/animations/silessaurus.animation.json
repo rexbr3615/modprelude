@@ -2,7 +2,120 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.silessaurus.walk": {
-			"loop": true
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"bone14": {
+					"rotation": {
+						"0.0": {
+							"vector": [32.5, 0, 0]
+						},
+						"0.5": {
+							"vector": [-32.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [32.5, 0, 0]
+						}
+					}
+				},
+				"bone17": {
+					"rotation": {
+						"0.0": {
+							"vector": [-32.5, 0, 0]
+						},
+						"0.5": {
+							"vector": [32.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [-32.5, 0, 0]
+						}
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 2.5]
+						},
+						"0.5": {
+							"vector": [0, 0, -2.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 2.5]
+						}
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"0.0": {
+							"vector": [-2.5, 2.5, 0]
+						},
+						"0.5": {
+							"vector": [-2.5, -2.5, 0]
+						},
+						"1.0": {
+							"vector": [-2.5, 2.5, 0]
+						}
+					}
+				},
+				"bone8": {
+					"rotation": {
+						"0.0": {
+							"vector": [-5.08807, 14.98539, 4.33037]
+						},
+						"0.25": {
+							"vector": [-0.09, 0, 0]
+						},
+						"0.5": {
+							"vector": [-5.08807, -14.9854, -4.3304]
+						},
+						"0.75": {
+							"vector": [-0.09, 0, 0]
+						},
+						"1.0": {
+							"vector": [-5.08807, 14.98539, 4.33037]
+						}
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"0.0": {
+							"vector": [-0.47479, 17.22575, 6.86612]
+						},
+						"0.5": {
+							"vector": [-0.47479, -17.2258, -6.8661]
+						},
+						"1.0": {
+							"vector": [-0.47479, 17.22575, 6.86612]
+						}
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"0.0": {
+							"vector": [-32.5, 0, 0]
+						},
+						"0.5": {
+							"vector": [32.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [-32.5, 0, 0]
+						}
+					}
+				},
+				"bone20": {
+					"rotation": {
+						"0.0": {
+							"vector": [32.5, 0, 0]
+						},
+						"0.5": {
+							"vector": [-32.5, 0, 0]
+						},
+						"1.0": {
+							"vector": [32.5, 0, 0]
+						}
+					}
+				}
+			}
 		},
 		"animation.silessaurus.idle": {
 			"animation_length": 2,
@@ -156,7 +269,29 @@
 			"loop": true
 		},
 		"animation.silessaurus.attack": {
-			"loop": true
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"bone5": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.1667": {
+							"vector": [0, 0, 0]
+						},
+						"0.25": {
+							"vector": [45, 0, 0]
+						},
+						"0.3333": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2

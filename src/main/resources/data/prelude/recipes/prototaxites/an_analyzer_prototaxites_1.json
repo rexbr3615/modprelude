@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:prototaxites_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:prototaxites_disc"
+  }
+}

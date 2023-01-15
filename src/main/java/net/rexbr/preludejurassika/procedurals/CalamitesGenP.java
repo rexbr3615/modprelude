@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 public class CalamitesGenP {
     public static void execute(LevelAccessor world, double x, double y, double z) {
         if (world instanceof ServerLevel _serverworld) {
-            StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("quiltyggwwcfge", "calamites"));
+            StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("prelude", "calamites"));
             if (template != null) {
                 template.placeInWorld(_serverworld, new BlockPos(x + 2, y, z + 2), new BlockPos(x + 2, y, z + 2),
                         new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random,

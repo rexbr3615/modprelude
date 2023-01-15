@@ -19,7 +19,7 @@ modId="prelude" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="1.18.2-0.2.8.beta" #mandatory
+version="1.18.2-0.3.0.release" #mandatory
  # A display name for the mod
 displayName="jurassic: prelude" #mandatory
 displayURL= "https://github.com/rexbr3615/modprelude , https://www.curseforge.com/minecraft/mc-mods/jurassick-prelude"
@@ -33,9 +33,12 @@ logoFile="PRTS.png" #optional
 credits="rexbr" #optional
 # A text field displayed in the mod UI
 authors="rexbr" #optional
-# The description text for the mod (multi line!) (#mandatory)
+
 description='''
-dinossaurs!!!
+
+thanks for playing the mod!
+this is my first complex mod
+
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.prelude]] #optional
@@ -71,6 +74,8 @@ dinossaurs!!!
      versionRange="[10.2.5,)"
      ordering="BEFORE"
      side="BOTH"
+
+
 
 
 
