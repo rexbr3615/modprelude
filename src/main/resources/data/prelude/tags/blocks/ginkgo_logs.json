@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:ginkgo_log",
+    "prelude:ginkgo_wood"
+  ]
+}

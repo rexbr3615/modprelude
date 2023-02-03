@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "prelude:block/calamites_sapling" }
+    "": { "model": "prelude:block/calamites/calamites_sapling" }
   }
 }

@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -17,13 +16,9 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,9 +30,11 @@ import net.rexbr.preludejurassika.block.plants.CooksoniaPlantBlock;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
-import net.rexbr.preludejurassika.procedurals.CalamitesGenP;
 import net.rexbr.preludejurassika.procedurals.CalamitesTreeGrowing;
+
 import net.rexbr.preludejurassika.procedurals.EncaseFossil;
+import net.rexbr.preludejurassika.procedurals.GinkgoTreeGrowing;
+
 import net.rexbr.preludejurassika.world.feature.tree.CalamitesTreeGrower;
 
 
@@ -102,9 +99,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
-    public static final RegistryObject<Block> VOLCANIC_ASH = registerBlock("volcanic_ash",
+    /*public static final RegistryObject<Block> VOLCANIC_ASH = registerBlock("volcanic_ash",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);*/
 
 
     public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
@@ -272,36 +269,36 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CALAMITES_STAIRS = registerBlock("calamites_stairs",
             () -> new StairBlock(() -> ModBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(5f).requiresCorrectToolForDrops()),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> CALAMITES_SLAB = registerBlock("calamites_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
+                    ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> CALAMITES_FENCE = registerBlock("calamites_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)
+                    ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
     
     public static final RegistryObject<Block> CALAMITES_FENCE_GATE = registerBlock("calamites_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)
+                    ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
     public static final RegistryObject<Block> CALAMITES_BUTTON = registerBlock("calamites_button",
             () -> new StoneButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)
-                    .strength(5f).requiresCorrectToolForDrops().noCollission()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    .noCollission()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> CALAMITES_PRESSURE_PLATE = registerBlock("calamites_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> CALAMITES_DOOR = registerBlock("calamites_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    .noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
     public static final RegistryObject<Block> CALAMITES_TRAPDOOR = registerBlock("calamites_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+                    .noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
     
 
     public static final RegistryObject<Block> CALAMITES_SAPLING = registerBlock("calamites_sapling",
@@ -309,7 +306,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CALAMITES_SAPLING2 = registerBlock("calamites_sapling1",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
-                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion().noCollission().instabreak()){
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()){
 
 
                 @Override
@@ -367,7 +364,41 @@ public class ModBlocks {
                     return 30;
                 }
             }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> GINKGO_LEAVES_FRUIT = registerBlock("ginkgo_leaves_fruit",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
 
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+
+
+    public static final RegistryObject<Block> GINKGO_SAPLING = registerBlock("ginkgo_sapling",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion().noCollission().instabreak()){
+
+
+                @Override
+                public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+                    super.onPlace(blockstate, world, pos, oldState, moving);
+                    GinkgoTreeGrowing.execute(world, pos.getX(), pos.getY(), pos.getZ());
+                }
+
+
+
+            }, ModCreativeModeTab.PALEO_BOTANIC);
 
     //==========================seeds=================================================
 

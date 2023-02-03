@@ -31,6 +31,7 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 
 import net.rexbr.preludejurassika.entity.client.*;
 
+import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
 import net.rexbr.preludejurassika.entity.client.incisivosaurus.IncisivosaurusRenderer;
@@ -49,10 +50,7 @@ import net.rexbr.preludejurassika.item.ModItems;
 
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
-import net.rexbr.preludejurassika.screen.slots.AnalyzerScreen;
-import net.rexbr.preludejurassika.screen.slots.CleanerScreen;
-import net.rexbr.preludejurassika.screen.slots.CultureScreen;
-import net.rexbr.preludejurassika.screen.slots.RessonatorScreen;
+import net.rexbr.preludejurassika.screen.slots.*;
 import net.rexbr.preludejurassika.sound.ModSounds;
 import net.rexbr.preludejurassika.villager.ModVillagers;
 
@@ -104,9 +102,11 @@ public class prelude {
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COOKSONIA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_COOKSONIA.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COMMON_FENCE.get(), RenderType.cutout());
 
@@ -134,6 +134,7 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.INCISIVOSAURUS.get(), IncisivosaurusRenderer::new);
         EntityRenderers.register(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusRenderer::new);
         EntityRenderers.register(ModEntityTypes.SILESSAURUS.get(), SilessaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.DEINONYCHUS.get(), DeinonychusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());
@@ -143,7 +144,7 @@ public class prelude {
         MenuScreens.register(ModMenuTypes.CULTURE_MENU.get(), CultureScreen::new);
         MenuScreens.register(ModMenuTypes.CLEANER_MENU.get(), CleanerScreen::new);
         MenuScreens.register(ModMenuTypes.RESSONATOR_MENU.get(), RessonatorScreen::new);
-
+        
 
 
     }

@@ -10,6 +10,7 @@ import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.prelude;
 
 
+
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, prelude.MODID);

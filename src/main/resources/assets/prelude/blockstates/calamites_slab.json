@@ -4,7 +4,7 @@
       "model": "prelude:block/calamites/calamites_slab"
     },
     "type=double": {
-      "model": "prelude:block/calamites_planks"
+      "model": "prelude:block/calamites/calamites_planks"
     },
     "type=top": {
       "model": "prelude:block/calamites/calamites_slab_top"

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:raw_albertosaurus_meat",
+    "prelude:raw_pyroraptor_meat",
+    "prelude:raw_amazonsaurus_meat",
+    "prelude:raw_avaceratops_meat",
+    "prelude:raw_juravenator_meat",
+    "prelude:raw_torvosaurus_meat",
+    "prelude:raw_paleolama_meat",
+    "prelude:raw_dryosaurus_meat",
+    "prelude:raw_ypupiara_meat",
+    "prelude:raw_tenontosaurus_meat",
+    "prelude:raw_mimodactylus_meat",
+    "prelude:raw_irritator_meat",
+    "prelude:raw_prolibytherium_meat",
+    "prelude:raw_eotriceratops_meat",
+    "prelude:raw_incisivosaurus_meat",
+    "prelude:raw_ornithomimus_meat",
+    "prelude:raw_silessaurus_meat",
+    "prelude:raw_deinonychus_meat"
+  ]
+}

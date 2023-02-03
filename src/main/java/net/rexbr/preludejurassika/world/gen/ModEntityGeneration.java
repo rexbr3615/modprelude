@@ -29,28 +29,28 @@ public class ModEntityGeneration {
                     32, 1, 5, Biomes.BADLANDS,  Biomes.PLAINS , Biomes.FOREST);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.JURAVENATOR.get(),
-                    32, 1, 5, Biomes.PLAINS , Biomes.FOREST , Biomes.JUNGLE);
+                    48, 1, 3, Biomes.PLAINS , Biomes.FOREST , Biomes.JUNGLE);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.AVACERATOPS.get(),
-                    32, 1, 5, Biomes.PLAINS,  Biomes.DESERT , Biomes.FOREST , Biomes.JUNGLE);
+                    55, 2, 3, Biomes.PLAINS,  Biomes.DESERT , Biomes.FOREST , Biomes.JUNGLE);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.PYRORAPTOR.get(),
-                    32, 1, 5, Biomes.BADLANDS,  Biomes.ERODED_BADLANDS , Biomes.FOREST , Biomes.ERODED_BADLANDS);
+                    23, 1, 3, Biomes.BADLANDS,  Biomes.ERODED_BADLANDS , Biomes.FOREST , Biomes.ERODED_BADLANDS);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.AMAZONSAURUS.get(),
-                    32, 1, 5, Biomes.JUNGLE,  Biomes.PLAINS , Biomes.FOREST , Biomes.BAMBOO_JUNGLE);
+                    43, 1, 2, Biomes.JUNGLE,  Biomes.PLAINS , Biomes.FOREST , Biomes.BAMBOO_JUNGLE);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.PALEOLAMA.get(),
-                    32, 1, 5, Biomes.DESERT,  Biomes.BADLANDS , Biomes.ERODED_BADLANDS , Biomes.SAVANNA , Biomes.SAVANNA_PLATEAU);
+                    37, 1, 3, Biomes.DESERT,  Biomes.BADLANDS , Biomes.ERODED_BADLANDS , Biomes.SAVANNA , Biomes.SAVANNA_PLATEAU);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.TORVOSAURUS.get(),
-                    32, 1, 5, Biomes.BIRCH_FOREST,  Biomes.PLAINS , Biomes.FOREST , Biomes.JUNGLE);
+                    22, 1, 2, Biomes.BIRCH_FOREST,  Biomes.PLAINS , Biomes.FOREST , Biomes.JUNGLE);
 
             addEntityToSpecificBiomes(event, ModEntityTypes.PROLIBYTHERIUM.get(),
-                    32, 1, 5, Biomes.SAVANNA,  Biomes.SAVANNA_PLATEAU , Biomes.WINDSWEPT_SAVANNA );
+                    45, 1, 4, Biomes.SAVANNA,  Biomes.SAVANNA_PLATEAU , Biomes.WINDSWEPT_SAVANNA );
 
             addEntityToSpecificBiomes(event, ModEntityTypes.IRRITATOR.get(),
-                    32, 1, 5, Biomes.SWAMP,  Biomes.RIVER );
+                    30, 1, 2, Biomes.SWAMP,  Biomes.RIVER );
 
 
         }

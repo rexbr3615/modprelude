@@ -9,10 +9,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.prelude;
-import net.rexbr.preludejurassika.screen.slots.AnalyzerMenu;
-import net.rexbr.preludejurassika.screen.slots.CleanerMenu;
-import net.rexbr.preludejurassika.screen.slots.CultureMenu;
-import net.rexbr.preludejurassika.screen.slots.RessonatorMenu;
+import net.rexbr.preludejurassika.screen.slots.*;
+
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
@@ -26,7 +24,6 @@ public class ModMenuTypes {
             registerMenuType(CleanerMenu::new, "cleaner_menu");
     public static final RegistryObject<MenuType<RessonatorMenu>> RESSONATOR_MENU =
             registerMenuType(RessonatorMenu::new, "ressonator_menu");
-
 
 
 

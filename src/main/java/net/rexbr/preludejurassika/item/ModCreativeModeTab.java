@@ -23,10 +23,4 @@ public class ModCreativeModeTab {
             return new ItemStack(ModItems.COOKSONIA_SPORES.get());
         }
     };
-    public static final CreativeModeTab TEST_ITEMS = new CreativeModeTab("test_items") {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(Items.BARRIER);
-        }
-    };
 }

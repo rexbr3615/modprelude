@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_deinonychus_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:deinonychus_disc"
+  }
+}

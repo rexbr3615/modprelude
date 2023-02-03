@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
@@ -155,8 +156,13 @@ public class CleanerEntity extends BlockEntity implements MenuProvider {
                 .getRecipeFor(CleanerRecipe.Type.INSTANCE, inventory, level); /////recip
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem());
+                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem())
+                && hasItemInItemSlot(entity) && hasToolsInToolSlot(entity);
 
+    }
+
+    private static boolean hasItemInItemSlot(CleanerEntity entity) {
+        return entity.itemHandler.getStackInSlot(0).getItem() == Items.PAPER;
     }
 
     private static boolean hasToolsInToolSlot(CleanerEntity entity) {
@@ -174,6 +180,7 @@ public class CleanerEntity extends BlockEntity implements MenuProvider {
                 .getRecipeFor(CleanerRecipe.Type.INSTANCE, inventory, level); //recipe now
 
         if(match.isPresent()) {
+            entity.itemHandler.extractItem(0,0, false);
             entity.itemHandler.extractItem(1,1, false);
             entity.itemHandler.getStackInSlot(2).hurt(1, new Random(), null);
 

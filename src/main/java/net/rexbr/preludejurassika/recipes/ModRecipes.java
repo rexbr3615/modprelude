@@ -20,6 +20,8 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<RessonatorRecipe>> RESSONATOR_SERIALIZER =
             SERIALIZERS.register("ressonate", () -> RessonatorRecipe.Serializer.INSTANCE);
 
+
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

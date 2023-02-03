@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "prelude:calamites_fence"
+          "name": "prelude:calamites_fence_gate"
         }
       ]
     }

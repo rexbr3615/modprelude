@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:deinonychus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:deinonychus_spawn_egg"
+  }
+}

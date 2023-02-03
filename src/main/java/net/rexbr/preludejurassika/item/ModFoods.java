@@ -22,9 +22,16 @@ public class ModFoods {
     public static final FoodProperties RAW_DIABLOCERATOPS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties RAW_INCISIVOSAURUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties RAW_SILESSAURUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
+    public static final FoodProperties RAW_DEINONYCHUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
+
+
+    public static final FoodProperties GINKGO_NUTS = (new FoodProperties.Builder()).fast().nutrition(3).saturationMod(0.3F).build();
+    public static final FoodProperties CAVIAR = (new FoodProperties.Builder()).fast().nutrition(4).saturationMod(0.3F).build();
+    public static final FoodProperties DINO_BEEF = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.6F).build();
+
 
     // future
-    public static final FoodProperties RAW_DEINONYCHUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
+
     public static final FoodProperties RAW_CLOUDINA_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
 
 }

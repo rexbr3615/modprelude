@@ -8,6 +8,8 @@
       "prelude:calamites_button",
       "prelude:calamites_pressure_plate",
       "prelude:calamites_door",
-      "prelude:calamites_trapdoor"
+      "prelude:calamites_trapdoor",
+      "prelude:calamites_planks",
+      "prelude:ginkgo_planks"
   ]
 }

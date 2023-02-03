@@ -11,7 +11,7 @@ import net.rexbr.preludejurassika.prelude;
 
 public class AnalyzerScreen extends AbstractContainerScreen<AnalyzerMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(prelude.MODID, "textures/gui/gem_cutting_station_gui.png");
+            new ResourceLocation(prelude.MODID, "textures/gui/analyzer.png");
 
     public AnalyzerScreen(AnalyzerMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
@@ -28,7 +28,7 @@ public class AnalyzerScreen extends AbstractContainerScreen<AnalyzerMenu> {
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 102, y + 41, 176, 0, 8, menu.getScaledProgress());
+            blit(pPoseStack, x + 84, y + 32, 176, 0, 8, menu.getScaledProgress());
         }
 
     }

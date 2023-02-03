@@ -23,7 +23,7 @@ import javax.annotation.Nonnull;
 public class AnalyzerRecipeCategory implements IRecipeCategory<AnalyzerRecipe> {
     public final static ResourceLocation UID = new ResourceLocation(prelude.MODID, "analyze");
     public final static ResourceLocation TEXTURE =
-            new ResourceLocation(prelude.MODID, "textures/gui/gem_cutting_station_gui.png");
+            new ResourceLocation(prelude.MODID, "textures/gui/analyzer.png");
 
     private final IDrawable background;
     private final IDrawable icon;

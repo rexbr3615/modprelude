@@ -38,7 +38,7 @@
                   ]
                 }
               ],
-              "name": "minecraft:calamites_leaves"
+              "name": "prelude:calamites_leaves"
             },
             {
               "type": "minecraft:item",
@@ -57,7 +57,7 @@
                   ]
                 }
               ],
-              "name": "minecraft:calamites_sapling"
+              "name": "prelude:calamites_sapling1"
             }
           ]
         }
