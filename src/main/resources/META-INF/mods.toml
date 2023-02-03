@@ -30,7 +30,7 @@ displayURL= "https://github.com/rexbr3615/modprelude , https://www.curseforge.co
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="PRTS.png" #optional
 # A text field displayed in the mod UI
-credits="rexbr" #optional
+credits="rexbr," #optional
 # A text field displayed in the mod UI
 authors="rexbr," #optional
 
