@@ -19,7 +19,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.18.2-0.3.1.release'
+version = '1.18.2-0.3.2.release'
 group = 'net.rexbr.preludejurassika' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'prelude'
 
@@ -190,6 +190,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:${project.tf}")
     runtimeOnly fg.deobf("curse.maven:cofh-core-69162:${project.cofh}")
     runtimeOnly fg.deobf("curse.maven:thermal-expansion-69163:${project.th_ex}")
+
+    implementation fg.deobf("curse.maven:appleskin-248787:${project.apsk}")
 
     implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")
 
