@@ -145,8 +145,14 @@
 					"rotation": {
 						"vector": [1.15518, 4.29357, 325.23095]
 					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [0, 0, 27.5]
+					}
 				}
 			}
 		}
-	}
+	},
+	"geckolib_format_version": 2
 }

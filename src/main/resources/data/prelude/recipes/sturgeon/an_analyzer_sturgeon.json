@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:cleaned_sturgeon_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:sturgeon_disc"
+  }
+}

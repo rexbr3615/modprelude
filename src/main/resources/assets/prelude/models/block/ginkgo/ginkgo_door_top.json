@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "top": "prelude:block/trees/ginkgo/ginkgo_door_top",
+    "bottom": "prelude:block/trees/ginkgo/ginkgo_door_bottom"
+  }
+}

@@ -35,6 +35,8 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusEntity.setAttributes());
         event.put(ModEntityTypes.SILESSAURUS.get(), SilessaurusEntity.setAttributes());
         event.put(ModEntityTypes.DEINONYCHUS.get(), DeinonychusEntity.setAttributes());
+        event.put(ModEntityTypes.STURGEON.get(), SturgeonEntity.setAttributes());
+        event.put(ModEntityTypes.CONODONTA.get(), ConodontaEntity.setAttributes());
     }
 
     @SubscribeEvent

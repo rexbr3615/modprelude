@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "prelude:salinized_bone"
+  },
+  "result": {
+    "item": "prelude:ancient_sword"
+  }
+}

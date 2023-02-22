@@ -34,7 +34,7 @@ public class EotriceratopsEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 67.0D)
+                .add(Attributes.MAX_HEALTH, 60.0D)
                 .add(Attributes.ATTACK_DAMAGE, 6f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.ARMOR, 1.5)

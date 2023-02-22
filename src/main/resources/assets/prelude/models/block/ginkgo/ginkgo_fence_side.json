@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "prelude:block/trees/ginkgo/ginkgo_planks"
+  }
+}

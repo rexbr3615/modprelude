@@ -37,7 +37,7 @@ public class AvaceratopsEntity extends Animal implements IAnimatable{
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 36.0D)
+                .add(Attributes.MAX_HEALTH, 34.0D)
                 .add(Attributes.ATTACK_DAMAGE, 6f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.23f).build();

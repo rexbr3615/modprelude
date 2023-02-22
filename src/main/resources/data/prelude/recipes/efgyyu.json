@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WQW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "prelude:amber"
+    },
+    "Q": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "prelude:salinized_bone",
+    "count": 1
+  }
+}

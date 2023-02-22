@@ -53,6 +53,11 @@ public class ModEntityGeneration {
                     30, 1, 2, Biomes.SWAMP,  Biomes.RIVER );
 
 
+
+            addEntityToSpecificBiomes(event, ModEntityTypes.STURGEON.get(),
+                    30, 1, 2, Biomes.RIVER,  Biomes.SWAMP );
+
+
         }
     }
 

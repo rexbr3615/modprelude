@@ -1,6 +1,7 @@
 package net.rexbr.preludejurassika.item;
 
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -8,7 +9,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
+import net.rexbr.preludejurassika.item.common.ItemModFishBucket;
+import net.rexbr.preludejurassika.item.items.*;
 import net.rexbr.preludejurassika.prelude;
+
+import java.util.function.Supplier;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -66,14 +71,25 @@ public class ModItems {
     public static final RegistryObject<Item> PYRORAPTOR_FEATHER = ITEMS.register("pyroraptor_feather",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    public static final RegistryObject<Item> SALINIZED_BONE = ITEMS.register("salinized_bone",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     //misc
     public static final RegistryObject<Item> TOKEN = ITEMS.register("token",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> THAGOMIZER = ITEMS.register("thagomizer",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
-
-
+    public static final RegistryObject<Item> ANCIENT_SWORD = ITEMS.register("ancient_sword",
+            AncientSword::new);
+    public static final RegistryObject<Item> ANCIENT_HOE = ITEMS.register("ancient_hoe",
+            AncientHoe::new);
+    public static final RegistryObject<Item> ANCIENT_AXE = ITEMS.register("ancient_axe",
+            AncientAxe::new);
+    public static final RegistryObject<Item> ANCIENT_SHOVEL = ITEMS.register("ancient_shovel",
+            AncientShovel::new);
+    public static final RegistryObject<Item> ANCIENT_PICKAXE = ITEMS.register("ancient_pickaxe",
+            AncientPick::new);
 
     //dinossaurs fossils
     public static final RegistryObject<Item> FOSSIL_GENERIC = ITEMS.register("fossil",
@@ -165,6 +181,16 @@ public class ModItems {
     public static final RegistryObject<Item> FOSSIL_DEINONYCHUS = ITEMS.register("deinonychus_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> CLEANED_DEINONYCHUS_FOSSIL = ITEMS.register("cleaned_deinonychus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_STURGEON = ITEMS.register("sturgeon_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_STURGEON_FOSSIL = ITEMS.register("cleaned_sturgeon_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> CONODONTA_STURGEON = ITEMS.register("conodonta_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_CONODONTA_FOSSIL = ITEMS.register("cleaned_conodonta_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
     // plants stuff
@@ -261,6 +287,13 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_DEINONYCHUS_MEAT = ITEMS.register("raw_deinonychus_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_DEINONYCHUS_MEAT)));
 
+    public static final RegistryObject<Item> STURGEON_MEAT = ITEMS.register("sturgeon_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.STURGEON_MEAT)));
+    public static final RegistryObject<Item> CONODONTA_MEAT = ITEMS.register("conodonta_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.CONODONTA_MEAT)));
+
+    public static final RegistryObject<Item> FISH_COOCKED_MEAT = ITEMS.register("fish_coocked_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.FISH_COOCKED_MEAT)));
 
 
 
@@ -351,6 +384,27 @@ public class ModItems {
     public static final RegistryObject<Item> DEINONYCHUS_SPAWN_EGG = ITEMS.register("deinonychus_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.DEINONYCHUS,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> STURGEON_SPAWN_EGG = ITEMS.register("sturgeon_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.STURGEON,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> CONODONTA_SPAWN_EGG = ITEMS.register("conodonta_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CONODONTA,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+
+
+    // buckets
+
+    public static final RegistryObject<Item> STURGEON_BUCKET = ITEMS.register("sturgeon_bucket",
+            () -> new ItemModFishBucket(ModEntityTypes.STURGEON, Fluids.WATER,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> CONODONTA_BUCKET = ITEMS.register("conodonta_bucket",
+            () -> new ItemModFishBucket(ModEntityTypes.CONODONTA, Fluids.WATER,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
 
     //dna
 
@@ -480,13 +534,23 @@ public class ModItems {
     public static final RegistryObject<Item> DEINONYCHUS_SYRINGUE = ITEMS.register("deinonychus_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
+    public static final RegistryObject<Item> STURGEON_DNA = ITEMS.register("sturgeon_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> STURGEON_DISC = ITEMS.register("sturgeon_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> STURGEON_SYRINGUE = ITEMS.register("sturgeon_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
-
+    public static final RegistryObject<Item> CONODONTA_DNA = ITEMS.register("conodonta_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> CONODONTA_DISC = ITEMS.register("conodonta_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1).durability(5)));
+    public static final RegistryObject<Item> CONODONTA_SYRINGUE = ITEMS.register("conodonta_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     //seeds
 
-    public static final RegistryObject<Item> STURGEON_BUCKET = ITEMS.register("sturgeon_bucket",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
 
 
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "prelude:block/trees/ginkgo/ginkgo_trapdoor"
+  }
+}

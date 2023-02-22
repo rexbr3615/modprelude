@@ -123,6 +123,18 @@ public class ModEntityTypes {
                             .sized(0.65f, 1.05f)
                             .build(new ResourceLocation(prelude.MODID, "deinonychus").toString()));
 
+    public static final RegistryObject<EntityType<SturgeonEntity>> STURGEON =
+            ENTITY_TYPES.register("sturgeon",
+                    () -> EntityType.Builder.of(SturgeonEntity::new, MobCategory.CREATURE)
+                            .sized(1.2f, 0.6f)
+                            .build(new ResourceLocation(prelude.MODID, "sturgeon").toString()));
+
+    public static final RegistryObject<EntityType<ConodontaEntity>> CONODONTA =
+            ENTITY_TYPES.register("conodonta",
+                    () -> EntityType.Builder.of(ConodontaEntity::new, MobCategory.CREATURE)
+                            .sized(0.6f, 0.3f)
+                            .build(new ResourceLocation(prelude.MODID, "conodonta").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

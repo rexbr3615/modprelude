@@ -1,0 +1,6 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "prelude:block/trees/ginkgo/ginkgo_planks"
+  }
+}

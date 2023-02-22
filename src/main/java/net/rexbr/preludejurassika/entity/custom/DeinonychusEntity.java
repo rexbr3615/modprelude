@@ -36,7 +36,7 @@ public class DeinonychusEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 35.0D)
+                .add(Attributes.MAX_HEALTH, 27.0D)
                 .add(Attributes.ATTACK_DAMAGE, 5f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.25f).build();

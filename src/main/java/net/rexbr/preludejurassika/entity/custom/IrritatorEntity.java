@@ -115,4 +115,6 @@ public class IrritatorEntity extends Animal implements IAnimatable {
         this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
 
+
+
 }

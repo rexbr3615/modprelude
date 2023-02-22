@@ -28,7 +28,7 @@ public class AnalyzerScreen extends AbstractContainerScreen<AnalyzerMenu> {
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 84, y + 32, 176, 0, 8, menu.getScaledProgress());
+            blit(pPoseStack, x + 85, y + 31, 176, 0, 8, menu.getScaledProgress());
         }
 
     }

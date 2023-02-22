@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "prelude:item/eggs/egg_meganeura",
+    "layer1": "prelude:item/overlay/conodonta"
+  }
+}

@@ -11,6 +11,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -31,6 +32,7 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 
 import net.rexbr.preludejurassika.entity.client.*;
 
+import net.rexbr.preludejurassika.entity.client.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
@@ -43,9 +45,11 @@ import net.rexbr.preludejurassika.entity.client.ornithomimus.OrnithomimusRendere
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
 import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
 import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
+import net.rexbr.preludejurassika.entity.client.sturgeon.SturgeonRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
+import net.rexbr.preludejurassika.entity.custom.ConodontaEntity;
 import net.rexbr.preludejurassika.item.ModItems;
 
 import net.rexbr.preludejurassika.recipes.ModRecipes;
@@ -57,6 +61,8 @@ import net.rexbr.preludejurassika.villager.ModVillagers;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -65,6 +71,7 @@ public class prelude {
 
     public static final String MODID = "prelude";
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
+
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
@@ -107,6 +114,8 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_DOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COMMON_FENCE.get(), RenderType.cutout());
 
@@ -135,6 +144,8 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.ORNITHOMIMUS.get(), OrnithomimusRenderer::new);
         EntityRenderers.register(ModEntityTypes.SILESSAURUS.get(), SilessaurusRenderer::new);
         EntityRenderers.register(ModEntityTypes.DEINONYCHUS.get(), DeinonychusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.STURGEON.get(), SturgeonRenderer::new);
+        EntityRenderers.register(ModEntityTypes.CONODONTA.get(), ConoRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());
@@ -158,44 +169,104 @@ public class prelude {
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
-            SpawnPlacements.register(ModEntityTypes.ORNITHOMIMUS.get(),
+
+            SpawnPlacements.register(ModEntityTypes.MIMODACTYLUS.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
-            SpawnPlacements.register(ModEntityTypes.AVACERATOPS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-            SpawnPlacements.register(ModEntityTypes.AMAZONSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
+
             SpawnPlacements.register(ModEntityTypes.JURAVENATOR.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.AVACERATOPS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
             SpawnPlacements.register(ModEntityTypes.PYRORAPTOR.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
-            SpawnPlacements.register(ModEntityTypes.PALEOLAMA.get(),
+
+            SpawnPlacements.register(ModEntityTypes.AMAZONSAURUS.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
+
             SpawnPlacements.register(ModEntityTypes.TORVOSAURUS.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
-            SpawnPlacements.register(ModEntityTypes.PROLIBYTHERIUM.get(),
+
+            SpawnPlacements.register(ModEntityTypes.PALEOLAMA.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.DRYOSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.YPUPIARA.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.TENONTOSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
             SpawnPlacements.register(ModEntityTypes.IRRITATOR.get(),
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
 
+            SpawnPlacements.register(ModEntityTypes.PROLIBYTHERIUM.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
 
+            SpawnPlacements.register(ModEntityTypes.EOTRICERATOPS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.INCISIVOSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.ORNITHOMIMUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.SILESSAURUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.DEINONYCHUS.get(),
+                    SpawnPlacements.Type.ON_GROUND,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                    Animal::checkAnimalSpawnRules);
+
+            SpawnPlacements.register(ModEntityTypes.CONODONTA.get(),
+                    SpawnPlacements.Type.IN_WATER,
+                    Heightmap.Types.OCEAN_FLOOR,
+                    Animal::checkAnimalSpawnRules);
+
+
+            //// normal spawn XD ////
+
+            SpawnPlacements.register(ModEntityTypes.STURGEON.get(),
+                    SpawnPlacements.Type.IN_WATER,
+                    Heightmap.Types.OCEAN_FLOOR,
+                    Animal::checkAnimalSpawnRules);
 
             ModVillagers.registerPOIs();
 

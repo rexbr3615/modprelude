@@ -382,7 +382,38 @@ public class ModBlocks {
                 }
             }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
+    public static final RegistryObject<Block> GINKGO_STAIRS = registerBlock("ginkgo_stairs",
+            () -> new StairBlock(() -> ModBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
+    public static final RegistryObject<Block> GINKGO_SLAB = registerBlock("ginkgo_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)
+            ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> GINKGO_FENCE = registerBlock("ginkgo_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)
+            ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> GINKGO_FENCE_GATE = registerBlock("ginkgo_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)
+            ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+    public static final RegistryObject<Block> GINKGO_BUTTON = registerBlock("ginkgo_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)
+                    .noCollission()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> GINKGO_PRESSURE_PLATE = registerBlock("ginkgo_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)
+            ), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> GINKGO_DOOR = registerBlock("ginkgo_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)
+                    .noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> GINKGO_TRAPDOOR = registerBlock("ginkgo_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)
+                    .noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
     public static final RegistryObject<Block> GINKGO_SAPLING = registerBlock("ginkgo_sapling",

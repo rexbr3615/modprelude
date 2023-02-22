@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:ginkgo_planks"
+    }
+  },
+  "result": {
+    "item": "prelude:ginkgo_trapdoor",
+    "count": 2
+  }
+}

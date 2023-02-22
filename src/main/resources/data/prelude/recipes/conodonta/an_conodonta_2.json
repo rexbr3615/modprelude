@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_conodonta_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:conodonta_disc"
+  }
+}
