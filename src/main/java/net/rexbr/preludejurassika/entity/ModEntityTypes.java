@@ -135,6 +135,12 @@ public class ModEntityTypes {
                             .sized(0.6f, 0.3f)
                             .build(new ResourceLocation(prelude.MODID, "conodonta").toString()));
 
+    public static final RegistryObject<EntityType<PrognathodonEntity>> PROGNATHODON =
+            ENTITY_TYPES.register("prognathodon",
+                    () -> EntityType.Builder.of(PrognathodonEntity::new, MobCategory.CREATURE)
+                            .sized(2.85f, 1.8f)
+                            .build(new ResourceLocation(prelude.MODID, "prognathodon").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:prognathodon_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_prognathodon_fossil"
+  }
+}

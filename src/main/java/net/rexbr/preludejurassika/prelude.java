@@ -43,6 +43,7 @@ import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 import net.rexbr.preludejurassika.entity.client.ornithomimus.OrnithomimusRenderer;
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
+import net.rexbr.preludejurassika.entity.client.prognathodon.PrognathodonRenderer;
 import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
 import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.sturgeon.SturgeonRenderer;
@@ -146,6 +147,8 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.DEINONYCHUS.get(), DeinonychusRenderer::new);
         EntityRenderers.register(ModEntityTypes.STURGEON.get(), SturgeonRenderer::new);
         EntityRenderers.register(ModEntityTypes.CONODONTA.get(), ConoRenderer::new);
+        EntityRenderers.register(ModEntityTypes.PROGNATHODON.get(), PrognathodonRenderer::new);
+
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:prognathodon_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:prognathodon_spawn_egg"
+  }
+}

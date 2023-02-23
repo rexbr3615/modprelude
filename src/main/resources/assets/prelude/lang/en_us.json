@@ -264,5 +264,18 @@
   "block.prelude.ginkgo_pressure_plate": "Ginkgo Pressure Plate",
   "block.prelude.ginkgo_door": "Ginkgo Door",
   "block.prelude.ginkgo_trapdoor": "Ginkgo Trapdoor",
-  "item.prelude.salinized_bone": "Ancient Bone"
+  "item.prelude.salinized_bone": "Ancient Bone",
+  "entity.prelude.prognathodon": "Prognathodon",
+  "item.prelude.ancient_sword": "Ancient Sword",
+  "item.prelude.ancient_axe": "Ancient Aaxe",
+  "item.prelude.ancient_hoe": "Ancient Hoe",
+  "item.prelude.ancient_shovel": "Ancient Shovel",
+  "item.prelude.ancient_pickaxe": "Ancient Pickaxe",
+  "item.prelude.prognathodon_dna": "Prognathodon Dna",
+  "item.prelude.prognathodon_disc": "Prognathodon Disc",
+  "item.prelude.prognathodon_syringue": "Prognathodon Syringue",
+  "item.prelude.prognathodon_spawn_egg": "Prognathodon Sac",
+  "item.prelude.raw_prognathodon_meat": "Raw Prognathodon Meat",
+  "item.prelude.prognathodon_fossil": "Prognathodon Fossil",
+  "item.prelude.cleaned_prognathodon_fossil": "Cleaned Prognathodon Fossil"
 }

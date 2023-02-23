@@ -2,10 +2,10 @@
   "type": "prelude:analyze",
   "ingredients": [
     {
-      "item": "prelude:sturgeon_meat"
+      "item": "prelude:raw_prognathodon_meat"
     }
   ],
   "output": {
-    "item": "prelude:sturgeon_disc"
+    "item": "prelude:prognathodon_disc"
   }
 }

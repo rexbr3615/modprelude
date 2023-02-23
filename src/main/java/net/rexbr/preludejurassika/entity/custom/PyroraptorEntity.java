@@ -61,6 +61,7 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
 
         this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
 
+
         this.goalSelector.addGoal(1, new FollowMobGoal(this, (float) 1, 16, 6));
 
     }

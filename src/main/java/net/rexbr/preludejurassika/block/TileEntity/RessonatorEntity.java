@@ -177,7 +177,7 @@ public class RessonatorEntity extends BlockEntity implements MenuProvider {
 
         if(match.isPresent()) {
             entity.itemHandler.extractItem(0,1, false);
-            entity.itemHandler.getStackInSlot(1).hurt(1, new Random(), null);
+            entity.itemHandler.extractItem(1,1, false);
             entity.itemHandler.extractItem(2,1, false);
 
             entity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(),

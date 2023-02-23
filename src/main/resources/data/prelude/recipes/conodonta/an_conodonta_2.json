@@ -2,7 +2,7 @@
   "type": "prelude:analyze",
   "ingredients": [
     {
-      "item": "prelude:raw_conodonta_meat"
+      "item": "prelude:conodonta_meat"
     }
   ],
   "output": {

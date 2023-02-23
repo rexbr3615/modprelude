@@ -25,6 +25,7 @@ public class ModFoods {
     public static final FoodProperties RAW_DEINONYCHUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties STURGEON_MEAT = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties CONODONTA_MEAT = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.2F).build();
+    public static final FoodProperties RAW_PROGNATHODON_MEAT = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.2F).build();
 
 
     public static final FoodProperties GINKGO_NUTS = (new FoodProperties.Builder()).fast().nutrition(3).saturationMod(0.3F).build();
