@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:tiktaalik_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:tiktaalik_spawn_egg"
+  }
+}

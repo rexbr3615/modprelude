@@ -22,40 +22,11 @@ public class ModEntityGeneration {
     public static void onEntitySpawn(final BiomeLoadingEvent event) {
         if (PreludeCommonConfig.dinosaurSpawning.get()) {
 
-            addEntityToSpecificBiomes(event, ModEntityTypes.ALBERTOSAURUS.get(),
-                    25, 1, 2, Biomes.BADLANDS, Biomes.PLAINS , Biomes.DESERT , Biomes.FOREST );
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.ORNITHOMIMUS.get(),
-                    32, 1, 5, Biomes.BADLANDS,  Biomes.PLAINS , Biomes.FOREST);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.JURAVENATOR.get(),
-                    48, 1, 3, Biomes.PLAINS , Biomes.FOREST , Biomes.JUNGLE);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.AVACERATOPS.get(),
-                    55, 2, 3, Biomes.PLAINS,  Biomes.DESERT , Biomes.FOREST , Biomes.JUNGLE);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.PYRORAPTOR.get(),
-                    23, 1, 3, Biomes.BADLANDS,  Biomes.ERODED_BADLANDS , Biomes.FOREST , Biomes.ERODED_BADLANDS);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.AMAZONSAURUS.get(),
-                    43, 1, 2, Biomes.JUNGLE,  Biomes.PLAINS , Biomes.FOREST , Biomes.BAMBOO_JUNGLE);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.PALEOLAMA.get(),
-                    37, 1, 3, Biomes.DESERT,  Biomes.BADLANDS , Biomes.ERODED_BADLANDS , Biomes.SAVANNA , Biomes.SAVANNA_PLATEAU);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.TORVOSAURUS.get(),
-                    22, 1, 2, Biomes.BIRCH_FOREST,  Biomes.PLAINS , Biomes.FOREST , Biomes.JUNGLE);
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.PROLIBYTHERIUM.get(),
-                    45, 1, 4, Biomes.SAVANNA,  Biomes.SAVANNA_PLATEAU , Biomes.WINDSWEPT_SAVANNA );
-
-            addEntityToSpecificBiomes(event, ModEntityTypes.IRRITATOR.get(),
-                    30, 1, 2, Biomes.SWAMP,  Biomes.RIVER );
-
 
 
             addEntityToSpecificBiomes(event, ModEntityTypes.STURGEON.get(),
-                    30, 1, 2, Biomes.RIVER,  Biomes.SWAMP );
+                    40, 1, 2, Biomes.RIVER,  Biomes.SWAMP, Biomes.OCEAN, Biomes.DEEP_OCEAN, Biomes.WARM_OCEAN, Biomes.LUKEWARM_OCEAN, Biomes.DEEP_LUKEWARM_OCEAN );
+
 
 
         }
@@ -118,4 +89,5 @@ public class ModEntityGeneration {
         List<MobSpawnSettings.SpawnerData> base = event.getSpawns().getSpawner(type.getCategory());
         base.add(new MobSpawnSettings.SpawnerData(type,weight, minCount, maxCount));
     }
+
 }

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_giganothosaurus_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:giganothosaurus_disc"
+  }
+}

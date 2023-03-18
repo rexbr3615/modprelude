@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_dilophosaurus_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:dilophosaurus_disc"
+  }
+}

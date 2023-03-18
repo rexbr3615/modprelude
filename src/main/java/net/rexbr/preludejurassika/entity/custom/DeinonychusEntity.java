@@ -112,6 +112,6 @@ public class DeinonychusEntity extends Animal implements IAnimatable {
     }
 
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
+        this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
 }

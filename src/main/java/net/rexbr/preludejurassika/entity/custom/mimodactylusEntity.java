@@ -137,20 +137,10 @@ public class mimodactylusEntity extends Animal implements IAnimatable {
     }
 
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
+        this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
 
-    protected SoundEvent getAmbientSound() {
-        return SoundEvents.CAT_STRAY_AMBIENT;
-    }
 
-    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.DOLPHIN_HURT;
-    }
-
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.DOLPHIN_DEATH;
-    }
 
     protected float getSoundVolume() {
         return 0.2F;

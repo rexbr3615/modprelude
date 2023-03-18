@@ -43,8 +43,16 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.FOSSIL_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEP_FOSSIL_ORE.get().defaultBlockState()));
 
+    public static final List<OreConfiguration.TargetBlockState> OVERWORLD_MARBLE_ORES = List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MARBLE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.MARBLE.get().defaultBlockState()));
+
+
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> FOSSIL_ORE = FeatureUtils.register("fossil_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, PreludeCommonConfig.FOSSIL_ORE_VEIN_SIZE.get())); //20
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> MARBLE_ORE = FeatureUtils.register("marble_ore",
+            Feature.ORE, new OreConfiguration(OVERWORLD_MARBLE_ORES, PreludeCommonConfig.MARBLE_VEIN_SIZE.get())); //20
 
 
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> CALAMITES_TREE =

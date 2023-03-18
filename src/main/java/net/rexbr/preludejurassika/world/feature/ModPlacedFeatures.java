@@ -20,5 +20,8 @@ public class ModPlacedFeatures {
                     PlacementUtils.countExtra(3, 0.1f, 2)));
 
 
+    public static final Holder<PlacedFeature> MARBLE_ORE_PLACED = PlacementUtils.register("marble_ore_placed",
+            ModConfiguredFeatures.MARBLE_ORE, ModOrePlacement.commonOrePlacement(PreludeCommonConfig.MARBLE_VEIN_SIZE.get(), // VeinsPerChunk //20
+                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(128)))); //-80 e 128
 
 }

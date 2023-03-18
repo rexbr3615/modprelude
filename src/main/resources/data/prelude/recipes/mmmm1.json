@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MM",
+    "MM"
+  ],
+  "key": {
+    "M": {
+      "item": "prelude:raw_marble"
+    }
+  },
+  "result": {
+    "item": "prelude:marble",
+    "count": 1
+  }
+}

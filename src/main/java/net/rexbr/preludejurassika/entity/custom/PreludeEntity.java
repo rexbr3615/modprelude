@@ -1,6 +1,6 @@
 package net.rexbr.preludejurassika.entity.custom;
 
-public class PreludeEntity {
+public abstract class PreludeEntity {
 
     public static int HUNGRY = 000;
 

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:giganothosaurus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:giganothosaurus_spawn_egg"
+  }
+}

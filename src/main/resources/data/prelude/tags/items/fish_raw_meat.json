@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "prelude:sturgeon_meat",
-    "prelude:conodonta_meat"
+    "prelude:conodonta_meat",
+    "prelude:raw_tiktaalik_meat"
   ]
 }

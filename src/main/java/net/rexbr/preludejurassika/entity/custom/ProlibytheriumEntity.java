@@ -36,7 +36,7 @@ public class ProlibytheriumEntity extends Animal implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 36.0D)
                 .add(Attributes.ATTACK_DAMAGE, 6f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.23f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.22f).build();
     }
 
     protected void registerGoals() {
@@ -99,6 +99,6 @@ public class ProlibytheriumEntity extends Animal implements IAnimatable {
     }
 
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
+        this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
 }

@@ -19,6 +19,10 @@
     "prelude:raw_ornithomimus_meat",
     "prelude:raw_silessaurus_meat",
     "prelude:raw_deinonychus_meat",
-    "prelude:raw_prognathodon_meat"
+    "prelude:raw_prognathodon_meat",
+    "prelude:raw_giganothosaurus_meat",
+    "prelude:raw_dilophosaurus_meat",
+    "prelude:raw_proterosuchus_meat",
+    "prelude:raw_achilobator_meat"
   ]
 }

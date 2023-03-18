@@ -17,7 +17,7 @@ public class AncientHoe extends HoeItem {
             }
 
             public float getAttackDamageBonus() {
-                return -1f;
+                return -0f;
             }
 
             public int getLevel() {
@@ -31,6 +31,6 @@ public class AncientHoe extends HoeItem {
             public Ingredient getRepairIngredient() {
                 return Ingredient.of(new ItemStack(ModItems.SALINIZED_BONE.get()));
             }
-        }, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS));
+        }, 4, 0f, new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS));
     }
 }

@@ -103,6 +103,27 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);*/
 
+    public static final RegistryObject<Block> MARBLE = registerBlock("marble",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.45f, 4.6f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> MARBLE_BRICKS = registerBlock("marble_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.45f, 4.6f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> MARBLE_TILES = registerBlock("marble_tiles",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.45f, 4.6f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> MARBLE_FLOOR = registerBlock("marble_floor",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> MARBLE_PILLAR = registerBlock("marble_pillar",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
 
     public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:achilobator_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:achilobator_spawn_egg"
+  }
+}

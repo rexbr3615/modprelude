@@ -5,21 +5,24 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -32,10 +35,13 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 
 import net.rexbr.preludejurassika.entity.client.*;
 
+import net.rexbr.preludejurassika.entity.client.achilobator.AchilobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
+import net.rexbr.preludejurassika.entity.client.dilophosaurus.DilophosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
+import net.rexbr.preludejurassika.entity.client.giganotosaurus.GiganotosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.incisivosaurus.IncisivosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.irritator.IrritatorRenderer;
 import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
@@ -45,12 +51,13 @@ import net.rexbr.preludejurassika.entity.client.ornithomimus.OrnithomimusRendere
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
 import net.rexbr.preludejurassika.entity.client.prognathodon.PrognathodonRenderer;
 import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
+import net.rexbr.preludejurassika.entity.client.proterosuchus.ProterosuchusRenderer;
 import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.sturgeon.SturgeonRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
+import net.rexbr.preludejurassika.entity.client.tiktaalik.TiktaalikRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
-import net.rexbr.preludejurassika.entity.custom.ConodontaEntity;
 import net.rexbr.preludejurassika.item.ModItems;
 
 import net.rexbr.preludejurassika.recipes.ModRecipes;
@@ -62,9 +69,6 @@ import net.rexbr.preludejurassika.villager.ModVillagers;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(prelude.MODID)
@@ -74,8 +78,6 @@ public class prelude {
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
 
     private static final Logger LOGGER = LogUtils.getLogger();
-
-
 
     // add a comment
     public prelude() {
@@ -148,7 +150,11 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.STURGEON.get(), SturgeonRenderer::new);
         EntityRenderers.register(ModEntityTypes.CONODONTA.get(), ConoRenderer::new);
         EntityRenderers.register(ModEntityTypes.PROGNATHODON.get(), PrognathodonRenderer::new);
-
+        EntityRenderers.register(ModEntityTypes.GIGANOTOSAURUS.get(), GiganotosaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.DILOPHOSAURUS.get(), DilophosaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.PROTEROSUCHUS.get(), ProterosuchusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TIKTAALIK.get(), TiktaalikRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ACHILOBATOR.get(), AchilobatorRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());
@@ -168,108 +174,13 @@ public class prelude {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.COOKSONIA.getId(), ModBlocks.POTTED_COOKSONIA);
 
 
-            SpawnPlacements.register(ModEntityTypes.ALBERTOSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.MIMODACTYLUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.JURAVENATOR.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.AVACERATOPS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.PYRORAPTOR.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.AMAZONSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.TORVOSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.PALEOLAMA.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.DRYOSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.YPUPIARA.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.TENONTOSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.IRRITATOR.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.PROLIBYTHERIUM.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.EOTRICERATOPS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.INCISIVOSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.ORNITHOMIMUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.SILESSAURUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.DEINONYCHUS.get(),
-                    SpawnPlacements.Type.ON_GROUND,
-                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    Animal::checkAnimalSpawnRules);
-
-            SpawnPlacements.register(ModEntityTypes.CONODONTA.get(),
-                    SpawnPlacements.Type.IN_WATER,
-                    Heightmap.Types.OCEAN_FLOOR,
-                    Animal::checkAnimalSpawnRules);
-
-
-            //// normal spawn XD ////
+//// normal spawn XD ////
 
             SpawnPlacements.register(ModEntityTypes.STURGEON.get(),
                     SpawnPlacements.Type.IN_WATER,
-                    Heightmap.Types.OCEAN_FLOOR,
+                    Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
+
 
             ModVillagers.registerPOIs();
 
@@ -277,6 +188,5 @@ public class prelude {
 
         });
     }
-
-
+    
 }

@@ -8,6 +8,11 @@
     "prelude:culture_vat",
     "prelude:cleaner",
     "prelude:adobe",
-    "prelude:enchased_fossil"
+    "prelude:enchased_fossil",
+    "prelude:marble",
+    "prelude:marble_bricks",
+    "prelude:marble_tiles",
+    "prelude:marble_floor",
+    "prelude:marble_pillar"
   ]
 }

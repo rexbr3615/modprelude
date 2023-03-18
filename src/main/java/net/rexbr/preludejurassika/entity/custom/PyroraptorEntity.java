@@ -37,7 +37,7 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 24.0D)
                 .add(Attributes.ATTACK_DAMAGE, 4f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.25f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.24f).build();
     }
 
     protected void registerGoals() {
@@ -74,7 +74,7 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.pyroraptor.move", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.pyroraptor.move2", 999));
             return PlayState.CONTINUE;
         }
 
@@ -113,6 +113,6 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
     }
 
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
+        this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
 }

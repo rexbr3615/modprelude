@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_proterosuchus_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:proterosuchus_disc"
+  }
+}

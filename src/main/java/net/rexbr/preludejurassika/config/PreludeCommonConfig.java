@@ -9,7 +9,7 @@ public class PreludeCommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> dinosaurSpawning;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOSSIL_ORE_VEINS_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOSSIL_ORE_VEIN_SIZE;
-
+    public static final ForgeConfigSpec.ConfigValue<Integer> MARBLE_VEIN_SIZE;
 
     
     static {
@@ -22,6 +22,8 @@ public class PreludeCommonConfig {
         FOSSIL_ORE_VEIN_SIZE = BUILDER.comment("How many fossil Ore Blocks spawn in one Vein!")
                 .defineInRange("Vein Size// original 9", 11, 4, 20);
 
+        MARBLE_VEIN_SIZE = BUILDER.comment("How many Marble Blocks spawn in one Vein!")
+                .defineInRange("Vein Size// original 16", 16, 9, 24);
 
 
 

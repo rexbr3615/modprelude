@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:proterosuchus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:proterosuchus_spawn_egg"
+  }
+}
