@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/bajada_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:bajada_disc"
+  }
+}

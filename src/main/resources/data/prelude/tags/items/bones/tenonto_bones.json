@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:tenonto_bone_skull",
+    "prelude:tenonto_bone_gastralium",
+    "prelude:tenonto_bone_ribs",
+    "prelude:tenonto_bone_tail",
+    "prelude:tenonto_bone_vertebrate"
+  ]
+}

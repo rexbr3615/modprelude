@@ -2,10 +2,10 @@
   "type": "prelude:culture",
   "ingredients": [
     {
-      "item": "prelude:deinonychus_syringue"
+      "item": "prelude:diabloceratops_syringue"
     }
   ],
   "output": {
-    "item": "prelude:deinonychus_spawn_egg"
+    "item": "prelude:diabloceratops_spawn_egg"
   }
 }

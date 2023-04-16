@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/jura_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:jura_disc"
+  }
+}

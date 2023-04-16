@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BAB",
+    "ACA",
+    "BAB"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:coal_coke"
+    },
+    "B": {
+      "tag": "forge:bitumen"
+    },
+    "C": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "result": {
+    "item": "prelude:asfalt",
+    "count": 8
+  }
+}

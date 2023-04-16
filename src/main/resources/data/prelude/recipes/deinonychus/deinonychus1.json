@@ -5,11 +5,11 @@
       "item": "prelude:syringue"
     },
     {
-      "item": "prelude:deinonychus_dna"
+      "item": "prelude:diabloceratops_dna"
     }
   ],
   "result": {
-    "item": "prelude:deinonychus_syringue",
+    "item": "prelude:diabloceratops_syringue",
     "count": 1
   }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "prelude:item/bones/dilo_bone_skull"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:allosaurus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:allosaurus_spawn_egg"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:amazon_bone_skull",
+    "prelude:amazon_bone_gastralium",
+    "prelude:amazon_bone_ribs",
+    "prelude:amazon_bone_tail",
+    "prelude:amazon_bone_vertebrate"
+  ]
+}

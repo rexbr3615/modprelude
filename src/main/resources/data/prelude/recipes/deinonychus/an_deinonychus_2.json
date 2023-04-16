@@ -2,10 +2,10 @@
   "type": "prelude:analyze",
   "ingredients": [
     {
-      "item": "prelude:raw_deinonychus_meat"
+      "item": "prelude:raw_diabloceratops_meat"
     }
   ],
   "output": {
-    "item": "prelude:deinonychus_disc"
+    "item": "prelude:diabloceratops_disc"
   }
 }

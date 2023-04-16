@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/pyro_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:pyro_disc"
+  }
+}

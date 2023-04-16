@@ -35,9 +35,12 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 
 import net.rexbr.preludejurassika.entity.client.*;
 
+import net.rexbr.preludejurassika.entity.client.Allo.AllossaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.achilobator.AchilobatorRenderer;
+import net.rexbr.preludejurassika.entity.client.bajada.BajadaRenderer;
 import net.rexbr.preludejurassika.entity.client.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
+import net.rexbr.preludejurassika.entity.client.diablo.DiabloRenderer;
 import net.rexbr.preludejurassika.entity.client.dilophosaurus.DilophosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
@@ -48,16 +51,20 @@ import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 
 import net.rexbr.preludejurassika.entity.client.ornithomimus.OrnithomimusRenderer;
+import net.rexbr.preludejurassika.entity.client.oro.OroRenderer;
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
 import net.rexbr.preludejurassika.entity.client.prognathodon.PrognathodonRenderer;
 import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
 import net.rexbr.preludejurassika.entity.client.proterosuchus.ProterosuchusRenderer;
 import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.sturgeon.SturgeonRenderer;
+import net.rexbr.preludejurassika.entity.client.tapejara.TapejaraRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.tiktaalik.TiktaalikRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
+import net.rexbr.preludejurassika.entity.custom.TapejaraEntity;
+import net.rexbr.preludejurassika.item.ModBones;
 import net.rexbr.preludejurassika.item.ModItems;
 
 import net.rexbr.preludejurassika.recipes.ModRecipes;
@@ -75,6 +82,9 @@ import software.bernie.geckolib3.GeckoLib;
 public class prelude {
 
     public static final String MODID = "prelude";
+
+
+
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
 
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -85,6 +95,8 @@ public class prelude {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
+        ModBones.register(eventBus);
 
         ModEntityTypes.register(eventBus);
         ModSounds.register(eventBus);
@@ -97,6 +109,14 @@ public class prelude {
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+
+        // tests
+
+
+
+
+
+        // tests
 
 
         GeckoLib.initialize();
@@ -155,6 +175,12 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.PROTEROSUCHUS.get(), ProterosuchusRenderer::new);
         EntityRenderers.register(ModEntityTypes.TIKTAALIK.get(), TiktaalikRenderer::new);
         EntityRenderers.register(ModEntityTypes.ACHILOBATOR.get(), AchilobatorRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TAPEJARA.get(), TapejaraRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BAJADASAURUS.get(), BajadaRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ALLOSAURUS.get(), AllossaurusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.DIABLOCERATOPS.get(), DiabloRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ORODROMEUS.get(), OroRenderer::new);
+
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());

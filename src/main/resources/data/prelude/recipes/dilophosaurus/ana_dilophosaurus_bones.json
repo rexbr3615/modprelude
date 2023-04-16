@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/dilophosaurus_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:dilophosaurus_disc"
+  }
+}

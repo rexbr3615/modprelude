@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/tapejara_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:tapejara_disc"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:paleolama_bone_skull",
+    "prelude:paleolama_bone_ribs",
+    "prelude:paleolama_bone_tail",
+    "prelude:paleolama_bone_vertebrate"
+  ]
+}

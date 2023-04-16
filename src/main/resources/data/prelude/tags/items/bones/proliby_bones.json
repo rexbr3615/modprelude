@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:proliby_bone_skull",
+    "prelude:proliby_bone_ribs",
+    "prelude:proliby_bone_tail",
+    "prelude:proliby_bone_vertebrate"
+  ]
+}

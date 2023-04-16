@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:cleaned_tapejara_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:tapejara_disc"
+  }
+}

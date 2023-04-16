@@ -23,6 +23,11 @@
     "prelude:raw_giganothosaurus_meat",
     "prelude:raw_dilophosaurus_meat",
     "prelude:raw_proterosuchus_meat",
-    "prelude:raw_achilobator_meat"
+    "prelude:raw_achilobator_meat",
+    "prelude:raw_tapejara_meat",
+    "prelude:raw_bajada_meat",
+    "prelude:raw_allosaurus_meat",
+    "prelude:raw_diabloceratops_meat",
+    "prelude:raw_orodromeus_meat"
   ]
 }

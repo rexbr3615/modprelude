@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/ypupiara_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:ypupiara_disc"
+  }
+}

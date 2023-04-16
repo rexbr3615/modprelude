@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:orodromeus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:orodromeus_dna"
+  }
+}

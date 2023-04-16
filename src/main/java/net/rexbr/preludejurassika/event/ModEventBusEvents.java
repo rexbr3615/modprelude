@@ -43,6 +43,11 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.PROTEROSUCHUS.get(), ProterosuchusEntity.setAttributes());
         event.put(ModEntityTypes.TIKTAALIK.get(), TiktaalikEntity.setAttributes());
         event.put(ModEntityTypes.ACHILOBATOR.get(), AchilobatorEntity.setAttributes());
+        event.put(ModEntityTypes.TAPEJARA.get(), TapejaraEntity.setAttributes());
+        event.put(ModEntityTypes.BAJADASAURUS.get(), BajadasaurusEntity.setAttributes());
+        event.put(ModEntityTypes.ALLOSAURUS.get(), AlosaurusEntity.setAttributes());
+        event.put(ModEntityTypes.DIABLOCERATOPS.get(), DiabloceratopsEntity.setAttributes());
+        event.put(ModEntityTypes.ORODROMEUS.get(), OrodromeusEntity.setAttributes());
     }
 
     @SubscribeEvent

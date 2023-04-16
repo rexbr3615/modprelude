@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:allosaurus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:allosaurus_dna"
+  }
+}

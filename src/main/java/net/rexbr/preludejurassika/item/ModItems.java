@@ -45,9 +45,9 @@ public class ModItems {
     public static final RegistryObject<Item> PETRI_DISH_AGAR = ITEMS.register("petri_dish_agar",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> PETRI_DISH_PLANT_CELLS = ITEMS.register("petri_dish_plant_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> PLANT_CELLS = ITEMS.register("plant_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> BACTERIAS = ITEMS.register("bacterias",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
@@ -230,61 +230,86 @@ public class ModItems {
     public static final RegistryObject<Item> CLEANED_ACHILOBATOR_FOSSIL = ITEMS.register("cleaned_achilobator_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    public static final RegistryObject<Item> FOSSIL_BAJADA = ITEMS.register("bajada_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_BAJADA_FOSSIL = ITEMS.register("cleaned_bajada_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_TAPEJARA = ITEMS.register("tapejara_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_TAPEJARA_FOSSIL = ITEMS.register("cleaned_tapejara_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_ALLOSAURUS = ITEMS.register("allosaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_ALLOSAURUS_FOSSIL = ITEMS.register("cleaned_allosaurus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_DIABLOCERATOPS = ITEMS.register("diabloceratops_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_DIABLOCERATOPS_FOSSIL = ITEMS.register("cleaned_diabloceratops_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_ORODROMEUS = ITEMS.register("orodromeus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_ORODROMEUS_FOSSIL = ITEMS.register("cleaned_orodromeus_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     // plants stuff
 
     public static final RegistryObject<Item> FOSSIL_COOKSONIA = ITEMS.register("cooksonia_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> COOKSONIA_DISC = ITEMS.register("cooksonia_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> COOKSONIA_CELLS = ITEMS.register("cooksonia_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> COOKSONIA_DNA = ITEMS.register("cooksonia_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> FOSSIL_PROTOTAXITES = ITEMS.register("prototaxites_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> PROTOTAXITES_DISC = ITEMS.register("prototaxites_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> PROTOTAXITES_CELLS = ITEMS.register("prototaxites_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> PROTOTAXITES_DNA = ITEMS.register("prototaxites_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> FOSSIL_SWARTPUNTIA = ITEMS.register("swartpuntia_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> SWARTPUNTIA_DISC = ITEMS.register("swartpuntia_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> SWARTPUNTIA_CELLS = ITEMS.register("swartpuntia_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> SWARTPUNTIA_DNA = ITEMS.register("swartpuntia_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> FOSSIL_ENCRINUS = ITEMS.register("encrinus_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> ENCRINUS_DISC = ITEMS.register("encrinus_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> ENCRINUS_CELLS = ITEMS.register("encrinus_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> ENCRINUS_DNA = ITEMS.register("encrinus_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> FOSSIL_CALAMITES = ITEMS.register("calamites_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> CALAMITES_DISC = ITEMS.register("calamites_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> CALAMITES_CELLS = ITEMS.register("calamites_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> CALAMITES_DNA = ITEMS.register("calamites_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> FOSSIL_GINKGO = ITEMS.register("ginkgo_fossil",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
     public static final RegistryObject<Item> GINKGO_DISC = ITEMS.register("ginkgo_disc",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> GINKGO_CELLS = ITEMS.register("ginkgo_cells",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> GINKGO_DNA = ITEMS.register("ginkgo_dna",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC).stacksTo(1)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
     //foods
     public static final RegistryObject<Item> RAW_ALBERTOSAURUS_MEAT = ITEMS.register("raw_albertosaurus_meat",
@@ -333,7 +358,16 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_TIKTAALIK_MEAT)));
     public static final RegistryObject<Item> RAW_ACHILOBATOR_MEAT = ITEMS.register("raw_achilobator_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_ACHILOBATOR_MEAT)));
-
+    public static final RegistryObject<Item> RAW_TAPEJARA_MEAT = ITEMS.register("raw_tapejara_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_TAPEJARA_MEAT)));
+    public static final RegistryObject<Item> RAW_BAJADASAURUS_MEAT = ITEMS.register("raw_bajada_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_BAJADASAURUS_MEAT)));
+    public static final RegistryObject<Item> RAW_ALLOSAURUS_MEAT = ITEMS.register("raw_allosaurus_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_ALLOSAURUS_MEAT)));
+    public static final RegistryObject<Item> RAW_DIABLOCERATOPS_MEAT = ITEMS.register("raw_diabloceratops_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_DIABLOCERATOPS_MEAT)));
+    public static final RegistryObject<Item> RAW_ORODROMEUS_MEAT = ITEMS.register("raw_orodromeus_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_ORODROMEUS_MEAT)));
 
 
     public static final RegistryObject<Item> STURGEON_MEAT = ITEMS.register("sturgeon_meat",
@@ -468,6 +502,25 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.ACHILOBATOR,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
+    public static final RegistryObject<Item> TAPEJARA_SPAWN_EGG = ITEMS.register("tapejara_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.TAPEJARA,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> BAJADA_SPAWN_EGG = ITEMS.register("bajada_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.BAJADASAURUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> ALLOSAURUS_SPAWN_EGG = ITEMS.register("allosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ALLOSAURUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> DIABLOCERATOPS_SPAWN_EGG = ITEMS.register("diabloceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.DIABLOCERATOPS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> ORODROMEUS_SPAWN_EGG = ITEMS.register("orodromeus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ORODROMEUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
     // buckets
 
@@ -664,6 +717,43 @@ public class ModItems {
     public static final RegistryObject<Item> ACHILOBATOR_SYRINGUE = ITEMS.register("achilobator_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
+    public static final RegistryObject<Item> BAJADA_DNA = ITEMS.register("bajada_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> BAJADA_DISC = ITEMS.register("bajada_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> BAJADA_SYRINGUE = ITEMS.register("bajada_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> TAPEJARA_DNA = ITEMS.register("tapejara_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> TAPEJARA_DISC = ITEMS.register("tapejara_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> TAPEJARA_SYRINGUE = ITEMS.register("tapejara_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> ALLOSAURUS_DNA = ITEMS.register("allosaurus_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ALLOSAURUS_DISC = ITEMS.register("allosaurus_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ALLOSAURUS_SYRINGUE = ITEMS.register("allosaurus_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> DIABLOCERATOPS_DNA = ITEMS.register("diabloceratops_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> DIABLOCERATOPS_DISC = ITEMS.register("diabloceratops_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> DIABLOCERATOPS_SYRINGUE = ITEMS.register("diabloceratops_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> ORODROMEUS_DNA = ITEMS.register("orodromeus_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ORODROMEUS_DISC = ITEMS.register("orodromeus_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> ORODROMEUS_SYRINGUE = ITEMS.register("orodromeus_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+
+
 
 
 
@@ -676,7 +766,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
             () -> new ItemNameBlockItem(ModBlocks.COOKSONIA_PLANT.get(),
-                    new Item.Properties().tab(ModCreativeModeTab.PALEO_BOTANIC)));
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
 
 

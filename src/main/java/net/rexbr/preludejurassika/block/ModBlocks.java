@@ -127,11 +127,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
-                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.PALEO_BOTANIC);
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> POTTED_COOKSONIA = registerBlockWithoutBlockItem("potted_cooksonia.json",
             () -> new FlowerPotBlock(null, ModBlocks.COOKSONIA,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
+
+
+    public static final RegistryObject<Block> ADOBE_BRICKS = registerBlock("adobe_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> ASFALT = registerBlock("asfalt",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
@@ -209,11 +221,11 @@ public class ModBlocks {
 
 
 
-            }, ModCreativeModeTab.PALEO_BOTANIC);
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> SWARTPUNTIA = registerBlock("swartpuntia",
             () -> new BlockPreludeCustomWaterGrass(
-                    BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion()), ModCreativeModeTab.PALEO_BOTANIC);
+                    BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<GrowingPlantHeadBlock> ENCRINUS = registerBlock("encrinus",
             () -> new BlockKrethrossTop(BlockBehaviour.Properties.of(Material.WATER_PLANT)
@@ -221,7 +233,7 @@ public class ModBlocks {
                     .randomTicks()
                     .instabreak()
 
-                    .sound(SoundType.WET_GRASS)), ModCreativeModeTab.PALEO_BOTANIC);
+                    .sound(SoundType.WET_GRASS)), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<GrowingPlantBlock> ENCRINUS_PLANT = registerBlock("encrinus_stem",
             () -> new BlockKrethross(BlockBehaviour.Properties.of(Material.WATER_PLANT)
@@ -229,7 +241,7 @@ public class ModBlocks {
                     .randomTicks()
                     .instabreak()
 
-                    .sound(SoundType.WET_GRASS)), ModCreativeModeTab.PALEO_BOTANIC);
+                    .sound(SoundType.WET_GRASS)), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
 
@@ -323,7 +335,7 @@ public class ModBlocks {
     
 
     public static final RegistryObject<Block> CALAMITES_SAPLING = registerBlock("calamites_sapling",
-            () -> new SaplingBlock(new CalamitesTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.PALEO_BOTANIC);
+            () -> new SaplingBlock(new CalamitesTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> CALAMITES_SAPLING2 = registerBlock("calamites_sapling1",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
@@ -338,7 +350,7 @@ public class ModBlocks {
 
 
 
-            }, ModCreativeModeTab.PALEO_BOTANIC);
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
 
@@ -450,7 +462,7 @@ public class ModBlocks {
 
 
 
-            }, ModCreativeModeTab.PALEO_BOTANIC);
+            }, ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     //==========================seeds=================================================
 

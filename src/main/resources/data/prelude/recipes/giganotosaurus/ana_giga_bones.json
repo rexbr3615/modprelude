@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/giga_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:giganothosaurus_disc"
+  }
+}

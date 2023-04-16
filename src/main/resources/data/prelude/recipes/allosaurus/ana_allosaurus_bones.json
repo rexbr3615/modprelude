@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/allo_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:allosaurus_disc"
+  }
+}

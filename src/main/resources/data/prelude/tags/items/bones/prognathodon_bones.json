@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:prognathodon_bone_skull",
+    "prelude:prognathodon_bone_gastralium",
+    "prelude:prognathodon_bone_ribs",
+    "prelude:prognathodon_bone_tail",
+    "prelude:prognathodon_bone_vertebrate"
+  ]
+}

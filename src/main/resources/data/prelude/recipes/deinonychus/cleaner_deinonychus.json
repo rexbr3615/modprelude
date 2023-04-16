@@ -2,10 +2,10 @@
   "type": "prelude:cleaner",
   "ingredients": [
     {
-      "item": "prelude:deinonychus_fossil"
+      "item": "prelude:diabloceratops_fossil"
     }
   ],
   "output": {
-    "item": "prelude:cleaned_deinonychus_fossil"
+    "item": "prelude:cleaned_diabloceratops_fossil"
   }
 }

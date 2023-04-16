@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/diabloceratops_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:diabloceratops_disc"
+  }
+}

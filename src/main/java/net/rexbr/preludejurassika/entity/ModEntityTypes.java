@@ -171,6 +171,36 @@ public class ModEntityTypes {
                             .sized(0.86f, 1.82f)
                             .build(new ResourceLocation(prelude.MODID, "achilobator").toString()));
 
+    public static final RegistryObject<EntityType<TapejaraEntity>> TAPEJARA =
+            ENTITY_TYPES.register("tapejara",
+                    () -> EntityType.Builder.of(TapejaraEntity::new, MobCategory.CREATURE)
+                            .sized(0.86f, 0.86f)
+                            .build(new ResourceLocation(prelude.MODID, "tapejara").toString()));
+
+    public static final RegistryObject<EntityType<BajadasaurusEntity>> BAJADASAURUS =
+            ENTITY_TYPES.register("bajadasaurus",
+                    () -> EntityType.Builder.of(BajadasaurusEntity::new, MobCategory.CREATURE)
+                            .sized(1.67f, 2.4f)
+                            .build(new ResourceLocation(prelude.MODID, "bajadasaurus").toString()));
+
+    public static final RegistryObject<EntityType<AlosaurusEntity>> ALLOSAURUS =
+            ENTITY_TYPES.register("allosaurus",
+                    () -> EntityType.Builder.of(AlosaurusEntity::new, MobCategory.CREATURE)
+                            .sized(1.67f, 2.4f)
+                            .build(new ResourceLocation(prelude.MODID, "allosaurus").toString()));
+
+    public static final RegistryObject<EntityType<DiabloceratopsEntity>> DIABLOCERATOPS =
+            ENTITY_TYPES.register("diabloceratops",
+                    () -> EntityType.Builder.of(DiabloceratopsEntity::new, MobCategory.CREATURE)
+                            .sized(1.67f, 2.4f)
+                            .build(new ResourceLocation(prelude.MODID, "diabloceratops").toString()));
+
+    public static final RegistryObject<EntityType<OrodromeusEntity>> ORODROMEUS =
+            ENTITY_TYPES.register("orodromeus",
+                    () -> EntityType.Builder.of(OrodromeusEntity::new, MobCategory.CREATURE)
+                            .sized(0.3f, 0.5f)
+                            .build(new ResourceLocation(prelude.MODID, "orodromeus").toString()));
+
 
 
 

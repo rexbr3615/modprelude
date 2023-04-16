@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:bajada_bone_skull",
+    "prelude:bajada_bone_gastralium",
+    "prelude:bajada_bone_ribs",
+    "prelude:bajada_bone_tail",
+    "prelude:bajada_bone_vertebrate"
+  ]
+}

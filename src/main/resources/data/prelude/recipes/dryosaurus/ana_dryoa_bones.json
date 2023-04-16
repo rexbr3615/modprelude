@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/dryo_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:dryo_disc"
+  }
+}

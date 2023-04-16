@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/amazon_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:amazonsaurus_disc"
+  }
+}

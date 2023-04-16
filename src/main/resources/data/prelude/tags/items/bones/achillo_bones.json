@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:achillobator_bone_skull",
+    "prelude:achillobator_bone_gastralium",
+    "prelude:achillobator_bone_ribs",
+    "prelude:achillobator_bone_tail",
+    "prelude:achillobator_bone_vertebrate"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/proliby_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:prolibytherium_disc"
+  }
+}

@@ -9,7 +9,9 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.custom.JuravenatorEntity;
 
 public enum PrehistoricEntityType {
-    JURAVENATOR(ModEntityTypes.JURAVENATOR, MobType.DINOSAUR, TimePeriod.MESOZOIC, Diet.HERBIVORE, 1);
+
+    JURAVENATOR(ModEntityTypes.JURAVENATOR, MobType.DINOSAUR, TimePeriod.JURASSIC, Diet.CARNIVORE, 1);
+
 
     public static final ResourceLocation DINOSAUR_LOOT = null;
     private EntityType entityType;

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:tapejara_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:tapejara_spawn_egg"
+  }
+}

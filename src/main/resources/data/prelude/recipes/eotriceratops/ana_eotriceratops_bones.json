@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/eotriceratops_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:eotriceratops_disc"
+  }
+}

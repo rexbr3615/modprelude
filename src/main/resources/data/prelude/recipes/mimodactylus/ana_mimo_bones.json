@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/mimo_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:mimodactylus_disc"
+  }
+}

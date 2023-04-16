@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:diabloceratops_bone_skull",
+    "prelude:diabloceratops_bone_gastralium",
+    "prelude:diabloceratops_bone_ribs",
+    "prelude:diabloceratops_bone_tail",
+    "prelude:diabloceratops_bone_vertebrate"
+  ]
+}

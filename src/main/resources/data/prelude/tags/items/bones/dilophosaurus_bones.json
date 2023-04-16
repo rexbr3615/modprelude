@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:dilophosaurus_bone_skull",
+    "prelude:dilophosaurus_bone_gastralium",
+    "prelude:dilophosaurus_bone_ribs",
+    "prelude:dilophosaurus_bone_tail",
+    "prelude:dilophosaurus_bone_vertebrate"
+  ]
+}

@@ -42,14 +42,14 @@ public class ProterosuchusEntity extends Animal implements IAnimatable {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
+        this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
+        this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.4D, false));
+        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(7, (new HurtByTargetGoal(this)).setAlertOthers());
 
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.4D, false));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
-
-        this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 1.2, true) {
+        this.goalSelector.addGoal(8, new MeleeAttackGoal(this, 1.2, true) {
             @Override
             protected double getAttackReachSqr(LivingEntity entity) {
                 return (double) (2.0 + entity.getBbWidth() * entity.getBbWidth());

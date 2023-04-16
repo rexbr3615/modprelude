@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/ornithomimus_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:ornithomimus_disc"
+  }
+}

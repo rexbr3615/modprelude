@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:tapejara_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:tapejara_dna"
+  }
+}

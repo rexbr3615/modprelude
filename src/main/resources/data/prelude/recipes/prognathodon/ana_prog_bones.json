@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/prognathodon_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:prognathodon_disc"
+  }
+}

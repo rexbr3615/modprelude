@@ -2,10 +2,10 @@
   "type": "prelude:ressonate",
   "ingredients": [
     {
-      "item": "prelude:deinonychus_disc"
+      "item": "prelude:diabloceratops_disc"
     }
   ],
   "output": {
-    "item": "prelude:deinonychus_dna"
+    "item": "prelude:diabloceratops_dna"
   }
 }

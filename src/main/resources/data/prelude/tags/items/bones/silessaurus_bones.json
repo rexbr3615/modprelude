@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:silessaurus_bone_skull",
+    "prelude:silessaurus_bone_gastralium",
+    "prelude:silessaurus_bone_ribs",
+    "prelude:silessaurus_bone_tail",
+    "prelude:silessaurus_bone_vertebrate"
+  ]
+}
