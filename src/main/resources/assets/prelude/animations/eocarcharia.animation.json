@@ -546,30 +546,6 @@
 			}
 		},
 		"animation.eocarcharia.idle": {
-			"animation_length": 0.5,
-			"bones": {
-				"bone5": {
-					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0]
-						},
-						"0.125": {
-							"vector": [0, 0, 0]
-						},
-						"0.25": {
-							"vector": [45, 0, 0]
-						},
-						"0.375": {
-							"vector": [0, 0, 0]
-						},
-						"0.5": {
-							"vector": [0, 0, 0]
-						}
-					}
-				}
-			}
-		},
-		"animation.eocarcharia.attack": {
 			"animation_length": 12,
 			"bones": {
 				"bone": {
