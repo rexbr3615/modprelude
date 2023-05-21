@@ -31,6 +31,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("ressonator_entity", () ->
                     BlockEntityType.Builder.of(RessonatorEntity::new,
                             ModBlocks.RESSONATOR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<CrusherEntity>> CRUSHER_ENTITY =
+            BLOCK_ENTITIES.register("crusher_entity", () ->
+                    BlockEntityType.Builder.of(CrusherEntity::new,
+                            ModBlocks.CRUSHER.get()).build(null));
 
 
 

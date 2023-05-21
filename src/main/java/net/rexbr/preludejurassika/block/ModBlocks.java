@@ -161,7 +161,9 @@ public class ModBlocks {
             () -> new DnaressonatorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
-
+    public static final RegistryObject<Block> CRUSHER = registerBlock("crusher",
+            () -> new CrusherBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
 
 

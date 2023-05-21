@@ -189,6 +189,10 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:mekanism-268560:${project.mek}")
     runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:${project.tf}")
     runtimeOnly fg.deobf("curse.maven:cofh-core-69162:${project.cofh}")
+
+    ///runtimeOnly fg.deobf("curse.maven:flywheel-486392:${project.flywheel_v}")
+    ///runtimeOnly fg.deobf("curse.maven:create-328085:${project.create_v}")
+
     runtimeOnly fg.deobf("curse.maven:thermal-expansion-69163:${project.th_ex}")
 
     implementation fg.deobf("curse.maven:appleskin-248787:${project.apsk}")

@@ -24,7 +24,8 @@ public class ModMenuTypes {
             registerMenuType(CleanerMenu::new, "cleaner_menu");
     public static final RegistryObject<MenuType<RessonatorMenu>> RESSONATOR_MENU =
             registerMenuType(RessonatorMenu::new, "ressonator_menu");
-
+    public static final RegistryObject<MenuType<CrusherMenu>> CRUSHER_MENU =
+            registerMenuType(CrusherMenu::new, "crusher_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

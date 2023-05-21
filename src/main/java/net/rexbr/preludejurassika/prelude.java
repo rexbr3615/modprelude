@@ -5,28 +5,19 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.IForgeRegistry;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.block.TileEntity.ModBlockEntities;
 import net.rexbr.preludejurassika.config.PreludeClientConfigs;
@@ -63,7 +54,6 @@ import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.tiktaalik.TiktaalikRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
-import net.rexbr.preludejurassika.entity.custom.TapejaraEntity;
 import net.rexbr.preludejurassika.item.ModBones;
 import net.rexbr.preludejurassika.item.ModItems;
 
@@ -71,6 +61,9 @@ import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.*;
 import net.rexbr.preludejurassika.sound.ModSounds;
+import net.rexbr.preludejurassika.tech.block.TechBlocks;
+import net.rexbr.preludejurassika.tech.items.TechItems;
+
 import net.rexbr.preludejurassika.villager.ModVillagers;
 
 import org.slf4j.Logger;
@@ -82,42 +75,38 @@ import software.bernie.geckolib3.GeckoLib;
 public class prelude {
 
     public static final String MODID = "prelude";
-
-
-
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
-
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     // add a comment
     public prelude() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // prelude stuff
+
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
-
         ModBones.register(eventBus);
-
         ModEntityTypes.register(eventBus);
         ModSounds.register(eventBus);
-
         ModRecipes.register(eventBus);
         ModVillagers.register(eventBus);
-
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
+        // tech stuffs
+
+        TechItems.register(eventBus);
+        TechBlocks.register(eventBus);
+
+
+
+        // setup stuffs
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
-        // tests
-
-
-
-
-
-        // tests
-
+        // other
 
         GeckoLib.initialize();
 
@@ -190,7 +179,7 @@ public class prelude {
         MenuScreens.register(ModMenuTypes.CULTURE_MENU.get(), CultureScreen::new);
         MenuScreens.register(ModMenuTypes.CLEANER_MENU.get(), CleanerScreen::new);
         MenuScreens.register(ModMenuTypes.RESSONATOR_MENU.get(), RessonatorScreen::new);
-        
+        MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
 
 
     }

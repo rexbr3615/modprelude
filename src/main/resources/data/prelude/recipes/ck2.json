@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 360,
+  "ingredient": {
+    "tag": "forge:bitumen"
+  },
+  "result": "prelude:coke"
+}
