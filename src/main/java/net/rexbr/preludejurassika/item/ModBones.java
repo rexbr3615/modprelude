@@ -398,7 +398,16 @@ public class ModBones {
     public static final RegistryObject<Item> ORO_BONE_VERTEBRATE = ITEMS.register("oro_bone_vertebrate",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
-
+    public static final RegistryObject<Item> EOCARCHARIA_BONE_SKULL = ITEMS.register("eocarcharia_bone_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> EOCARCHARIA_BONE_GRASTRALIUM = ITEMS.register("eocarcharia_bone_gastralium",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> EOCARCHARIA_BONE_RIBS = ITEMS.register("eocarcharia_bone_ribs",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> EOCARCHARIA_BONE_TAIL = ITEMS.register("eocarcharia_bone_tail",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> EOCARCHARIA_BONE_VERTEBRATE = ITEMS.register("eocarcharia_bone_vertebrate",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
 
 

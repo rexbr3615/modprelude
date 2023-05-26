@@ -190,8 +190,9 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:thermal-foundation-222880:${project.tf}")
     runtimeOnly fg.deobf("curse.maven:cofh-core-69162:${project.cofh}")
 
-    ///runtimeOnly fg.deobf("curse.maven:flywheel-486392:${project.flywheel_v}")
-    ///runtimeOnly fg.deobf("curse.maven:create-328085:${project.create_v}")
+    ///runtimeOnly fg.deobf("curse.maven:not-enough-animations-433760:${project.nea}")
+    ///runtimeOnly fg.deobf("curse.maven:mob-catcher-324347:${project.mobcatcher}")
+    runtimeOnly fg.deobf("curse.maven:thermal-cultivation-271835:${project.th_cu}")
 
     runtimeOnly fg.deobf("curse.maven:thermal-expansion-69163:${project.th_ex}")
 

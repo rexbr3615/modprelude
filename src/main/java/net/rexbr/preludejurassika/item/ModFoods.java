@@ -34,6 +34,7 @@ public class ModFoods {
     public static final FoodProperties RAW_TAPEJARA_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties RAW_ALLOSAURUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties RAW_ORODROMEUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
+    public static final FoodProperties RAW_EOCARCHARIA_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
 
 
     public static final FoodProperties GINKGO_NUTS = (new FoodProperties.Builder()).fast().nutrition(3).saturationMod(0.3F).build();

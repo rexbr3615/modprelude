@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:eocarcharia_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:eocarcharia_dna"
+  }
+}

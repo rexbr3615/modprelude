@@ -48,6 +48,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.ALLOSAURUS.get(), AlosaurusEntity.setAttributes());
         event.put(ModEntityTypes.DIABLOCERATOPS.get(), DiabloceratopsEntity.setAttributes());
         event.put(ModEntityTypes.ORODROMEUS.get(), OrodromeusEntity.setAttributes());
+        event.put(ModEntityTypes.EOCARCHARIA.get(), EocarchariaEntity.setAttributes());
     }
 
     @SubscribeEvent

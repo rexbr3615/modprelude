@@ -24,17 +24,18 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
-public class DilophosaurusEntity extends Animal implements IAnimatable {
+
+public class EocarchariaEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public DilophosaurusEntity(EntityType<? extends Animal> entityType, Level level) {
+    public EocarchariaEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 28.0D)
-                .add(Attributes.ATTACK_DAMAGE, 5f)
+                .add(Attributes.MAX_HEALTH, 45.0D)
+                .add(Attributes.ATTACK_DAMAGE, 12f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.26f).build();
     }
@@ -68,18 +69,18 @@ public class DilophosaurusEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.dilophosaurs.walk", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.eocarcharia.walk", 999));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.dilophosaurs.idle", 999));
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.eocarcharia.idle", 999));
         return PlayState.CONTINUE;
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dilophosaurs.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.eocarcharia.attack", false));
             this.swinging = false;
         }
 

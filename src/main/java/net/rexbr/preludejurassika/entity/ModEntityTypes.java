@@ -201,6 +201,11 @@ public class ModEntityTypes {
                             .sized(0.3f, 0.5f)
                             .build(new ResourceLocation(prelude.MODID, "orodromeus").toString()));
 
+    public static final RegistryObject<EntityType<EocarchariaEntity>> EOCARCHARIA =
+            ENTITY_TYPES.register("eocarcharia",
+                    () -> EntityType.Builder.of(EocarchariaEntity::new, MobCategory.CREATURE)
+                            .sized(1.2f, 2.3f)
+                            .build(new ResourceLocation(prelude.MODID, "eocarcharia").toString()));
 
 
 

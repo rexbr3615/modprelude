@@ -13,6 +13,8 @@
     "prelude:marble_bricks",
     "prelude:marble_tiles",
     "prelude:marble_floor",
-    "prelude:marble_pillar"
+    "prelude:marble_pillar",
+    "prelude:adobe_bricks",
+    "prelude:asfalt"
   ]
 }

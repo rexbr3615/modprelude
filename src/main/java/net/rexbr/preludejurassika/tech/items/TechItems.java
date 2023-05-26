@@ -91,6 +91,8 @@ public class TechItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
     public static final RegistryObject<Item> LATEX = ITEMS.register("latex",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
+    public static final RegistryObject<Item> MINI_AXE = ITEMS.register("mini_axe",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
 
     // dusts
 

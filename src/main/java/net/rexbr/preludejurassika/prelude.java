@@ -34,6 +34,7 @@ import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
 import net.rexbr.preludejurassika.entity.client.diablo.DiabloRenderer;
 import net.rexbr.preludejurassika.entity.client.dilophosaurus.DilophosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
+import net.rexbr.preludejurassika.entity.client.eocarcharia.EocarchariaRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
 import net.rexbr.preludejurassika.entity.client.giganotosaurus.GiganotosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.incisivosaurus.IncisivosaurusRenderer;
@@ -66,6 +67,7 @@ import net.rexbr.preludejurassika.tech.items.TechItems;
 
 import net.rexbr.preludejurassika.villager.ModVillagers;
 
+import net.rexbr.preludejurassika.world.PreludeModFeatures;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -93,6 +95,8 @@ public class prelude {
         ModVillagers.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
+        PreludeModFeatures.REGISTRY.register(eventBus);
 
         // tech stuffs
 
@@ -169,6 +173,7 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.ALLOSAURUS.get(), AllossaurusRenderer::new);
         EntityRenderers.register(ModEntityTypes.DIABLOCERATOPS.get(), DiabloRenderer::new);
         EntityRenderers.register(ModEntityTypes.ORODROMEUS.get(), OroRenderer::new);
+        EntityRenderers.register(ModEntityTypes.EOCARCHARIA.get(), EocarchariaRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());

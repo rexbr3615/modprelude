@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "yourmoddid:blocks/petroil_sand",
+    "particle": "yourmoddid:blocks/petroil_sand"
+  }
+}
