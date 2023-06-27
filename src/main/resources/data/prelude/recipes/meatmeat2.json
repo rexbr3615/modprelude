@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 1,
+  "cookingtime": 600,
+  "ingredient": {
+    "tag": "prelude:dino_raw_meat"
+  },
+  "result": "prelude:dinosaur_beef"
+}

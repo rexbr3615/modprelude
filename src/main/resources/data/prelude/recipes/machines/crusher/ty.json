@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "tag": "minecraft:log"
+    }
+  ],
+  "output": {
+    "item": "prelude:sawdust"
+  }
+}

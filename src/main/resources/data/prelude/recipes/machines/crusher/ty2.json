@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "item": "prelude:shell"
+    }
+  ],
+  "output": {
+    "item": "prelude:silica"
+  }
+}
