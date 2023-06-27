@@ -14,6 +14,10 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.FOSSIL_ORE, ModOrePlacement.commonOrePlacement(PreludeCommonConfig.FOSSIL_ORE_VEINS_PER_CHUNK.get(), // VeinsPerChunk //20
                      HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(128)))); //-80 e 128
 
+    public static final Holder<PlacedFeature> TIN_ORE_PLACED = PlacementUtils.register("tin_ore_placed",
+            ModConfiguredFeatures.TIN_ORE, ModOrePlacement.commonOrePlacement(PreludeCommonConfig.TIN_VEINS_PER_CHUNK.get(), // VeinsPerChunk //20
+                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(128)))); //-80 e 128
+
 
     public static final Holder<PlacedFeature> CALAMITES_PLACED = PlacementUtils.register("calamites_placed",
             ModConfiguredFeatures.CALAMITES_SPAWN, VegetationPlacements.treePlacement(
@@ -21,7 +25,9 @@ public class ModPlacedFeatures {
 
 
     public static final Holder<PlacedFeature> MARBLE_ORE_PLACED = PlacementUtils.register("marble_ore_placed",
-            ModConfiguredFeatures.MARBLE_ORE, ModOrePlacement.commonOrePlacement(PreludeCommonConfig.MARBLE_VEIN_SIZE.get(), // VeinsPerChunk //20
+            ModConfiguredFeatures.MARBLE_ORE, ModOrePlacement.commonOrePlacement(PreludeCommonConfig.MARBLE_VEINS_PER_CHUNK.get(), // VeinsPerChunk //20
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(128)))); //-80 e 128
+
+
 
 }

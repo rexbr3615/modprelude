@@ -43,7 +43,8 @@ public class CrusherEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 500;
+    private int maxProgress = 370;
+    private int outCount = 2;
 
     public CrusherEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.CRUSHER_ENTITY.get(), pWorldPosition, pBlockState);
@@ -152,16 +153,14 @@ public class CrusherEntity extends BlockEntity implements MenuProvider {
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem())
-                && hasItemInItemSlot(entity) && hasToolsInToolSlot(entity);
+                && hasItemInItemSlot(entity);
     }
 
     private static boolean hasItemInItemSlot(CrusherEntity entity) {
         return entity.itemHandler.getStackInSlot(0).getItem() == ModItems.DNA_NUCLEOTIDES.get();
     }
 
-    private static boolean hasToolsInToolSlot(CrusherEntity entity) {
-        return entity.itemHandler.getStackInSlot(2).getItem() == ModItems.TUBE.get();
-    }
+
 
     private static void craftItem(CrusherEntity entity) {
         Level level = entity.level;
@@ -176,10 +175,9 @@ public class CrusherEntity extends BlockEntity implements MenuProvider {
         if(match.isPresent()) {
             entity.itemHandler.extractItem(0,1, false);
             entity.itemHandler.extractItem(1,1, false);
-            entity.itemHandler.extractItem(2,1, false);
 
             entity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(),
-                    entity.itemHandler.getStackInSlot(3).getCount() + 1));
+                    entity.itemHandler.getStackInSlot(3).getCount() + 2));
 
             entity.resetProgress();
         }

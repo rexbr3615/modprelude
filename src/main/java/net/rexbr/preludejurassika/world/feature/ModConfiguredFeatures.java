@@ -9,6 +9,7 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.BiasedToBottomInt;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -31,17 +32,21 @@ import net.minecraftforge.registries.ForgeRegistryEntry;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.config.PreludeCommonConfig;
-import net.rexbr.preludejurassika.prelude;
-import net.rexbr.preludejurassika.procedurals.CalamitesGenP;
-import net.rexbr.preludejurassika.procedurals.EncaseFossil;
+import net.rexbr.preludejurassika.tech.block.TechBlocks;
+
 
 import java.util.List;
-import java.util.function.Supplier;
+
 
 public class ModConfiguredFeatures {
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_FOSSIL_ORES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.FOSSIL_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEP_FOSSIL_ORE.get().defaultBlockState()));
+
+    public static final List<OreConfiguration.TargetBlockState> OVERWORLD_TIN_ORES = List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, TechBlocks.TIN_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, TechBlocks.DEEPSLATED_TIN_ORE.get().defaultBlockState()));
+
 
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_MARBLE_ORES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MARBLE.get().defaultBlockState()),
@@ -50,6 +55,10 @@ public class ModConfiguredFeatures {
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> FOSSIL_ORE = FeatureUtils.register("fossil_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, PreludeCommonConfig.FOSSIL_ORE_VEIN_SIZE.get())); //20
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> TIN_ORE = FeatureUtils.register("tin_ore",
+            Feature.ORE, new OreConfiguration(OVERWORLD_FOSSIL_ORES, PreludeCommonConfig.TIN_VEIN_SIZE.get())); //20
+
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> MARBLE_ORE = FeatureUtils.register("marble_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_MARBLE_ORES, PreludeCommonConfig.MARBLE_VEIN_SIZE.get())); //20
@@ -72,6 +81,8 @@ public class ModConfiguredFeatures {
             FeatureUtils.register("calamites_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(CALAMITES_CHECKED,
                             0.5F)), CALAMITES_CHECKED));
+
+
 
 
 

@@ -14,6 +14,7 @@ public class ModOreGeneration {
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
 
         base.add(ModPlacedFeatures.FOSSIL_ORE_PLACED);
+        base.add(ModPlacedFeatures.TIN_ORE_PLACED);
         base.add(ModPlacedFeatures.MARBLE_ORE_PLACED);
     }
 }

@@ -46,7 +46,7 @@ public class CultureEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 2200;
+    private int maxProgress = 3600;
 
     public CultureEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.CULTURE_ENTITY.get(), pWorldPosition, pBlockState);

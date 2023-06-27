@@ -99,9 +99,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
-    /*public static final RegistryObject<Block> VOLCANIC_ASH = registerBlock("volcanic_ash",
+    public static final RegistryObject<Block> VOLCANIC_ASH = registerBlock("volcanic_ash",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);*/
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+    public static final RegistryObject<Block> VOLCANIC_ROCK = registerBlock("volcanic_rock",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
 
     public static final RegistryObject<Block> MARBLE = registerBlock("marble",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)

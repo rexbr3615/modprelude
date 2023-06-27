@@ -5,6 +5,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.block.Blocks;
@@ -62,14 +63,19 @@ import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.*;
 import net.rexbr.preludejurassika.sound.ModSounds;
+import net.rexbr.preludejurassika.tech.TechEntities;
 import net.rexbr.preludejurassika.tech.block.TechBlocks;
+import net.rexbr.preludejurassika.tech.block.common.SeatRenderer;
 import net.rexbr.preludejurassika.tech.items.TechItems;
 
 import net.rexbr.preludejurassika.villager.ModVillagers;
 
 import net.rexbr.preludejurassika.world.PreludeModFeatures;
+
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
+
+import terrablender.api.SurfaceRuleManager;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -102,6 +108,8 @@ public class prelude {
 
         TechItems.register(eventBus);
         TechBlocks.register(eventBus);
+        TechEntities.REGISTER.register(eventBus);
+
 
 
 
@@ -109,6 +117,7 @@ public class prelude {
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+
 
         // other
 
@@ -128,6 +137,7 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TechBlocks.SEAT2.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
@@ -174,7 +184,7 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.DIABLOCERATOPS.get(), DiabloRenderer::new);
         EntityRenderers.register(ModEntityTypes.ORODROMEUS.get(), OroRenderer::new);
         EntityRenderers.register(ModEntityTypes.EOCARCHARIA.get(), EocarchariaRenderer::new);
-
+        EntityRenderers.register(TechEntities.SEAT.get(), SeatRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CULTURE_VAT.get(), RenderType.translucent());
@@ -208,5 +218,7 @@ public class prelude {
 
         });
     }
+
+
     
 }

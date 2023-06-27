@@ -1,32 +1,24 @@
 package net.rexbr.preludejurassika.tech.block;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.PipeBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.item.ModItems;
 import net.rexbr.preludejurassika.prelude;
-import net.rexbr.preludejurassika.tech.block.common.PetroilredsandBlock;
-import net.rexbr.preludejurassika.tech.block.common.PetroilsandBlock;
-import net.rexbr.preludejurassika.tech.block.common.ShellBlock;
-
+import net.rexbr.preludejurassika.tech.block.common.*;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -44,6 +36,25 @@ public class TechBlocks {
             () -> new PetroilsandBlock(), ModCreativeModeTab.TECH_ITEMS);
     public static final RegistryObject<Block> PETROILREDSAND = registerBlock("petroilredsand",
             () -> new PetroilredsandBlock(), ModCreativeModeTab.TECH_ITEMS);
+
+
+
+    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.TECH_ITEMS);
+    public static final RegistryObject<Block> DEEPSLATED_TIN_ORE = registerBlock("deepslated_tin_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.25f, 4.2f).requiresCorrectToolForDrops()), ModCreativeModeTab.TECH_ITEMS);
+
+
+
+    public static final RegistryObject<Block> SEAT1 = registerBlock("seat1",
+            () -> new ChairLikeBlock_2(BlockBehaviour.Properties.of(Material.WOOL)
+                    .strength(1.2f, 2.4f)), ModCreativeModeTab.TECH_ITEMS);
+
+    public static final RegistryObject<Block> SEAT2 = registerBlock("seat2",
+            () -> new SeatAllongableBlock(BlockBehaviour.Properties.of(Material.WOOL)
+                    .strength(1.2f, 2.4f)), ModCreativeModeTab.TECH_ITEMS);
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab, String tooltipKey) {

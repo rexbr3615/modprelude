@@ -7,6 +7,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.item.ModCreativeModeTab;
 import net.rexbr.preludejurassika.prelude;
+import net.rexbr.preludejurassika.tech.items.common.BitumenItem;
+import net.rexbr.preludejurassika.tech.items.common.CokeItem;
+import net.rexbr.preludejurassika.tech.items.common.MiniAxeItem;
 
 public class TechItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -14,11 +17,12 @@ public class TechItems {
 
 
     public static final RegistryObject<Item> COKE = ITEMS.register("coke",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
+            () -> new CokeItem(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
+
     public static final RegistryObject<Item> SAWDUST = ITEMS.register("sawdust",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
     public static final RegistryObject<Item> BITUMEN = ITEMS.register("bitumen",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
+            () -> new BitumenItem(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
 
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
@@ -92,6 +96,8 @@ public class TechItems {
     public static final RegistryObject<Item> LATEX = ITEMS.register("latex",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
     public static final RegistryObject<Item> MINI_AXE = ITEMS.register("mini_axe",
+            () -> new MiniAxeItem());
+    public static final RegistryObject<Item> TAR = ITEMS.register("tar",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
 
     // dusts

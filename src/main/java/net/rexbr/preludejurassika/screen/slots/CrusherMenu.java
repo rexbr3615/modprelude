@@ -10,11 +10,11 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.rexbr.preludejurassika.block.ModBlocks;
-import net.rexbr.preludejurassika.block.TileEntity.RessonatorEntity;
+import net.rexbr.preludejurassika.block.TileEntity.CrusherEntity;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 
 public class CrusherMenu extends AbstractContainerMenu {
-    private final RessonatorEntity blockEntity;
+    private final CrusherEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
@@ -25,7 +25,7 @@ public class CrusherMenu extends AbstractContainerMenu {
     public CrusherMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.CRUSHER_MENU.get(), pContainerId);
         checkContainerSize(inv, 4);
-        blockEntity = ((RessonatorEntity) entity); //aa
+        blockEntity = ((CrusherEntity) entity); //aa
         this.level = inv.player.level;
         this.data = data;
 

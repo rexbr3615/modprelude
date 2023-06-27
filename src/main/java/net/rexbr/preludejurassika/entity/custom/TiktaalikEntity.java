@@ -37,11 +37,11 @@ public class TiktaalikEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 10.0D)
+                .add(Attributes.MAX_HEALTH, 11.0D)
                 .add(Attributes.ATTACK_DAMAGE, 1f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(ForgeMod.SWIM_SPEED.get(), 3.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.08f).build();
+                .add(ForgeMod.SWIM_SPEED.get(), 8.0f)
+                .add(Attributes.MOVEMENT_SPEED, 0.10f).build();
     }
 
     protected void registerGoals() {
