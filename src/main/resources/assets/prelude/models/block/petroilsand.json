@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "yourmoddid:blocks/petroil_sand",
-    "particle": "yourmoddid:blocks/petroil_sand"
+    "all": "prelude:block/petroil_sand",
+    "particle": "prelude:block/petroil_sand"
   }
 }

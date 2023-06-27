@@ -15,6 +15,9 @@
     "prelude:marble_floor",
     "prelude:marble_pillar",
     "prelude:adobe_bricks",
-    "prelude:asfalt"
+    "prelude:asfalt",
+    "prelude:crusher",
+    "prelude:tin_ore",
+    "prelude:deepslated_tin_ore"
   ]
 }

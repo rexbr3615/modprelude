@@ -1,5 +1,5 @@
 {
-  "parent": "yourmoddid:block/petroilredsand",
+  "parent": "prelude:block/petroilredsand",
   "display": {
     "thirdperson": {
       "rotation": [

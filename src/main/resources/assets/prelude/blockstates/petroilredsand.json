@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "yourmoddid:block/petroilredsand"
+      "model": "prelude:block/petroilredsand"
     }
   }
 }
