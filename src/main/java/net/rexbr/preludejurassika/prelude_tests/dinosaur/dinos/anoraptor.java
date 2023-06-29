@@ -7,10 +7,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.level.Level;
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoTerrestrial;
 import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinossauroComplex;
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.ai.GotoSleepGoal;
 import net.rexbr.preludejurassika.prelude_tests.dinosaur.ai.SmartSwimGoal_Land;
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.ai.SmartWanderGoal;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -21,9 +25,9 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class anoraptor extends DinossauroComplex implements IAnimatable {
+public class anoraptor extends DinoTerrestrial implements IAnimatable {
 
-    public anoraptor(EntityType<? extends DinossauroComplex> type, Level worldIn) {
+    public anoraptor(EntityType<? extends DinoTerrestrial> type, Level worldIn) {
         super(type, worldIn);
     }
 
@@ -41,8 +45,11 @@ public class anoraptor extends DinossauroComplex implements IAnimatable {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new SmartSwimGoal_Land(this));
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.3D, false));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+        this.goalSelector.addGoal(2, new SmartWanderGoal(this, 0.8D, false));
+        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.3D, false));
+        this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
+        //this.goalSelector.addGoal(6, new GotoSleepGoal(this, 1D));
     }
 
     @Nullable
