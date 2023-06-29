@@ -59,6 +59,8 @@ import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
 import net.rexbr.preludejurassika.item.ModBones;
 import net.rexbr.preludejurassika.item.ModItems;
 
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoAttributesRegister;
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoRegister;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.*;
@@ -110,7 +112,9 @@ public class prelude {
         TechBlocks.register(eventBus);
         TechEntities.REGISTER.register(eventBus);
 
+        // test stuff
 
+        DinoRegister.register(eventBus);
 
 
         // setup stuffs
