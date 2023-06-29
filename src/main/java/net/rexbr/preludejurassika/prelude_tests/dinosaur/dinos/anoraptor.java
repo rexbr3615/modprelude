@@ -6,8 +6,11 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.level.Level;
 import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinossauroComplex;
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.ai.SmartSwimGoal_Land;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -36,10 +39,11 @@ public class anoraptor extends DinossauroComplex implements IAnimatable {
     }
 
 
-
-
-
-    protected void registerGoals() {}
+    protected void registerGoals() {
+        this.goalSelector.addGoal(1, new SmartSwimGoal_Land(this));
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.3D, false));
+        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+    }
 
     @Nullable
     @Override

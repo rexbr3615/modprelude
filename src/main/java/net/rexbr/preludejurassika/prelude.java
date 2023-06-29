@@ -61,6 +61,7 @@ import net.rexbr.preludejurassika.item.ModItems;
 
 import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoAttributesRegister;
 import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoRegister;
+import net.rexbr.preludejurassika.prelude_tests.dinosaur.EggRegisrty;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.*;
@@ -115,6 +116,7 @@ public class prelude {
         // test stuff
 
         DinoRegister.register(eventBus);
+        EggRegisrty.REGISTRY.register(eventBus);
 
 
         // setup stuffs
