@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "prelude:item/bones/amazonsaurus_bone_skull",
-    "layer1": "prelude:item/bones/0101"
-  }
-}

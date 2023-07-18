@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "prelude:block/trees/calamites/calamites_planks",
-    "top": "prelude:block/trees/calamites/calamites_planks",
-    "side": "prelude:block/trees/calamites/calamites_planks"
-  }
-}

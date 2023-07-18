@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "prelude:block/trees/ginkgo/ginkgo_planks",
-    "top": "prelude:block/trees/ginkgo/ginkgo_planks",
-    "side": "prelude:block/trees/ginkgo/ginkgo_planks"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "prelude:block/dna_ressonator" },
-    "facing=east": { "model": "prelude:block/dna_ressonator", "y": 90 },
-    "facing=south": { "model": "prelude:block/dna_ressonator", "y": 180 },
-    "facing=west": { "model": "prelude:block/dna_ressonator", "y": 270 }
-  }
-}

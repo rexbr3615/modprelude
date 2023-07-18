@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "prelude:block/petroil_red_sand",
-    "particle": "prelude:block/petroil_red_sand"
-  }
-}

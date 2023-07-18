@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "experience": 1,
-  "cookingtime": 260,
-  "ingredient": {
-    "item": "prelude:petri_dish_agar"
-  },
-  "result": "prelude:bacterias"
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom",
-  "textures": {
-    "top": "prelude:block/araucaria_door_top",
-    "bottom": "prelude:block/araucaria_door_bottom"
-  }
-}

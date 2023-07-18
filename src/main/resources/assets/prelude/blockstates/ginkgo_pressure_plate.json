@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "powered=false": { "model": "prelude:block/ginkgo/ginkgo_pressure_plate" },
-    "powered=true": { "model": "prelude:block/ginkgo/ginkgo_pressure_plate_down" }
-  }
-}

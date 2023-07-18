@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "prelude:item/peri_dish_plant_cells",
-    "layer1": "prelude:item/overlay/spores"
-  }
-}

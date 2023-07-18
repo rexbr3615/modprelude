@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "powered=false": { "model": "prelude:block/calamites/calamites_pressure_plate" },
-    "powered=true": { "model": "prelude:block/calamites/calamites_pressure_plate_down" }
-  }
-}

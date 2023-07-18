@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "prelude:item/eggs/empty_egg",
-    "layer1": "prelude:item/overlay/deinonychus"
-  }
-}

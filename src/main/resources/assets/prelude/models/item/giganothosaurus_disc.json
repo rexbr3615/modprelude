@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "prelude:item/diskdrive",
-    "layer1": "prelude:item/overlay/giganothosaurus"
-  }
-}
