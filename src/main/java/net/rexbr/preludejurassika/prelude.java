@@ -5,7 +5,6 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.block.Blocks;
@@ -19,6 +18,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.block.TileEntity.ModBlockEntities;
 import net.rexbr.preludejurassika.config.PreludeClientConfigs;
@@ -55,13 +55,11 @@ import net.rexbr.preludejurassika.entity.client.tapejara.TapejaraRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.tiktaalik.TiktaalikRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
+import net.rexbr.preludejurassika.entity.client.uraniasloanus.UraniasloanusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
 import net.rexbr.preludejurassika.item.ModBones;
 import net.rexbr.preludejurassika.item.ModItems;
 
-import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoAttributesRegister;
-import net.rexbr.preludejurassika.prelude_tests.dinosaur.DinoRegister;
-import net.rexbr.preludejurassika.prelude_tests.dinosaur.EggRegisrty;
 import net.rexbr.preludejurassika.recipes.ModRecipes;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.*;
@@ -78,8 +76,6 @@ import net.rexbr.preludejurassika.world.PreludeModFeatures;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
-import terrablender.api.SurfaceRuleManager;
-
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(prelude.MODID)
@@ -88,6 +84,7 @@ public class prelude {
     public static final String MODID = "prelude";
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
     public static final Logger LOGGER = LogUtils.getLogger();
+    public static final boolean DEBUG = false;
 
     // add a comment
     public prelude() {
@@ -115,8 +112,6 @@ public class prelude {
 
         // test stuff
 
-        DinoRegister.register(eventBus);
-        EggRegisrty.REGISTRY.register(eventBus);
 
 
         // setup stuffs
@@ -131,6 +126,7 @@ public class prelude {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, PreludeClientConfigs.SPEC, "prelude-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, PreludeCommonConfig.SPEC, "prelude-common.toml");
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -190,6 +186,7 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.DIABLOCERATOPS.get(), DiabloRenderer::new);
         EntityRenderers.register(ModEntityTypes.ORODROMEUS.get(), OroRenderer::new);
         EntityRenderers.register(ModEntityTypes.EOCARCHARIA.get(), EocarchariaRenderer::new);
+        //EntityRenderers.register(ModEntityTypes.URANIASLOANUS.get(), UraniasloanusRenderer::new);
         EntityRenderers.register(TechEntities.SEAT.get(), SeatRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());
@@ -208,6 +205,7 @@ public class prelude {
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.COOKSONIA.getId(), ModBlocks.POTTED_COOKSONIA);
+
 
 
 //// normal spawn XD ////

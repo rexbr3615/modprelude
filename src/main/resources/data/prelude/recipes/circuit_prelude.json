@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSG",
+    "SSI",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "prelude:sawdust"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "result": {
+    "item": "prelude:circuit",
+    "count": 1
+  }
+}

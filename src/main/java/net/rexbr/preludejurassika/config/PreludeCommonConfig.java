@@ -7,6 +7,7 @@ public class PreludeCommonConfig {
     public static final ForgeConfigSpec SPEC;
 
     public static final ForgeConfigSpec.ConfigValue<Boolean> dinosaurSpawning;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> naturalBreeding;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOSSIL_ORE_VEINS_PER_CHUNK;
     public static final ForgeConfigSpec.ConfigValue<Integer> FOSSIL_ORE_VEIN_SIZE;
     public static final ForgeConfigSpec.ConfigValue<Integer> MARBLE_VEIN_SIZE;
@@ -19,6 +20,9 @@ public class PreludeCommonConfig {
 
         dinosaurSpawning = BUILDER.comment("dinosaurSpawning")
                         .define("dinosaurSpawning",false);
+
+        naturalBreeding = BUILDER.comment("naturalBreeding")
+                .define("naturalBreeding",true);
 
         FOSSIL_ORE_VEINS_PER_CHUNK = BUILDER.comment("How many fossil Ore Veins spawn per chunk!")
                 .define("Veins Per Chunk", 13);

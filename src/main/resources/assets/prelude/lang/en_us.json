@@ -539,5 +539,7 @@
   "item.prelude.eocarcharia_bone_vertebrate": "Eocarcharia Vertebrate",
   "item.prelude.raw_eocarcharia_meat": "",
   "entity.prelude.eocarcharia": "Eocarcharia",
-  "item.prelude.eocarcharia_spawn_egg": "Eocarcharia Spawn Egg"
+  "item.prelude.eocarcharia_spawn_egg": "Eocarcharia Spawn Egg",
+  "item.prelude.urania_spawn_egg": "Urania Sloanus",
+  "entity.prelude.urania": "Urania Sloanus"
 }

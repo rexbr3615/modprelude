@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.custom.*;
 
+import net.rexbr.preludejurassika.entity.custom.test.UraniasolanusEntity;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {
@@ -207,6 +208,11 @@ public class ModEntityTypes {
                             .sized(1.2f, 2.3f)
                             .build(new ResourceLocation(prelude.MODID, "eocarcharia").toString()));
 
+    //public static final RegistryObject<EntityType<UraniasolanusEntity>> URANIASLOANUS =
+    //        ENTITY_TYPES.register("urania",
+    //                () -> EntityType.Builder.of(UraniasolanusEntity::new, MobCategory.CREATURE)
+    //                        .sized(0.4f, 0.4f)
+    //                        .build(new ResourceLocation(prelude.MODID, "urania").toString()));
 
 
     public static void register(IEventBus eventBus) {

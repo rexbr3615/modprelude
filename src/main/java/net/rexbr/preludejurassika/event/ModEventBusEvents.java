@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.custom.*;
+import net.rexbr.preludejurassika.entity.custom.test.UraniasolanusEntity;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
 import net.rexbr.preludejurassika.recipes.RessonatorRecipe;
@@ -49,6 +50,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.DIABLOCERATOPS.get(), DiabloceratopsEntity.setAttributes());
         event.put(ModEntityTypes.ORODROMEUS.get(), OrodromeusEntity.setAttributes());
         event.put(ModEntityTypes.EOCARCHARIA.get(), EocarchariaEntity.setAttributes());
+        //event.put(ModEntityTypes.URANIASLOANUS.get(), UraniasolanusEntity.setAttributes());
     }
 
     @SubscribeEvent
