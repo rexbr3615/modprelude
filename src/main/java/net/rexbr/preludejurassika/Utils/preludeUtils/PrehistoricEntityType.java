@@ -1,12 +1,11 @@
 package net.rexbr.preludejurassika.Utils.preludeUtils;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
-import net.rexbr.preludejurassika.entity.custom.JuravenatorEntity;
+import net.rexbr.preludejurassika.entity.common.juravenator.JuravenatorEntity;
 
 public enum PrehistoricEntityType {
 
