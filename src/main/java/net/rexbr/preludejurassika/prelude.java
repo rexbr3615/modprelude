@@ -18,7 +18,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.block.TileEntity.ModBlockEntities;
 import net.rexbr.preludejurassika.config.PreludeClientConfigs;
@@ -27,8 +26,8 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 
 import net.rexbr.preludejurassika.entity.client.*;
 
-import net.rexbr.preludejurassika.entity.client.Allo.AllossaurusRenderer;
-import net.rexbr.preludejurassika.entity.client.achilobator.AchilobatorRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.allo.AllossaurusRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.achilobator.AchilobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.bajada.BajadaRenderer;
 import net.rexbr.preludejurassika.entity.client.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
@@ -55,8 +54,10 @@ import net.rexbr.preludejurassika.entity.client.tapejara.TapejaraRenderer;
 import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.tiktaalik.TiktaalikRenderer;
 import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
-import net.rexbr.preludejurassika.entity.client.uraniasloanus.UraniasloanusRenderer;
 import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.mimodactylus.MimodactylusRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.pyroraptor.PyroraptorRenderer;
 import net.rexbr.preludejurassika.item.ModBones;
 import net.rexbr.preludejurassika.item.ModItems;
 

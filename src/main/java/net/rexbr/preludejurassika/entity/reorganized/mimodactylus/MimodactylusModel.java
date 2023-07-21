@@ -1,7 +1,7 @@
-package net.rexbr.preludejurassika.entity.client;
+package net.rexbr.preludejurassika.entity.reorganized.mimodactylus;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.mimodactylusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.mimodactylus.mimodactylusEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

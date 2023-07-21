@@ -1,8 +1,7 @@
-package net.rexbr.preludejurassika.entity.client.achilobator;
+package net.rexbr.preludejurassika.entity.reorganized.achilobator;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.AchilobatorEntity;
-import net.rexbr.preludejurassika.entity.custom.ConodontaEntity;
+import net.rexbr.preludejurassika.entity.reorganized.achilobator.AchilobatorEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

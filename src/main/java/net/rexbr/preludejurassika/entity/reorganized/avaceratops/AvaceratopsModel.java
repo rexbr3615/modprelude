@@ -1,8 +1,6 @@
-package net.rexbr.preludejurassika.entity.client;
+package net.rexbr.preludejurassika.entity.reorganized.avaceratops;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.AlbertosaurusEntity;
-import net.rexbr.preludejurassika.entity.custom.AvaceratopsEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

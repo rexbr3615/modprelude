@@ -1,4 +1,4 @@
-package net.rexbr.preludejurassika.entity.custom;
+package net.rexbr.preludejurassika.entity.reorganized.achilobator;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -15,6 +15,8 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
+import net.rexbr.preludejurassika.entity.custom.DryosaurusEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -25,16 +27,18 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class PyroraptorEntity extends Animal implements IAnimatable {
+public class AchilobatorEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
+    private boolean isSwimming;
 
-    public PyroraptorEntity(EntityType<? extends Animal> entityType, Level level) {
+
+    public AchilobatorEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 24.0D)
+                .add(Attributes.MAX_HEALTH, 28.0D)
                 .add(Attributes.ATTACK_DAMAGE, 4f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
                 .add(Attributes.MOVEMENT_SPEED, 0.24f).build();
@@ -42,7 +46,6 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
-
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.4D, false));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
@@ -55,14 +58,12 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
                 return (double) (2.0 + entity.getBbWidth() * entity.getBbWidth());
             }
         });
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, JuravenatorEntity.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PaleolamaMajorEntity.class, true));
+
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AvaceratopsEntity.class, true));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, DryosaurusEntity.class, true));
 
         this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
-
-
-        this.goalSelector.addGoal(1, new FollowMobGoal(this, (float) 1, 16, 6));
 
     }
 
@@ -74,24 +75,23 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.pyroraptor.move2", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.achilobator.walk", 999));
             return PlayState.CONTINUE;
         }
 
-        if (this.isInWaterOrBubble()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.swim", true));
-            return PlayState.CONTINUE;
-        }
-        
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.pyroraptor.idle", 999));
+
+
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.achilobator.idle", 999));
         return PlayState.CONTINUE;
+
     }
 
     private PlayState attackPredicate(AnimationEvent event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.pyroraptor.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.achilobator.attack", false));
             this.swinging = false;
+            this.getSharedFlag(4);
         }
 
         return PlayState.CONTINUE;
@@ -105,7 +105,10 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
                 0, this::predicate));
         data.addAnimationController(new AnimationController(this, "attackController",
                 0, this::attackPredicate));
+
     }
+
+
 
     @Override
     public AnimationFactory getFactory() {
@@ -115,4 +118,5 @@ public class PyroraptorEntity extends Animal implements IAnimatable {
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
+
 }

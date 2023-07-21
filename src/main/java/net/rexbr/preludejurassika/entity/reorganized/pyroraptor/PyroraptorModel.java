@@ -1,7 +1,6 @@
-package net.rexbr.preludejurassika.entity.client;
+package net.rexbr.preludejurassika.entity.reorganized.pyroraptor;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.PyroraptorEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

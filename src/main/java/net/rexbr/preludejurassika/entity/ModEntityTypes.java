@@ -9,7 +9,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.custom.*;
 
-import net.rexbr.preludejurassika.entity.custom.test.UraniasolanusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.achilobator.AchilobatorEntity;
+import net.rexbr.preludejurassika.entity.reorganized.allo.AlosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
+import net.rexbr.preludejurassika.entity.reorganized.mimodactylus.mimodactylusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.pyroraptor.PyroraptorEntity;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {

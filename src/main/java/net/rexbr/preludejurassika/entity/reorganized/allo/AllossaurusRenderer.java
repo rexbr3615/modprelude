@@ -1,18 +1,14 @@
-package net.rexbr.preludejurassika.entity.client.Allo;
+package net.rexbr.preludejurassika.entity.reorganized.allo;
 
 import com.google.common.collect.Maps;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.sun.jna.platform.unix.solaris.LibKstat;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.rexbr.preludejurassika.Utils.preludeUtils.AlosaurusVariants;
-import net.rexbr.preludejurassika.entity.client.achilobator.AchilobatorModel;
-import net.rexbr.preludejurassika.entity.custom.AchilobatorEntity;
-import net.rexbr.preludejurassika.entity.custom.AlosaurusEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 

@@ -1,8 +1,6 @@
-package net.rexbr.preludejurassika.entity.client.Allo;
+package net.rexbr.preludejurassika.entity.reorganized.allo;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.AchilobatorEntity;
-import net.rexbr.preludejurassika.entity.custom.AlosaurusEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
