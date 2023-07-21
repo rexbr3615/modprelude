@@ -15,7 +15,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.rexbr.preludejurassika.entity.custom.DryosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.dryo.DryosaurusEntity;
 import net.rexbr.preludejurassika.entity.custom.JuravenatorEntity;
 import net.rexbr.preludejurassika.entity.custom.PaleolamaMajorEntity;
 import org.jetbrains.annotations.Nullable;

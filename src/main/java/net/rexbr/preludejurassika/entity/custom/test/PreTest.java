@@ -16,7 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
-import net.rexbr.preludejurassika.entity.custom.DryosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.dryo.DryosaurusEntity;
 import net.rexbr.preludejurassika.entity.custom.PreludeEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;

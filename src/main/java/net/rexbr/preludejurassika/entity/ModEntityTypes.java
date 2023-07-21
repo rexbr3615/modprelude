@@ -10,10 +10,20 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.custom.*;
 
 import net.rexbr.preludejurassika.entity.reorganized.achilobator.AchilobatorEntity;
+import net.rexbr.preludejurassika.entity.reorganized.albertosaurus.AlbertosaurusEntity;
 import net.rexbr.preludejurassika.entity.reorganized.allo.AlosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.amazonsaurus.AmazonsaurusEntity;
 import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
+import net.rexbr.preludejurassika.entity.reorganized.dryo.DryosaurusEntity;
 import net.rexbr.preludejurassika.entity.reorganized.mimodactylus.mimodactylusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.orodromeus.OrodromeusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.proterosuchus.ProterosuchusEntity;
 import net.rexbr.preludejurassika.entity.reorganized.pyroraptor.PyroraptorEntity;
+import net.rexbr.preludejurassika.entity.reorganized.sturgeon.SturgeonEntity;
+import net.rexbr.preludejurassika.entity.reorganized.tapejara.TapejaraEntity;
+import net.rexbr.preludejurassika.entity.reorganized.tenontosaurus.TenontosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.torvosaurus.TorvosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.ypupiara.YpupiaraEntity;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {

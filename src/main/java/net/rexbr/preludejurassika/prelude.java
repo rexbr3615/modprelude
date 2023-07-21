@@ -24,8 +24,7 @@ import net.rexbr.preludejurassika.config.PreludeClientConfigs;
 import net.rexbr.preludejurassika.config.PreludeCommonConfig;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 
-import net.rexbr.preludejurassika.entity.client.*;
-
+import net.rexbr.preludejurassika.entity.reorganized.albertosaurus.AlbertosaurusRenderer;
 import net.rexbr.preludejurassika.entity.reorganized.allo.AllossaurusRenderer;
 import net.rexbr.preludejurassika.entity.reorganized.achilobator.AchilobatorRenderer;
 import net.rexbr.preludejurassika.entity.client.bajada.BajadaRenderer;
@@ -33,7 +32,7 @@ import net.rexbr.preludejurassika.entity.client.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.client.deinonychus.DeinonychusRenderer;
 import net.rexbr.preludejurassika.entity.client.diablo.DiabloRenderer;
 import net.rexbr.preludejurassika.entity.client.dilophosaurus.DilophosaurusRenderer;
-import net.rexbr.preludejurassika.entity.client.dryo.DryoRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.client.eocarcharia.EocarchariaRenderer;
 import net.rexbr.preludejurassika.entity.client.eotriceratops.EotriceratopsRenderer;
 import net.rexbr.preludejurassika.entity.client.giganotosaurus.GiganotosaurusRenderer;
@@ -43,18 +42,19 @@ import net.rexbr.preludejurassika.entity.client.juravenator.JuravenatorRenderer;
 
 
 import net.rexbr.preludejurassika.entity.client.ornithomimus.OrnithomimusRenderer;
-import net.rexbr.preludejurassika.entity.client.oro.OroRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.orodromeus.OroRenderer;
 import net.rexbr.preludejurassika.entity.client.paleolama.PaleoLamaRenderer;
 import net.rexbr.preludejurassika.entity.client.prognathodon.PrognathodonRenderer;
 import net.rexbr.preludejurassika.entity.client.prolibytherium.ProlibytheriumRenderer;
-import net.rexbr.preludejurassika.entity.client.proterosuchus.ProterosuchusRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.proterosuchus.ProterosuchusRenderer;
 import net.rexbr.preludejurassika.entity.client.silessaurus.SilessaurusRenderer;
-import net.rexbr.preludejurassika.entity.client.sturgeon.SturgeonRenderer;
-import net.rexbr.preludejurassika.entity.client.tapejara.TapejaraRenderer;
-import net.rexbr.preludejurassika.entity.client.teno.TenontosaurusRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.sturgeon.SturgeonRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.tapejara.TapejaraRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.tenontosaurus.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.client.tiktaalik.TiktaalikRenderer;
-import net.rexbr.preludejurassika.entity.client.torvosaurus.TorvosaurusRenderer;
-import net.rexbr.preludejurassika.entity.client.ypupiara.YpupiaraRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.torvosaurus.TorvosaurusRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.ypupiara.YpupiaraRenderer;
+import net.rexbr.preludejurassika.entity.reorganized.amazonsaurus.AmazonsaurusRenderer;
 import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsRenderer;
 import net.rexbr.preludejurassika.entity.reorganized.mimodactylus.MimodactylusRenderer;
 import net.rexbr.preludejurassika.entity.reorganized.pyroraptor.PyroraptorRenderer;

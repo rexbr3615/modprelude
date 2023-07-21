@@ -2,7 +2,6 @@ package net.rexbr.preludejurassika.entity.client.deinonychus;
 
 import net.minecraft.resources.ResourceLocation;
 import net.rexbr.preludejurassika.entity.custom.DeinonychusEntity;
-import net.rexbr.preludejurassika.entity.custom.DryosaurusEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

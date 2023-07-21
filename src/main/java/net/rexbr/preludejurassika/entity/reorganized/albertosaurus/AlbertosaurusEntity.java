@@ -1,4 +1,4 @@
-package net.rexbr.preludejurassika.entity.reorganized.achilobator;
+package net.rexbr.preludejurassika.entity.reorganized.albertosaurus;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -15,8 +15,8 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
 import net.rexbr.preludejurassika.entity.reorganized.dryo.DryosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -27,21 +27,21 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class AchilobatorEntity extends Animal implements IAnimatable {
+public class AlbertosaurusEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private boolean isSwimming;
 
 
-    public AchilobatorEntity(EntityType<? extends Animal> entityType, Level level) {
+    public AlbertosaurusEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 28.0D)
-                .add(Attributes.ATTACK_DAMAGE, 4f)
+                .add(Attributes.MAX_HEALTH, 56.0D)
+                .add(Attributes.ATTACK_DAMAGE, 8f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.24f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.25f).build();
     }
 
     protected void registerGoals() {
@@ -75,13 +75,16 @@ public class AchilobatorEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.achilobator.walk", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.albertosaurus.move", 999));
             return PlayState.CONTINUE;
         }
 
+        if (this.isInWaterOrBubble()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.swim", true));
+            return PlayState.CONTINUE;
+        }
 
-
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.achilobator.idle", 999));
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.albertosaurus.idle", 999));
         return PlayState.CONTINUE;
 
     }
@@ -89,7 +92,7 @@ public class AchilobatorEntity extends Animal implements IAnimatable {
     private PlayState attackPredicate(AnimationEvent event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.achilobator.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.albertosaurus.attack", false));
             this.swinging = false;
             this.getSharedFlag(4);
         }

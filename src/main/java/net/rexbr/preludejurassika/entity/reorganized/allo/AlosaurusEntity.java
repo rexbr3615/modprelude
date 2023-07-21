@@ -22,7 +22,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.rexbr.preludejurassika.Utils.preludeUtils.AlosaurusVariants;
 import net.rexbr.preludejurassika.entity.reorganized.avaceratops.AvaceratopsEntity;
-import net.rexbr.preludejurassika.entity.custom.DryosaurusEntity;
+import net.rexbr.preludejurassika.entity.reorganized.dryo.DryosaurusEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;

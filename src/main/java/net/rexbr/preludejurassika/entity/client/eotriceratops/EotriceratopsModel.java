@@ -1,7 +1,6 @@
 package net.rexbr.preludejurassika.entity.client.eotriceratops;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.DryosaurusEntity;
 import net.rexbr.preludejurassika.entity.custom.EotriceratopsEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;

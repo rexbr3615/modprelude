@@ -1,7 +1,6 @@
 package net.rexbr.preludejurassika.entity.client.uraniasloanus;
 
 import net.minecraft.resources.ResourceLocation;
-import net.rexbr.preludejurassika.entity.custom.TorvosaurusEntity;
 import net.rexbr.preludejurassika.entity.custom.test.UraniasolanusEntity;
 import net.rexbr.preludejurassika.prelude;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
