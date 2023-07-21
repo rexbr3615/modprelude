@@ -7,8 +7,10 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
+import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusEntity;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusEntity;
+import net.rexbr.preludejurassika.entity.common.kaprosuchus.KaprosuchusEntity;
 import net.rexbr.preludejurassika.entity.common.ornithomimus.OrnithomimusEntity;
 import net.rexbr.preludejurassika.entity.common.paleolama.PaleolamaMajorEntity;
 import net.rexbr.preludejurassika.entity.common.prolibytherium.ProlibytheriumEntity;
@@ -79,7 +81,8 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.DIABLOCERATOPS.get(), DiabloceratopsEntity.setAttributes());
         event.put(ModEntityTypes.ORODROMEUS.get(), OrodromeusEntity.setAttributes());
         event.put(ModEntityTypes.EOCARCHARIA.get(), EocarchariaEntity.setAttributes());
-        //event.put(ModEntityTypes.URANIASLOANUS.get(), UraniasolanusEntity.setAttributes());
+        event.put(ModEntityTypes.ARARIPESUCUS.get(), AraripesuchusEntity.setAttributes());
+        event.put(ModEntityTypes.KAPROSUCHUS.get(), KaprosuchusEntity.setAttributes());
     }
 
     @SubscribeEvent

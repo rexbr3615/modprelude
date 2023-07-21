@@ -27,6 +27,7 @@ import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.common.albertosaurus.AlbertosaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.allo.AllossaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.achilobator.AchilobatorRenderer;
+import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusRenderer;
 import net.rexbr.preludejurassika.entity.common.bajadasaurus.BajadaRenderer;
 import net.rexbr.preludejurassika.entity.common.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.common.deinonychus.DeinonychusRenderer;
@@ -41,6 +42,7 @@ import net.rexbr.preludejurassika.entity.common.irritator.IrritatorRenderer;
 import net.rexbr.preludejurassika.entity.common.juravenator.JuravenatorRenderer;
 
 
+import net.rexbr.preludejurassika.entity.common.kaprosuchus.KaprosuchusRenderer;
 import net.rexbr.preludejurassika.entity.common.ornithomimus.OrnithomimusRenderer;
 import net.rexbr.preludejurassika.entity.common.orodromeus.OroRenderer;
 import net.rexbr.preludejurassika.entity.common.paleolama.PaleoLamaRenderer;
@@ -187,7 +189,10 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.DIABLOCERATOPS.get(), DiabloRenderer::new);
         EntityRenderers.register(ModEntityTypes.ORODROMEUS.get(), OroRenderer::new);
         EntityRenderers.register(ModEntityTypes.EOCARCHARIA.get(), EocarchariaRenderer::new);
-        //EntityRenderers.register(ModEntityTypes.URANIASLOANUS.get(), UraniasloanusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ARARIPESUCUS.get(), AraripesuchusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.KAPROSUCHUS.get(), KaprosuchusRenderer::new);
+
+
         EntityRenderers.register(TechEntities.SEAT.get(), SeatRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANALYZER.get(), RenderType.translucent());

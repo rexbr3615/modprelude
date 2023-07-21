@@ -616,7 +616,7 @@
 				},
 				"bone5": {
 					"rotation": {
-						"vector": ["3.25+math.sin(query.anim_time*720/12-60)*1", 0, 0]
+						"vector": ["0.25+math.sin(query.anim_time*720/12-60)*1", 0, 0]
 					}
 				},
 				"bone11": {
@@ -640,6 +640,9 @@
 					}
 				}
 			}
+		},
+		"animation.araripesuchus.attack": {
+			"loop": true
 		}
 	},
 	"geckolib_format_version": 2

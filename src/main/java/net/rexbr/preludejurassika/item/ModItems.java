@@ -616,6 +616,14 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.EOCARCHARIA,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
+    public static final RegistryObject<Item> ARARIPESUCUS_SPAWN_EGG = ITEMS.register("araripesuchus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ARARIPESUCUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> KAPROSUCHUS_SPAWN_EGG = ITEMS.register("kaprosuchus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.KAPROSUCHUS,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
     //public static final RegistryObject<Item> URANIA_SPAWN_EGG = ITEMS.register("urania_spawn_egg",
     //        () -> new ForgeSpawnEggItem(ModEntityTypes.URANIASLOANUS,-1, -1,
     //                new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));

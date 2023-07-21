@@ -7,8 +7,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusEntity;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusEntity;
+import net.rexbr.preludejurassika.entity.common.kaprosuchus.KaprosuchusEntity;
 import net.rexbr.preludejurassika.entity.common.ornithomimus.OrnithomimusEntity;
 import net.rexbr.preludejurassika.entity.common.paleolama.PaleolamaMajorEntity;
 import net.rexbr.preludejurassika.entity.common.prolibytherium.ProlibytheriumEntity;
@@ -235,14 +237,21 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<EocarchariaEntity>> EOCARCHARIA =
             ENTITY_TYPES.register("eocarcharia",
                     () -> EntityType.Builder.of(EocarchariaEntity::new, MobCategory.CREATURE)
-                            .sized(1.2f, 2.3f)
+                            .sized(1.3f, 2.3f)
                             .build(new ResourceLocation(prelude.MODID, "eocarcharia").toString()));
 
-    //public static final RegistryObject<EntityType<UraniasolanusEntity>> URANIASLOANUS =
-    //        ENTITY_TYPES.register("urania",
-    //                () -> EntityType.Builder.of(UraniasolanusEntity::new, MobCategory.CREATURE)
-    //                        .sized(0.4f, 0.4f)
-    //                        .build(new ResourceLocation(prelude.MODID, "urania").toString()));
+    public static final RegistryObject<EntityType<AraripesuchusEntity>> ARARIPESUCUS =
+            ENTITY_TYPES.register("araripesuchus",
+                    () -> EntityType.Builder.of(AraripesuchusEntity::new, MobCategory.CREATURE)
+                            .sized(0.68f, 0.5f)
+                            .build(new ResourceLocation(prelude.MODID, "araripesuchus").toString()));
+
+    public static final RegistryObject<EntityType<KaprosuchusEntity>> KAPROSUCHUS =
+            ENTITY_TYPES.register("kaprosuchus",
+                    () -> EntityType.Builder.of(KaprosuchusEntity::new, MobCategory.CREATURE)
+                            .sized(1.1f, 0.8f)
+                            .build(new ResourceLocation(prelude.MODID, "kaprosuchus").toString()));
+
 
 
     public static void register(IEventBus eventBus) {
