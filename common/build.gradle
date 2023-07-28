@@ -1,29 +1,29 @@
-architectury {
-    common(rootProject.enabled_platforms.split(","))
+plugins {
+    id 'java'
+    id 'org.spongepowered.gradle.vanilla' version '0.2.1-SNAPSHOT'
+    id 'maven-publish'
 }
 
-loom {
-    accessWidenerPath = file("src/main/resources/prelude.accesswidener")
+archivesBaseName = "${mod_name}-Common-${minecraft_version}"
+
+minecraft {
+    version(minecraft_version)
+    accessWideners(project(":Common").file("src/main/resources/${mod_id}_common.accesswidener"))
 }
+
+//JavaDocs error with GeckoLib code as it shadows two dependencies that aren't found in the classpath, so we disable them.
+javadoc.enabled(false)
 
 dependencies {
-    // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
-    // Do NOT use other classes from fabric loader
-    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury:${rootProject.architectury_version}"
+    compileOnly "org.spongepowered:mixin:0.8.5"
+    compileOnly "software.bernie.geckolib:geckolib-forge-1.19:${geckolib_version_forge}"
 }
 
-publishing {
-    publications {
-        mavenCommon(MavenPublication) {
-            artifactId = rootProject.archives_base_name
-            from components.java
-        }
-    }
+processResources {
+    def buildProps = project.properties.clone()
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
+    filesMatching(['pack.mcmeta']) {
+
+        expand buildProps
     }
 }
