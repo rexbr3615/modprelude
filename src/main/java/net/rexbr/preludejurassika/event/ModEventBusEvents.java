@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusEntity;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusEntity;
+import net.rexbr.preludejurassika.entity.common.herrerassaurus.HerreraEntity;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.kaprosuchus.KaprosuchusEntity;
 import net.rexbr.preludejurassika.entity.common.ornithomimus.OrnithomimusEntity;
@@ -36,6 +37,7 @@ import net.rexbr.preludejurassika.entity.common.proterosuchus.ProterosuchusEntit
 import net.rexbr.preludejurassika.entity.common.pyroraptor.PyroraptorEntity;
 import net.rexbr.preludejurassika.entity.common.silessaurus.SilessaurusEntity;
 import net.rexbr.preludejurassika.entity.common.sturgeon.SturgeonEntity;
+import net.rexbr.preludejurassika.entity.common.suchomimus.SuchoEntity;
 import net.rexbr.preludejurassika.entity.common.tapejara.TapejaraEntity;
 import net.rexbr.preludejurassika.entity.common.tenontosaurus.TenontosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikEntity;
@@ -83,6 +85,8 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.EOCARCHARIA.get(), EocarchariaEntity.setAttributes());
         event.put(ModEntityTypes.ARARIPESUCUS.get(), AraripesuchusEntity.setAttributes());
         event.put(ModEntityTypes.KAPROSUCHUS.get(), KaprosuchusEntity.setAttributes());
+        event.put(ModEntityTypes.SUCHOMIMUS.get(), SuchoEntity.setAttributes());
+        event.put(ModEntityTypes.HERRERASSAURUS.get(), HerreraEntity.setAttributes());
     }
 
     @SubscribeEvent

@@ -37,6 +37,7 @@ import net.rexbr.preludejurassika.entity.common.dryo.DryoRenderer;
 import net.rexbr.preludejurassika.entity.common.eocarcharia.EocarchariaRenderer;
 import net.rexbr.preludejurassika.entity.common.eotriceratops.EotriceratopsRenderer;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusRenderer;
+import net.rexbr.preludejurassika.entity.common.herrerassaurus.HerreraRenderer;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.irritator.IrritatorRenderer;
 import net.rexbr.preludejurassika.entity.common.juravenator.JuravenatorRenderer;
@@ -51,6 +52,7 @@ import net.rexbr.preludejurassika.entity.common.prolibytherium.ProlibytheriumRen
 import net.rexbr.preludejurassika.entity.common.proterosuchus.ProterosuchusRenderer;
 import net.rexbr.preludejurassika.entity.common.silessaurus.SilessaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.sturgeon.SturgeonRenderer;
+import net.rexbr.preludejurassika.entity.common.suchomimus.SuchoRenderer;
 import net.rexbr.preludejurassika.entity.common.tapejara.TapejaraRenderer;
 import net.rexbr.preludejurassika.entity.common.tenontosaurus.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikRenderer;
@@ -191,6 +193,8 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.EOCARCHARIA.get(), EocarchariaRenderer::new);
         EntityRenderers.register(ModEntityTypes.ARARIPESUCUS.get(), AraripesuchusRenderer::new);
         EntityRenderers.register(ModEntityTypes.KAPROSUCHUS.get(), KaprosuchusRenderer::new);
+        EntityRenderers.register(ModEntityTypes.SUCHOMIMUS.get(), SuchoRenderer::new);
+        EntityRenderers.register(ModEntityTypes.HERRERASSAURUS.get(), HerreraRenderer::new);
 
 
         EntityRenderers.register(TechEntities.SEAT.get(), SeatRenderer::new);

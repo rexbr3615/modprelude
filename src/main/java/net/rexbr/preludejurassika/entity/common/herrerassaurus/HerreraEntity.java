@@ -1,4 +1,4 @@
-package net.rexbr.preludejurassika.entity.common.araripesuchus;
+package net.rexbr.preludejurassika.entity.common.herrerassaurus;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -10,13 +10,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.rexbr.preludejurassika.entity.common.avaceratops.AvaceratopsEntity;
-import net.rexbr.preludejurassika.entity.common.dryo.DryosaurusEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -27,20 +24,21 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class AraripesuchusEntity extends Animal implements IAnimatable {
+public class HerreraEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
+    private boolean isSwimming;
 
 
-    public AraripesuchusEntity(EntityType<? extends Animal> entityType, Level level) {
+    public HerreraEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 12.0D)
-                .add(Attributes.ATTACK_DAMAGE, 1f)
+                .add(Attributes.MAX_HEALTH, 18.0D)
+                .add(Attributes.ATTACK_DAMAGE, 5f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.20f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.23f).build();
     }
 
     protected void registerGoals() {
@@ -58,6 +56,8 @@ public class AraripesuchusEntity extends Animal implements IAnimatable {
             }
         });
 
+
+
         this.goalSelector.addGoal(1, new RandomSwimmingGoal(this, 1, 40));
 
     }
@@ -70,11 +70,13 @@ public class AraripesuchusEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.araripesuchus.walk", 999));
+            event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.herrerassaurus.walk", 999));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.araripesuchus.idle", 999));
+
+
+        event.getController().setAnimation(new AnimationBuilder().addRepeatingAnimation("animation.herrerassaurus.idle", 999));
         return PlayState.CONTINUE;
 
     }
@@ -82,7 +84,7 @@ public class AraripesuchusEntity extends Animal implements IAnimatable {
     private PlayState attackPredicate(AnimationEvent event) {
         if(this.swinging && event.getController().getAnimationState().equals(AnimationState.Stopped)) {
             event.getController().markNeedsReload();
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.araripesuchus.attack", false));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.herrerassaurus.attack", false));
             this.swinging = false;
             this.getSharedFlag(4);
         }
@@ -111,5 +113,6 @@ public class AraripesuchusEntity extends Animal implements IAnimatable {
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
+
 
 }

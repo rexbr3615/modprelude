@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusEntity;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusEntity;
+import net.rexbr.preludejurassika.entity.common.herrerassaurus.HerreraEntity;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.kaprosuchus.KaprosuchusEntity;
 import net.rexbr.preludejurassika.entity.common.ornithomimus.OrnithomimusEntity;
@@ -37,6 +38,7 @@ import net.rexbr.preludejurassika.entity.common.proterosuchus.ProterosuchusEntit
 import net.rexbr.preludejurassika.entity.common.pyroraptor.PyroraptorEntity;
 import net.rexbr.preludejurassika.entity.common.silessaurus.SilessaurusEntity;
 import net.rexbr.preludejurassika.entity.common.sturgeon.SturgeonEntity;
+import net.rexbr.preludejurassika.entity.common.suchomimus.SuchoEntity;
 import net.rexbr.preludejurassika.entity.common.tapejara.TapejaraEntity;
 import net.rexbr.preludejurassika.entity.common.tenontosaurus.TenontosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikEntity;
@@ -252,6 +254,17 @@ public class ModEntityTypes {
                             .sized(1.1f, 0.8f)
                             .build(new ResourceLocation(prelude.MODID, "kaprosuchus").toString()));
 
+    public static final RegistryObject<EntityType<SuchoEntity>> SUCHOMIMUS =
+            ENTITY_TYPES.register("suchomimus",
+                    () -> EntityType.Builder.of(SuchoEntity::new, MobCategory.CREATURE)
+                            .sized(1.5f, 2.6f)
+                            .build(new ResourceLocation(prelude.MODID, "suchomimus").toString()));
+
+    public static final RegistryObject<EntityType<HerreraEntity>> HERRERASSAURUS =
+            ENTITY_TYPES.register("herrerassaurus",
+                    () -> EntityType.Builder.of(HerreraEntity::new, MobCategory.CREATURE)
+                            .sized(1.2f, 1.9f)
+                            .build(new ResourceLocation(prelude.MODID, "herrerassaurus").toString()));
 
 
     public static void register(IEventBus eventBus) {

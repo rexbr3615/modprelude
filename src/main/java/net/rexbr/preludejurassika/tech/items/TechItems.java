@@ -24,6 +24,9 @@ public class TechItems {
     public static final RegistryObject<Item> BITUMEN = ITEMS.register("bitumen",
             () -> new BitumenItem(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
 
+    public static final RegistryObject<Item> SIFTED_ORE = ITEMS.register("sifted_ore",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
+
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TECH_ITEMS)));
     public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot",
