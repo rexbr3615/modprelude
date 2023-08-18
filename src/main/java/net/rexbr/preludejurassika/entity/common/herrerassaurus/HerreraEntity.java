@@ -35,10 +35,10 @@ public class HerreraEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 18.0D)
+                .add(Attributes.MAX_HEALTH, 23.0D)
                 .add(Attributes.ATTACK_DAMAGE, 5f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.23f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.225f).build();
     }
 
     protected void registerGoals() {
