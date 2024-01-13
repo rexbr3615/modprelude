@@ -24,7 +24,7 @@ public class SturgeonRenderer extends GeoEntityRenderer<SturgeonEntity> {
     public RenderType getRenderType(SturgeonEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(1F, 1F, 1F);
+        stack.scale(1.1F, 1.1F, 1.1F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }
