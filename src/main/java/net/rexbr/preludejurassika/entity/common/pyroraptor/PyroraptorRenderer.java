@@ -27,8 +27,8 @@ public class PyroraptorRenderer extends GeoEntityRenderer<PyroraptorEntity> {
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
         stack.scale(0.8F, 0.8F, 0.8F);
-        //return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
-        return RenderType.entityTranslucent(getTextureLocation(animatable));
+        return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
+        //return RenderType.entityTranslucent(getTextureLocation(animatable));
     }
 
 }
