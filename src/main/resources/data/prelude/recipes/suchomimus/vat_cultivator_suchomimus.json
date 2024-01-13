@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:suchomimus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:suchomimus_spawn_egg"
+  }
+}

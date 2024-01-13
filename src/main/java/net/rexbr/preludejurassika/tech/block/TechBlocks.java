@@ -52,9 +52,9 @@ public class TechBlocks {
             () -> new ChairLikeBlock_2(BlockBehaviour.Properties.of(Material.WOOL)
                     .strength(1.2f, 2.4f)), ModCreativeModeTab.TECH_ITEMS);
 
-    public static final RegistryObject<Block> SEAT2 = registerBlock("seat2",
-            () -> new SeatAllongableBlock(BlockBehaviour.Properties.of(Material.WOOL)
-                    .strength(1.2f, 2.4f)), ModCreativeModeTab.TECH_ITEMS);
+    //public static final RegistryObject<Block> SEAT2 = registerBlock("seat2",
+    //        () -> new SeatAllongableBlock(BlockBehaviour.Properties.of(Material.WOOL)
+    //                .strength(1.2f, 2.4f)), ModCreativeModeTab.TECH_ITEMS);
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab, String tooltipKey) {

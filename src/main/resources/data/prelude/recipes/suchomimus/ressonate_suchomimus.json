@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:suchomimus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:suchomimus_dna"
+  }
+}

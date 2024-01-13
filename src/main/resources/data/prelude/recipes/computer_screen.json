@@ -16,13 +16,13 @@
       "item": "minecraft:iron_ingot"
     },
     "3": {
-      "item": "mekanism:basic_control_circuit"
+      "tag": "forge:circuits/basic"
     },
     "4": {
       "item": "minecraft:tinted_glass"
     },
     "5": {
-      "item": "mekanism:basic_control_circuit"
+      "tag": "forge:circuits/basic"
     },
     "6": {
       "item": "mekanism:dictionary"

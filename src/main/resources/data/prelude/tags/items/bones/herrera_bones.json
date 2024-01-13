@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:herrerassaurus_bone_skull",
+    "prelude:herrerassaurus_bone_gastralium",
+    "prelude:herrerassaurus_bone_ribs",
+    "prelude:herrerassaurus_bone_tail",
+    "prelude:herrerassaurus_bone_vertebrate"
+  ]
+}

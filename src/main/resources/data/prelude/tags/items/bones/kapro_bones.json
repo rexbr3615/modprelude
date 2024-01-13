@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:kaprosuchus_bone_skull",
+    "prelude:kaprosuchus_bone_gastralium",
+    "prelude:kaprosuchus_bone_ribs",
+    "prelude:kaprosuchus_bone_tail",
+    "prelude:kaprosuchus_bone_vertebrate"
+  ]
+}

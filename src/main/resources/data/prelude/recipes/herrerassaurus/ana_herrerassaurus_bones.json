@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/herrera_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:herrerassaurus_disc"
+  }
+}

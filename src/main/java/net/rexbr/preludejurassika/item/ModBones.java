@@ -409,6 +409,71 @@ public class ModBones {
     public static final RegistryObject<Item> EOCARCHARIA_BONE_VERTEBRATE = ITEMS.register("eocarcharia_bone_vertebrate",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    //
+    //
+    //
+    //
+    //
+    //
+    // alter 1
+    //
+    //
+    //
+    //
+    //
+    //
+
+    // araripesuchus ARARIPE
+
+    public static final RegistryObject<Item> ARARIPE_BONE_SKULL = ITEMS.register("araripesuchus_bone_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> ARARIPE_BONE_GRASTRALIUM = ITEMS.register("araripesuchus_bone_gastralium",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> ARARIPE_BONE_RIBS = ITEMS.register("araripesuchus_bone_ribs",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> ARARIPE_BONE_TAIL = ITEMS.register("araripesuchus_bone_tail",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> ARARIPE_BONE_VERTEBRATE = ITEMS.register("araripesuchus_bone_vertebrate",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+// kaprosuchus KAPRO
+
+    public static final RegistryObject<Item> KAPRO_BONE_SKULL = ITEMS.register("kaprosuchus_bone_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> KAPRO_BONE_GRASTRALIUM = ITEMS.register("kaprosuchus_bone_gastralium",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> KAPRO_BONE_RIBS = ITEMS.register("kaprosuchus_bone_ribs",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> KAPRO_BONE_TAIL = ITEMS.register("kaprosuchus_bone_tail",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> KAPRO_BONE_VERTEBRATE = ITEMS.register("kaprosuchus_bone_vertebrate",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+// suchomimus SUCHO
+
+    public static final RegistryObject<Item> SUCHO_BONE_SKULL = ITEMS.register("suchomimus_bone_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> SUCHO_BONE_GRASTRALIUM = ITEMS.register("suchomimus_bone_gastralium",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> SUCHO_BONE_RIBS = ITEMS.register("suchomimus_bone_ribs",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> SUCHO_BONE_TAIL = ITEMS.register("suchomimus_bone_tail",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> SUCHO_BONE_VERTEBRATE = ITEMS.register("suchomimus_bone_vertebrate",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+// herrerassaurus HERRERA
+
+    public static final RegistryObject<Item> HERRERA_BONE_SKULL = ITEMS.register("herrerassaurus_bone_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> HERRERA_BONE_GRASTRALIUM = ITEMS.register("herrerassaurus_bone_gastralium",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> HERRERA_BONE_RIBS = ITEMS.register("herrerassaurus_bone_ribs",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> HERRERA_BONE_TAIL = ITEMS.register("herrerassaurus_bone_tail",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> HERRERA_BONE_VERTEBRATE = ITEMS.register("herrerassaurus_bone_vertebrate",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
 
 

@@ -23,7 +23,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'idea'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-version = '1.18.2-0.3.5.release'
+version = '1.18.2-0.3.6.release'
 group = 'net.rexbr.preludejurassika' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'prelude'
 

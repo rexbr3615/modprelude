@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/araripe_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:araripesuchus_disc"
+  }
+}

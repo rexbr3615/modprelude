@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:herrerassaurus_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_herrerassaurus_fossil"
+  }
+}

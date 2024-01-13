@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:kaprosuchus_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_kaprosuchus_fossil"
+  }
+}

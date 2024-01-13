@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:araripesuchus_bone_skull",
+    "prelude:araripesuchus_bone_gastralium",
+    "prelude:araripesuchus_bone_ribs",
+    "prelude:araripesuchus_bone_tail",
+    "prelude:araripesuchus_bone_vertebrate"
+  ]
+}

@@ -28,6 +28,8 @@ public class SuchoRenderer extends GeoEntityRenderer<SuchoEntity> {
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
         stack.scale(1.79F, 1.79F, 1.79F);
-        return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
+        //return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
+        return RenderType.entityTranslucent(getTextureLocation(animatable));
+
     }
 }

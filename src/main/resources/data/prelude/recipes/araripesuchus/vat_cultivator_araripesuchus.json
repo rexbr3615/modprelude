@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:araripesuchus_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:araripesuchus_spawn_egg"
+  }
+}

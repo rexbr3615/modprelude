@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:kaprosuchus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:kaprosuchus_dna"
+  }
+}

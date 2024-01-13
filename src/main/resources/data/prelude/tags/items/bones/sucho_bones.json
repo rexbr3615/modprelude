@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:suchomimus_bone_skull",
+    "prelude:suchomimus_bone_gastralium",
+    "prelude:suchomimus_bone_ribs",
+    "prelude:suchomimus_bone_tail",
+    "prelude:suchomimus_bone_vertebrate"
+  ]
+}

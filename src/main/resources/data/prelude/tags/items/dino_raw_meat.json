@@ -29,6 +29,10 @@
     "prelude:raw_allosaurus_meat",
     "prelude:raw_diabloceratops_meat",
     "prelude:raw_orodromeus_meat",
-    "prelude:raw_eocarcharia_meat"
+    "prelude:raw_eocarcharia_meat",
+    "prelude:raw_araripesuchus_meat",
+    "prelude:raw_kaprosuchus_meat",
+    "prelude:raw_suchomimus_meat",
+    "prelude:raw_herrerassaurus_meat"
   ]
 }

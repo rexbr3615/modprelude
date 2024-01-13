@@ -144,7 +144,7 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(TechBlocks.SEAT2.get(), RenderType.cutout());
+        //ItemBlockRenderTypes.setRenderLayer(TechBlocks.SEAT2.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());

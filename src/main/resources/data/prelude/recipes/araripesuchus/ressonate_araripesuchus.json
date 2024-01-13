@@ -1,0 +1,11 @@
+{
+  "type": "prelude:ressonate",
+  "ingredients": [
+    {
+      "item": "prelude:araripesuchus_disc"
+    }
+  ],
+  "output": {
+    "item": "prelude:araripesuchus_dna"
+  }
+}
