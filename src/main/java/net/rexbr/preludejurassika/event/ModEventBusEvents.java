@@ -42,6 +42,7 @@ import net.rexbr.preludejurassika.entity.common.tapejara.TapejaraEntity;
 import net.rexbr.preludejurassika.entity.common.tenontosaurus.TenontosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikEntity;
 import net.rexbr.preludejurassika.entity.common.torvosaurus.TorvosaurusEntity;
+import net.rexbr.preludejurassika.entity.common.velociraptor.VelociraptorEntity;
 import net.rexbr.preludejurassika.entity.common.ypupiara.YpupiaraEntity;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
@@ -87,6 +88,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.KAPROSUCHUS.get(), KaprosuchusEntity.setAttributes());
         event.put(ModEntityTypes.SUCHOMIMUS.get(), SuchoEntity.setAttributes());
         event.put(ModEntityTypes.HERRERASSAURUS.get(), HerreraEntity.setAttributes());
+        event.put(ModEntityTypes.VELOCIRAPTOR.get(), VelociraptorEntity.setAttributes());
     }
 
     @SubscribeEvent

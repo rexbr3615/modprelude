@@ -659,6 +659,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.HERRERASSAURUS,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
+    public static final RegistryObject<Item> VELOCIRAPTOR_SPAWN_EGG = ITEMS.register("velociraptor_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.VELOCIRAPTOR,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
     //public static final RegistryObject<Item> URANIA_SPAWN_EGG = ITEMS.register("urania_spawn_egg",
     //        () -> new ForgeSpawnEggItem(ModEntityTypes.URANIASLOANUS,-1, -1,
     //                new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));

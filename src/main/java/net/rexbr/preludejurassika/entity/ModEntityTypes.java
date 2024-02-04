@@ -43,6 +43,7 @@ import net.rexbr.preludejurassika.entity.common.tapejara.TapejaraEntity;
 import net.rexbr.preludejurassika.entity.common.tenontosaurus.TenontosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikEntity;
 import net.rexbr.preludejurassika.entity.common.torvosaurus.TorvosaurusEntity;
+import net.rexbr.preludejurassika.entity.common.velociraptor.VelociraptorEntity;
 import net.rexbr.preludejurassika.entity.common.ypupiara.YpupiaraEntity;
 import net.rexbr.preludejurassika.prelude;
 
@@ -265,6 +266,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.of(HerreraEntity::new, MobCategory.CREATURE)
                             .sized(1.2f, 1.9f)
                             .build(new ResourceLocation(prelude.MODID, "herrerassaurus").toString()));
+
+    public static final RegistryObject<EntityType<VelociraptorEntity>> VELOCIRAPTOR =
+            ENTITY_TYPES.register("velociraptor",
+                    () -> EntityType.Builder.of(VelociraptorEntity::new, MobCategory.CREATURE)
+                            .sized(1.2f, 1.9f)
+                            .build(new ResourceLocation(prelude.MODID, "velociraptor").toString()));
 
 
     public static void register(IEventBus eventBus) {

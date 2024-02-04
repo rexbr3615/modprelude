@@ -57,6 +57,7 @@ import net.rexbr.preludejurassika.entity.common.tapejara.TapejaraRenderer;
 import net.rexbr.preludejurassika.entity.common.tenontosaurus.TenontosaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikRenderer;
 import net.rexbr.preludejurassika.entity.common.torvosaurus.TorvosaurusRenderer;
+import net.rexbr.preludejurassika.entity.common.velociraptor.VelociraptorRenderer;
 import net.rexbr.preludejurassika.entity.common.ypupiara.YpupiaraRenderer;
 import net.rexbr.preludejurassika.entity.common.amazonsaurus.AmazonsaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.avaceratops.AvaceratopsRenderer;
@@ -195,7 +196,7 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.KAPROSUCHUS.get(), KaprosuchusRenderer::new);
         EntityRenderers.register(ModEntityTypes.SUCHOMIMUS.get(), SuchoRenderer::new);
         EntityRenderers.register(ModEntityTypes.HERRERASSAURUS.get(), HerreraRenderer::new);
-
+        EntityRenderers.register(ModEntityTypes.VELOCIRAPTOR.get(), VelociraptorRenderer::new);
 
         EntityRenderers.register(TechEntities.SEAT.get(), SeatRenderer::new);
 
