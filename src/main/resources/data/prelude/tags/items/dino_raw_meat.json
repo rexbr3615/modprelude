@@ -33,6 +33,8 @@
     "prelude:raw_araripesuchus_meat",
     "prelude:raw_kaprosuchus_meat",
     "prelude:raw_suchomimus_meat",
-    "prelude:raw_herrerassaurus_meat"
+    "prelude:raw_herrerassaurus_meat",
+    "prelude:raw_velociraptor_meat",
+    "prelude:raw_arthropleura_meat"
   ]
 }

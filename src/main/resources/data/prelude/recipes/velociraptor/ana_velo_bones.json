@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "tag": "prelude:bones/velociraptor_bones"
+    }
+  ],
+  "output": {
+    "item": "prelude:velociraptor_disc"
+  }
+}

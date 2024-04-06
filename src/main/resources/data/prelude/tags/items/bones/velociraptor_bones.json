@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:velociraptor_bone_skull",
+    "prelude:velociraptor_bone_gastralium",
+    "prelude:velociraptor_bone_ribs",
+    "prelude:velociraptor_bone_tail",
+    "prelude:velociraptor_bone_vertebrate"
+  ]
+}

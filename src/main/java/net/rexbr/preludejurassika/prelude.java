@@ -5,6 +5,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.block.Blocks;
@@ -18,6 +19,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.NetworkEvent;
 import net.rexbr.preludejurassika.block.ModBlocks;
 import net.rexbr.preludejurassika.block.TileEntity.ModBlockEntities;
 import net.rexbr.preludejurassika.config.PreludeClientConfigs;
@@ -28,6 +30,7 @@ import net.rexbr.preludejurassika.entity.common.albertosaurus.AlbertosaurusRende
 import net.rexbr.preludejurassika.entity.common.allo.AllossaurusRenderer;
 import net.rexbr.preludejurassika.entity.common.achilobator.AchilobatorRenderer;
 import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusRenderer;
+import net.rexbr.preludejurassika.entity.common.arthropleura.ArthropleuraRenderer;
 import net.rexbr.preludejurassika.entity.common.bajadasaurus.BajadaRenderer;
 import net.rexbr.preludejurassika.entity.common.conodonta.ConoRenderer;
 import net.rexbr.preludejurassika.entity.common.deinonychus.DeinonychusRenderer;
@@ -63,10 +66,12 @@ import net.rexbr.preludejurassika.entity.common.amazonsaurus.AmazonsaurusRendere
 import net.rexbr.preludejurassika.entity.common.avaceratops.AvaceratopsRenderer;
 import net.rexbr.preludejurassika.entity.common.mimodactylus.MimodactylusRenderer;
 import net.rexbr.preludejurassika.entity.common.pyroraptor.PyroraptorRenderer;
+import net.rexbr.preludejurassika.entity.testcontent.RenderKrono;
 import net.rexbr.preludejurassika.item.ModBones;
 import net.rexbr.preludejurassika.item.ModItems;
 
 import net.rexbr.preludejurassika.recipes.ModRecipes;
+import net.rexbr.preludejurassika.screen.Menu2Types;
 import net.rexbr.preludejurassika.screen.ModMenuTypes;
 import net.rexbr.preludejurassika.screen.slots.*;
 import net.rexbr.preludejurassika.sound.ModSounds;
@@ -82,6 +87,22 @@ import net.rexbr.preludejurassika.world.PreludeModFeatures;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
+import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.FriendlyByteBuf;
+
+import java.util.function.Supplier;
+import java.util.function.Function;
+import java.util.function.BiConsumer;
+import org.apache.logging.log4j.LogManager;
+
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(prelude.MODID)
@@ -90,7 +111,10 @@ public class prelude {
     public static final String MODID = "prelude";
     public static final preludeConfig CONFIG_OPTIONS = new preludeConfig();
     public static final Logger LOGGER = LogUtils.getLogger();
-    public static final boolean DEBUG = false;
+    private static final String PROTOCOL_VERSION = "1";
+    public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
+    private static int messageID = 0;
+
 
     // add a comment
     public prelude() {
@@ -107,6 +131,7 @@ public class prelude {
         ModVillagers.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
 
         PreludeModFeatures.REGISTRY.register(eventBus);
 
@@ -152,6 +177,7 @@ public class prelude {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GINKGO_DOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COMMON_FENCE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAIL_FENCE.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SWARTPUNTIA.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ENCRINUS.get(), RenderType.cutout());
@@ -197,6 +223,9 @@ public class prelude {
         EntityRenderers.register(ModEntityTypes.SUCHOMIMUS.get(), SuchoRenderer::new);
         EntityRenderers.register(ModEntityTypes.HERRERASSAURUS.get(), HerreraRenderer::new);
         EntityRenderers.register(ModEntityTypes.VELOCIRAPTOR.get(), VelociraptorRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ARTHROPLEURA.get(), ArthropleuraRenderer::new);
+
+        EntityRenderers.register(ModEntityTypes.KRONO.get(), RenderKrono::new);
 
         EntityRenderers.register(TechEntities.SEAT.get(), SeatRenderer::new);
 
@@ -209,6 +238,7 @@ public class prelude {
         MenuScreens.register(ModMenuTypes.CLEANER_MENU.get(), CleanerScreen::new);
         MenuScreens.register(ModMenuTypes.RESSONATOR_MENU.get(), RessonatorScreen::new);
         MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
+        MenuScreens.register(Menu2Types.PRELUDE, PreludeScreen::new);
 
 
     }
@@ -235,5 +265,14 @@ public class prelude {
     }
 
 
-    
+
+
+    public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
+        PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
+        messageID++;
+    }
+
+
+
+
 }

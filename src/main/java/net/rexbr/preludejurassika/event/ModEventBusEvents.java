@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.rexbr.preludejurassika.entity.ModEntityTypes;
 import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusEntity;
+import net.rexbr.preludejurassika.entity.common.arthropleura.ArthropleuraEntity;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.herrerassaurus.HerreraEntity;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusEntity;
@@ -44,6 +45,7 @@ import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikEntity;
 import net.rexbr.preludejurassika.entity.common.torvosaurus.TorvosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.velociraptor.VelociraptorEntity;
 import net.rexbr.preludejurassika.entity.common.ypupiara.YpupiaraEntity;
+import net.rexbr.preludejurassika.entity.testcontent.KronosaurusEntity;
 import net.rexbr.preludejurassika.prelude;
 import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
 import net.rexbr.preludejurassika.recipes.RessonatorRecipe;
@@ -89,6 +91,10 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.SUCHOMIMUS.get(), SuchoEntity.setAttributes());
         event.put(ModEntityTypes.HERRERASSAURUS.get(), HerreraEntity.setAttributes());
         event.put(ModEntityTypes.VELOCIRAPTOR.get(), VelociraptorEntity.setAttributes());
+        event.put(ModEntityTypes.ARTHROPLEURA.get(), ArthropleuraEntity.setAttributes());
+
+        event.put(ModEntityTypes.KRONO.get(), KronosaurusEntity.basilosaurusAttributes().build());
+
     }
 
     @SubscribeEvent

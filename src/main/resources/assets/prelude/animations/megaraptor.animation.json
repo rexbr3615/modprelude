@@ -1,0 +1,135 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.megaraptor.sit": {
+			"animation_length": 12,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [-10, 0, 0]
+					},
+					"position": {
+						"vector": [0, -14, -1]
+					}
+				},
+				"root2": {
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": [7.5, 0, 0]
+					},
+					"position": {
+						"vector": [0, -1, -1]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [-25, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 1]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"bone22": {
+					"rotation": {
+						"vector": [-85, 0, 0]
+					},
+					"position": {
+						"vector": [0, -1, -1]
+					}
+				},
+				"bone24": {
+					"rotation": {
+						"vector": [-85, 0, 0]
+					},
+					"position": {
+						"vector": [0, -1, -1]
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"vector": [-4.81336, 9.76061, 2.18557]
+					}
+				},
+				"bone11": {
+					"rotation": {
+						"vector": [7.30998, 25.71544, 10.09538]
+					}
+				},
+				"bone12": {
+					"rotation": {
+						"vector": [12.14786, 34.39275, 6.93251]
+					}
+				},
+				"bone13": {
+					"rotation": {
+						"vector": [10.76862, 29.8742, 2.88063]
+					}
+				},
+				"bone14": {
+					"rotation": {
+						"vector": [10.12076, 12.45167, 1.10692]
+					}
+				},
+				"leg1": {
+					"rotation": {
+						"vector": [-57.16239, -9.05478, -4.26175]
+					}
+				},
+				"bone16": {
+					"rotation": {
+						"vector": [22.5, 0, 0]
+					}
+				},
+				"bone17": {
+					"rotation": {
+						"vector": [-42.5, 0, 0]
+					}
+				},
+				"bone18": {
+					"rotation": {
+						"vector": [85, 0, 0]
+					}
+				},
+				"leg2": {
+					"rotation": {
+						"vector": [-57.16239, 9.0548, 4.2617]
+					}
+				},
+				"bone15": {
+					"rotation": {
+						"vector": [22.5, 0, 0]
+					}
+				},
+				"bone19": {
+					"rotation": {
+						"vector": [-42.5, 0, 0]
+					}
+				},
+				"bone20": {
+					"rotation": {
+						"vector": [85, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

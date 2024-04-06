@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:porkchop",
+    "minecraft:coocked_porkchop",
+    "minecraft:beef",
+    "minecraft:coocked_beef",
+    "minecraft:mutton",
+    "minecraft:coocked_mutton",
+    "minecraft:chicken",
+    "minecraft:coocked_chicken",
+    "#prelude:dino_raw_meat"
+  ]
+}

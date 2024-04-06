@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "prelude:petroilsand",
-    "prelude:petroilredsand"
+    "prelude:petroilredsand",
+    "prelude:p_sand",
+    "prelude:p_dirt",
+    "prelude:p_grass"
   ]
 }

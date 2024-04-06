@@ -28,6 +28,9 @@ public class ModMenuTypes {
             registerMenuType(CrusherMenu::new, "crusher_menu");
 
 
+
+
+
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

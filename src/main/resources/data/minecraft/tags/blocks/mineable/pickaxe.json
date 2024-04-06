@@ -18,6 +18,7 @@
     "prelude:asfalt",
     "prelude:crusher",
     "prelude:tin_ore",
-    "prelude:deepslated_tin_ore"
+    "prelude:deepslated_tin_ore",
+    "prelude:p_volcano"
   ]
 }

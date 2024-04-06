@@ -39,6 +39,7 @@ public class ModFoods {
     public static final FoodProperties RAW_KAPROSUCHUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties RAW_SUCHOMIMUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties RAW_HERRERASSAURUS_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
+    public static final FoodProperties RAW_VELOCIRAPTOR_MEAT = (new FoodProperties.Builder()) .nutrition(2).saturationMod(0.2F).build();
 
 
     public static final FoodProperties GINKGO_NUTS = (new FoodProperties.Builder()).fast().nutrition(3).saturationMod(0.3F).build();

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prelude:block/jail_fence"
+    },
+    "facing=east": {
+      "model": "prelude:block/jail_fence",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "prelude:block/jail_fence",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prelude:block/jail_fence",
+      "y": 270
+    }
+  }
+}

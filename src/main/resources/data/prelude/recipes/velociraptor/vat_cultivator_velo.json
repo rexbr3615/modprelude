@@ -1,0 +1,11 @@
+{
+  "type": "prelude:culture",
+  "ingredients": [
+    {
+      "item": "prelude:velociraptor_syringue"
+    }
+  ],
+  "output": {
+    "item": "prelude:velociraptor_spawn_egg"
+  }
+}

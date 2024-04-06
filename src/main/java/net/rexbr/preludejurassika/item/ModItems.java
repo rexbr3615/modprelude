@@ -306,6 +306,16 @@ public class ModItems {
     public static final RegistryObject<Item> CLEANED_HERRERASSAURUS_FOSSIL = ITEMS.register("cleaned_herrerassaurus_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
 
+    public static final RegistryObject<Item> FOSSIL_VELOCIRAPTOR = ITEMS.register("velociraptor_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_VELOCIRAPTOR_FOSSIL = ITEMS.register("cleaned_velociraptor_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
+    public static final RegistryObject<Item> FOSSIL_ARTHROPLEURA = ITEMS.register("arthropleura_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+    public static final RegistryObject<Item> CLEANED_ARTHROPLEURA_FOSSIL = ITEMS.register("cleaned_arthropleura_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS)));
+
     //
     //
     //
@@ -457,6 +467,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_SUCHOMIMUS_MEAT)));
     public static final RegistryObject<Item> RAW_HERRERASSAURUS_MEAT = ITEMS.register("raw_herrerassaurus_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_HERRERASSAURUS_MEAT)));
+    public static final RegistryObject<Item> RAW_VELOCIRAPTOR_MEAT = ITEMS.register("raw_velociraptor_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).food(ModFoods.RAW_VELOCIRAPTOR_MEAT)));
 
 
     public static final RegistryObject<Item> STURGEON_MEAT = ITEMS.register("sturgeon_meat",
@@ -661,6 +673,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> VELOCIRAPTOR_SPAWN_EGG = ITEMS.register("velociraptor_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.VELOCIRAPTOR,-1, -1,
+                    new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
+
+    public static final RegistryObject<Item> ARTHROPLEURA_SPAWN_EGG = ITEMS.register("arthropleura_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.ARTHROPLEURA,-1, -1,
                     new Item.Properties().tab(ModCreativeModeTab.FOSSIL_EGSS)));
 
     //public static final RegistryObject<Item> URANIA_SPAWN_EGG = ITEMS.register("urania_spawn_egg",
@@ -959,6 +975,13 @@ public class ModItems {
     public static final RegistryObject<Item> HERRERASSAURUS_DISC = ITEMS.register("herrerassaurus_disc",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
     public static final RegistryObject<Item> HERRERASSAURUS_SYRINGUE = ITEMS.register("herrerassaurus_syringue",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> VELOCIRAPTOR_DNA = ITEMS.register("velociraptor_dna",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> VELOCIRAPTOR_DISC = ITEMS.register("velociraptor_disc",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
+    public static final RegistryObject<Item> VELOCIRAPTOR_SYRINGUE = ITEMS.register("velociraptor_syringue",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.FOSSIL_MOD_ITEMS).stacksTo(1)));
 
 

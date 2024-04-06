@@ -15,6 +15,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.rexbr.preludejurassika.entity.common.PreludeEntity;
 import net.rexbr.preludejurassika.entity.common.dryo.DryosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.avaceratops.AvaceratopsEntity;
 import org.jetbrains.annotations.Nullable;
@@ -27,14 +28,20 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import static java.lang.Math.PI;
+
 public class AlbertosaurusEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private boolean isSwimming;
 
 
+
+
+
     public AlbertosaurusEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
+
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
@@ -68,7 +75,7 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
     }
 
     @Nullable
-    @Override
+    //@Override
     public AgeableMob getBreedOffspring(ServerLevel p_146743_, AgeableMob p_146744_) {
         return null;
     }
@@ -121,5 +128,8 @@ public class AlbertosaurusEntity extends Animal implements IAnimatable {
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
         this.playSound(SoundEvents.GRASS_STEP, 0.15F, 1.0F);
     }
+
+
+
 
 }

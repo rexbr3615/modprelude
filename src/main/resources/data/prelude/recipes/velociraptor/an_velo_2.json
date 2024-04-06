@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyze",
+  "ingredients": [
+    {
+      "item": "prelude:raw_velociraptor_meat"
+    }
+  ],
+  "output": {
+    "item": "prelude:velociraptor_disc"
+  }
+}

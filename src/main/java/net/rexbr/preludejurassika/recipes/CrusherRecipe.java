@@ -18,6 +18,7 @@ public class CrusherRecipe implements Recipe<SimpleContainer> {
     private final ResourceLocation id;
     private final ItemStack output;
 
+
     private final NonNullList<Ingredient> recipeItems;
 
     public CrusherRecipe(ResourceLocation id, ItemStack output,

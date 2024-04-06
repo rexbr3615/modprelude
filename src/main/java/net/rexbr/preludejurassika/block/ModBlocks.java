@@ -482,6 +482,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> COMMON_FENCE = registerBlock("common_fence",
             () -> new common_fence(),
             ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> JAIL_FENCE = registerBlock("jail_fence",
+            () -> new Jail1Block(),
+            ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
+
+
+    public static final RegistryObject<Block> P_GRASS = registerBlock("p_grass", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> P_DIRT = registerBlock("p_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> P_SAND = registerBlock("p_sand", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+    public static final RegistryObject<Block> P_VOLCANO = registerBlock("p_volcano", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).noOcclusion()), ModCreativeModeTab.FOSSIL_MOD_ITEMS);
+
 
 
 

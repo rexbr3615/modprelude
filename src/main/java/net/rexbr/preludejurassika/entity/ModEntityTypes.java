@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbr.preludejurassika.entity.common.araripesuchus.AraripesuchusEntity;
+import net.rexbr.preludejurassika.entity.common.arthropleura.ArthropleuraEntity;
 import net.rexbr.preludejurassika.entity.common.giganotosaurus.GiganotosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.herrerassaurus.HerreraEntity;
 import net.rexbr.preludejurassika.entity.common.incisivosaurus.IncisivosaurusEntity;
@@ -45,6 +46,7 @@ import net.rexbr.preludejurassika.entity.common.tiktaalik.TiktaalikEntity;
 import net.rexbr.preludejurassika.entity.common.torvosaurus.TorvosaurusEntity;
 import net.rexbr.preludejurassika.entity.common.velociraptor.VelociraptorEntity;
 import net.rexbr.preludejurassika.entity.common.ypupiara.YpupiaraEntity;
+import net.rexbr.preludejurassika.entity.testcontent.KronosaurusEntity;
 import net.rexbr.preludejurassika.prelude;
 
 public class ModEntityTypes {
@@ -270,8 +272,20 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<VelociraptorEntity>> VELOCIRAPTOR =
             ENTITY_TYPES.register("velociraptor",
                     () -> EntityType.Builder.of(VelociraptorEntity::new, MobCategory.CREATURE)
-                            .sized(1.2f, 1.9f)
+                            .sized(0.9f, 1.2f)
                             .build(new ResourceLocation(prelude.MODID, "velociraptor").toString()));
+
+    public static final RegistryObject<EntityType<ArthropleuraEntity>> ARTHROPLEURA =
+            ENTITY_TYPES.register("arthropleura",
+                    () -> EntityType.Builder.of(ArthropleuraEntity::new, MobCategory.CREATURE)
+                            .sized(1.2f, 0.6f)
+                            .build(new ResourceLocation(prelude.MODID, "arthropleura").toString()));
+
+    public static final RegistryObject<EntityType<KronosaurusEntity>> KRONO =
+            ENTITY_TYPES.register("krono",
+                    () -> EntityType.Builder.of(KronosaurusEntity::new, MobCategory.CREATURE)
+                            .sized(1.2f, 0.6f)
+                            .build(new ResourceLocation(prelude.MODID, "krono").toString()));
 
 
     public static void register(IEventBus eventBus) {

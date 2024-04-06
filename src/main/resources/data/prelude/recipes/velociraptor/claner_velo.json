@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:velociraptor_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:cleaned_velociraptor_fossil"
+  }
+}

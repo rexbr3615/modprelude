@@ -6,13 +6,10 @@ import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.rexbr.preludejurassika.prelude;
-import net.rexbr.preludejurassika.recipes.AnalyzerRecipe;
+import net.rexbr.preludejurassika.recipes.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
-import net.rexbr.preludejurassika.recipes.CleanerRecipe;
-import net.rexbr.preludejurassika.recipes.CultureRecipe;
-import net.rexbr.preludejurassika.recipes.RessonatorRecipe;
 
 import java.util.List;
 import java.util.Objects;
@@ -37,6 +34,10 @@ public class JEITutorialModPlugin implements IModPlugin {
                 VatRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 
 
+        registration.addRecipeCategories(new
+                CrusherRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+
+
     }
 
     @Override
@@ -51,6 +52,9 @@ public class JEITutorialModPlugin implements IModPlugin {
         registration.addRecipes(new RecipeType<>(RessonatorRecipeCategory.UID, RessonatorRecipe.class), recipes2);
         List<CultureRecipe> recipes3 = rm.getAllRecipesFor(CultureRecipe.Type.INSTANCE);
         registration.addRecipes(new RecipeType<>(VatRecipeCategory.UID, CultureRecipe.class), recipes3);
+
+        List<CrusherRecipe> recipes4 = rm.getAllRecipesFor(CrusherRecipe.Type.INSTANCE);
+        registration.addRecipes(new RecipeType<>(VatRecipeCategory.UID, CrusherRecipe.class), recipes4);
 
 
     }
